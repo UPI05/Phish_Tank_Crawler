@@ -1,0 +1,2969 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+
+
+<head>
+
+    <!-- Path to manifest.json -->
+<link rel="manifest" href="/manifest.json">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Tuk Ofertas">
+
+
+<!-- Chrome for Android theme color -->
+<meta name="theme-color" content="#FFFFFF">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tuk Ofertas">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+    
+        <link rel="apple-touch-icon" href="static/images/icon-160x160.png" sizes="">
+    
+
+
+
+
+<link href="static/images/icon.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image"/>
+
+
+
+<!-- Tile for Win8 -->
+<meta name="msapplication-TileColor" content="#FFFFFF">
+
+<meta name="msapplication-TileImage" content="static/images/icon-160x160.png">
+
+
+<link rel="icon" sizes="" href="static/images/icon-160x160.png">
+
+
+<script type="text/javascript">
+    // Initialize the service worker
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/serviceworker.js', {
+            scope: '/'
+        }).then(function (registration) {
+            // Registration was successful
+            
+            console.log('django-pwa: ServiceWorker registration successful with scope: ', registration.scope);
+            
+        }, function (err) {
+            // registration failed :(
+            
+            console.log('django-pwa: ServiceWorker registration failed: ', err);
+            
+        });
+    }
+</script>
+
+
+
+
+  <title>TUK Ofertas</title>
+
+  <meta charset="utf-8">
+
+    <meta name="description" content="O produto que você procura com o melhor preço da internet! Celulares, fones de ouvido, eletrônico, cupom de desconto muitos mais!">
+
+    
+
+    <meta name="theme-color" content="#00BFFF">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" media="screen, print" href="/staticfiles/css/vendors.bundle.css">
+
+    <link rel="stylesheet" media="screen, print" href="/staticfiles/css/app.bundle.css">
+
+    <link rel="stylesheet" media="screen, print" href="/staticfiles/css/fa-solid.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link id="myskin" rel="stylesheet" media="screen, print" href="/staticfiles/css/skins/skin-master.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/media/img/logo.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/media/img/logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" media="screen, print" href="/staticfiles/css/fa-brands.css">
+
+
+
+
+
+    <!---------------------------------------------ADSENSE------------------------------------------------------------>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6321171863783350"
+
+     crossorigin="anonymous"></script>
+
+    <!---------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics lucas -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEWHCBG8NE"></script>
+
+    <script>
+
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('js', new Date());
+
+
+
+      gtag('config', 'G-DEWHCBG8NE');
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics sistema-->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETSVKWXVDW"></script>
+
+    <script>
+
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(){dataLayer.push(arguments);}
+
+      gtag('js', new Date());
+
+
+
+      gtag('config', 'G-ETSVKWXVDW');
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+<!--Global site tag (gtag.js) - Google Analytics-->
+
+
+
+
+
+
+
+</head>
+
+<style>
+
+body {
+
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+.top-container {
+
+  background-color: #f1f1f1;
+
+  padding: 30px;
+
+  text-align: center;
+
+}
+
+
+
+.header {
+
+  padding: 0px 10px;
+
+  background: white;
+
+  color: #f1f1f1;
+
+}
+
+
+
+.content {
+
+  padding: 16px;
+
+}
+
+
+
+.sticky {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+}
+
+
+
+.sticky + .content {
+
+  padding-top: 102px;
+
+}
+
+
+
+.menu {
+
+    list-style-type: none;
+
+    padding: 0px 0px 0px 4px;
+
+}
+
+
+
+.menu a {
+
+  padding: 0px 0px 2px 4px;
+
+  text-decoration: none;
+
+  font-size: 18px;
+
+  color: #00BFFF;
+
+  display: block; /* Display block instead of inline */
+
+  transition: 0.3s; /* Transition effects on hover (color) */
+
+}
+
+
+
+.menu a:hover, .nav-menu a:focus {
+
+  color: black;
+
+}
+
+
+
+.modal-backdrop {
+
+     background-color: rgba(0,0,0,.0001) !important;
+
+}
+
+
+
+</style>
+
+<body>
+
+
+
+<div class="header" id="myHeader" style="z-index: 1;">
+
+    <div class="" style="overflow:auto; overflow: hidden;border-style: solid;border-width: 0px 0px 2px 0px;">
+
+        <span class="float-left">
+
+            <a href="/p/?">
+
+                <img src="/media/img/logo-nova.png" class="" style="height:45px !important; width:auto; height:auto" alt="Tuk Ofertas">
+
+            </a>
+
+        </span>
+
+
+
+        <span class="float-right" style="font-size:30px;cursor:pointer;color:grey" data-toggle="modal" data-target=".example-modal-left-transparent">&#9776;</span>
+
+        <span class="float-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:25px;cursor:pointer;padding: 5px 20px 0px 0px;color:#1685CA">
+
+            <i class="fas fa-user-alt btn-user"></i>
+
+        </span>
+
+        <div class="dropdown-menu dropdown-lg">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title h4 text-white" style="margin-top:-20px;margin-left:-13px">
+
+                    <a href="/p/?"><img src="/media/img/logo-nova.png" class="" style="height:45px !important; width:auto; height:auto" alt="Tuk Ofertas"></a>
+
+                </h5>
+
+            </div>
+
+
+
+            
+
+            <form class="p-4 border" action="/login/" method="post"> <input type='hidden' name='csrfmiddlewaretoken' value='JvpzQKnu4xkRux9DtvVFLkN0wV5NSYafdRCpk6RwgPeJestr7as9zdmVbXv9dVCX' />
+
+                <div class="form-group">
+
+                    <input type="hidden" name="next" value="">
+
+                    <label class="form-label color-fusion-900" for="username">Username</label>
+
+                    <input type="text" id="username" name="username" class="form-control" placeholder="username" value="" required>
+
+                    <span class="help-block">
+
+                        
+
+                    </span>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="form-label color-fusion-900" for="password">Password</label>
+
+                    <input type="password" id="password" name="password" class="form-control" placeholder="password" value="" required>
+
+                    <span class="help-block">
+
+                        
+
+                    </span>
+
+                </div>
+
+                <button type="submit" class="btn btn-info btn-block">Fazer login</button>
+
+            </form>
+
+
+
+            <div class="dropdown-divider"></div>
+
+
+
+            <a class="dropdown-item" href="/cadastro/">Criar conta</a>
+
+            <a class="dropdown-item" href="#">Esqueci minha senha</a>
+
+            
+
+        </div>
+
+        <div class="float-right hidden-xs-down">
+
+            <form>
+
+                <input type="text" id="search-field" placeholder="Pesquisar produto" name="buscar" class="form-control form-control-sm" tabindex="1" autocomplete="off" required>
+
+                <a href="#" onclick="return false;" class="btn-danger btn-search-close js-waves-off d-none" data-action="toggle" data-class="mobile-search-on"><i class="fal fa-times"></i></a>
+
+            </form>
+
+        </div>
+
+
+
+<!--        <div class="btn-group hidden-sm-up" style="position: absolute;z-index: 1;">-->
+
+<!--            <span class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:25px;cursor:pointer;color:deepskyblue;padding: 5px 20px 0px 0px;">-->
+
+<!--                <i class="fas fa-search"></i>-->
+
+<!--            </span>-->
+
+<!--            <div class="dropdown-menu dropdown-lg">-->
+
+<!--                <input type="text" id="search-field" placeholder="Pesquisar produto" name="buscar" class="form-control form-control-sm input-sm" tabindex="1" autocomplete="off" required style="margin-right:50px !important">-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+
+
+
+<!--        <span class="float-right hidden-sm-up" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:25px;cursor:pointer;color:deepskyblue;padding: 5px 20px 0px 0px;">-->
+
+<!--            <i class="fas fa-search"></i>-->
+
+<!--        </span>-->
+
+<!--        <div class="dropdown-menu dropdown-lg">-->
+
+<!--             <form>-->
+
+<!--                <input type="text" id="search-field" placeholder="Pesquisar produto" name="buscar" class="form-control form-control-sm" tabindex="1" autocomplete="off" required>-->
+
+<!--                <a href="#" onclick="return false;" class="btn-danger btn-search-close js-waves-off d-none" data-action="toggle" data-class="mobile-search-on"><i class="fal fa-times"></i></a>-->
+
+<!--            </form>-->
+
+<!--        </div>-->
+
+    </div>
+
+
+
+    <div class="text-center" style="white-space:nowrap;padding: 5px 0px 10px 0px;">
+
+        
+
+        <a href="/p?categoria=ultimas" style="border:none;" class="menu btn btn-xs btn-outline-secondary fs-lg"><strong>Últimas</strong></a>
+
+        
+
+        <a href="/p?categoria=celulares" style="border:none;" class="menu btn btn-xs btn-outline-secondary fs-lg"><strong>Celulares</strong></a>
+
+        
+
+        <a href="/p?categoria=top-ofertas" style="border:none;" class="menu btn btn-xs btn-outline-secondary fs-lg"><strong>Top Ofertas</strong></a>
+
+        
+
+<!--        <a href="/p?categoria=ultimas" style="border:none;" class="menu btn btn-xs btn-outline-secondary fs-lg"><strong>Ùltimas</strong></a>-->
+
+<!--        <a href="/p?categoria=celulares" class="menu btn btn-xs btn-outline-secondary fs-lg" style="border:none"><strong>Celulares</strong>-->
+
+<!--        </a> <a href="/p?categoria=top-ofertas" class="menu btn btn-xs btn-outline-secondary fs-lg" style="border:none"><strong>Top Ofertas</strong></a>-->
+
+        <a href="/p?cupom=desconto" class="menu btn btn-xs btn-outline-secondary fs-lg" style="border:none"><strong>Cupons</strong></a>
+
+    </div>
+
+</div>
+
+<div class="container custom-scroll sob-demanda" style="margin-top:10px; height:99vh; overflow-y:scroll;">
+
+
+
+    
+
+    
+
+    
+
+
+
+    
+
+
+
+    
+
+<style>
+
+	.product-grid .show-child-on-hover:hover {
+
+	    -webkit-transition: all .3s;
+
+	    -o-transition: all .3s;
+
+		margin-top: -.25rem;
+
+		margin-bottom: .25rem;
+
+		-webkit-box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .3);
+
+		box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .3)
+
+	}
+
+
+
+	.product-grid .show-child-on-hover:hover .editar-link{
+
+	    color:darkorange !important;
+
+	}
+
+
+
+	.produto-descricao{
+
+        overflow:hidden;
+
+        text-overflow: ellipsis;
+
+        display:-webkit-box;
+
+        -webkit-line-clamp:1;
+
+        -webkit-box-orient: vertical;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size:16px;
+
+	}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+
+    
+
+</div>
+
+
+
+<!---->
+
+
+
+
+
+
+
+<div class="row div-liks">
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3130/?rf=redmi-note-12-128gb" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3130/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/618WlKYjsQL._AC_SL1000_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Redmi NOTE 12 128GB">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/47SQyVT" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Redmi NOTE 12 128GB
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/47SQyVT" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3130" class="" style="color:#595454;font-weight: normal;">R$ 963,00</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/47SQyVT" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/47SQyVT" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3130"><span class="" style="color:#8C8383;"><s>R$ 1.119,00</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 13,94%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3130/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3130" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Redmi NOTE 12 128GB por apenas 963,00 http://tukofertas.com.br/3130/ aproveite!!!" target="_blank" class="float-right" data-titulo="Redmi NOTE 12 128GB" data-link="http://tukofertas.com.br/3130/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3569/?rf=redmi-buds-5" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/ALIESSPRESS.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="AliExpress.com">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3569/">
+
+                                
+
+                                <img src="https://ae01.alicdn.com/kf/S3be94cc90d564cc4892ee44ba85635e2m/Xiaomi-Redmi-Sem-Fio-Buds-5-Cancelamento-de-Ru-do-Bluetooth-5-3-Fone-de-Ouvido.png_80x80.png_.webp" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Redmi BUDS 5">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://s.click.aliexpress.com/e/_DEU9lWT" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Redmi BUDS 5
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://s.click.aliexpress.com/e/_DEU9lWT" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3569" class="" style="color:#595454;font-weight: normal;">R$ 184,96</span>
+
+                                </a>
+
+                                <a href="https://s.click.aliexpress.com/e/_DEU9lWT" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://s.click.aliexpress.com/e/_DEU9lWT" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3569"><span class="" style="color:#8C8383;"><s>R$ 382,94</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 51,70%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3569/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3569" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Redmi BUDS 5 por apenas 184,96 http://tukofertas.com.br/3569/ aproveite!!!" target="_blank" class="float-right" data-titulo="Redmi BUDS 5" data-link="http://tukofertas.com.br/3569/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="card-body p-0 d-flex flex-column align-items-center justify-content-center">
+
+                
+
+                <div class="row">
+
+                    <div class="col-12">
+
+                        <div class="" style="overflow:auto; overflow: hidden">
+
+                            <a href="https://tukofertas.com.br/2456/?rf=grupos" target="_blank">
+
+                                
+
+                                <img src="/media/gerenciador_de_links/img/Sem-Titulo-2-1.png" class="" style="max-height:110px !important; width:auto; height:auto" alt="Grupos">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                <h6 class="text-left h6"><a href="https://tukofertas.com.br/3610/?rf=capinha-bansk" target="_blank" style="text-decoration: none !important;"></a></h6>
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3610/">
+
+                                
+
+                                <img src="https://http2.mlstatic.com/D_NQ_NP_753480-MLU71187536239_082023-O.webp" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Capinha BANSK">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://banskbrasil.com/produtos/capa-bansk-nanoglass-ii-vidro-temperado-fosco/?utm_source=lucas-tuk&amp;utm_medium=insta-parceria-bio" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Capinha BANSK
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://banskbrasil.com/produtos/capa-bansk-nanoglass-ii-vidro-temperado-fosco/?utm_source=lucas-tuk&amp;utm_medium=insta-parceria-bio" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3610" class="" style="color:#595454;font-weight: normal;">R$ 99,90</span>
+
+                                </a>
+
+                                <a href="https://banskbrasil.com/produtos/capa-bansk-nanoglass-ii-vidro-temperado-fosco/?utm_source=lucas-tuk&amp;utm_medium=insta-parceria-bio" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:;"></a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://banskbrasil.com/produtos/capa-bansk-nanoglass-ii-vidro-temperado-fosco/?utm_source=lucas-tuk&amp;utm_medium=insta-parceria-bio" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3610"><span class="" style="color:#8C8383;"><s>R$ 179,00</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 44,19%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3610/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3610" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Capinha BANSK por apenas 99,90 http://tukofertas.com.br/3610/ aproveite!!!" target="_blank" class="float-right" data-titulo="Capinha BANSK" data-link="http://tukofertas.com.br/3610/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3212/?rf=aspirador-de-po-robo-wap" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3212/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/81w-AyhZt-L._AC_SY450_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Aspirador de Pó Robô WAP">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3JTYHj4" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Aspirador de Pó Robô WAP
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3JTYHj4" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3212" class="" style="color:#595454;font-weight: normal;">R$ 348,02</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3JTYHj4" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3JTYHj4" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3212"><span class="" style="color:#8C8383;"><s>R$ 549,00</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 36,61%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3212/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3212" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Aspirador de Pó Robô WAP por apenas 348,02 http://tukofertas.com.br/3212/ aproveite!!!" target="_blank" class="float-right" data-titulo="Aspirador de Pó Robô WAP" data-link="http://tukofertas.com.br/3212/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3468/?rf=headset-gamer-adamantiun" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3468/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/71dEXFuse2L._AC_SX425_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Headset gamer Adamantiun">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3PU0AOV" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Headset gamer Adamantiun
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3PU0AOV" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3468" class="" style="color:#595454;font-weight: normal;">R$ 269,99</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3PU0AOV" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3PU0AOV" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3468"><span class="" style="color:#8C8383;"><s>R$ 349,99</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 22,86%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3468/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3468" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Headset gamer Adamantiun por apenas 269,99 http://tukofertas.com.br/3468/ aproveite!!!" target="_blank" class="float-right" data-titulo="Headset gamer Adamantiun" data-link="http://tukofertas.com.br/3468/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3556/?rf=galaxy-a24" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3556/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/51YJzUxQQTL._AC_SX522_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Galaxy A24">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3MBKVD6" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Galaxy A24
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3MBKVD6" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3556" class="" style="color:#595454;font-weight: normal;">R$ 949,00</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3MBKVD6" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3MBKVD6" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3556"><span class="" style="color:#8C8383;"><s>R$ 1.159,88</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 18,18%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3556/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3556" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Galaxy A24 por apenas 949,00 http://tukofertas.com.br/3556/ aproveite!!!" target="_blank" class="float-right" data-titulo="Galaxy A24" data-link="http://tukofertas.com.br/3556/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/28/?rf=xiaomi-redmi-9" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/28/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/51V+LPz3ipL._AC_SL1000_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="XIAOMI REDMI 9">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3rgtsIG" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    XIAOMI REDMI 9
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3rgtsIG" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="28" class="" style="color:#595454;font-weight: normal;">R$ 523,00</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3rgtsIG" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3rgtsIG" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="28"><span class="" style="color:#8C8383;"><s>R$ 1.899,00</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 72,46%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/28/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="28" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=XIAOMI REDMI 9 por apenas 523,00 http://tukofertas.com.br/28/ aproveite!!!" target="_blank" class="float-right" data-titulo="XIAOMI REDMI 9" data-link="http://tukofertas.com.br/28/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3267/?rf=jogo-de-panelas-tramontina" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3267/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/51SRi+EXNVL._AC_SX522_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Jogo de Panelas Tramontina">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3u0TikY" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Jogo de Panelas Tramontina
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3u0TikY" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3267" class="" style="color:#595454;font-weight: normal;">R$ 293,00</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3u0TikY" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3u0TikY" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3267"><span class="" style="color:#8C8383;"><s>R$ 359,00</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 18,38%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3267/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3267" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Jogo de Panelas Tramontina por apenas 293,00 http://tukofertas.com.br/3267/ aproveite!!!" target="_blank" class="float-right" data-titulo="Jogo de Panelas Tramontina" data-link="http://tukofertas.com.br/3267/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+    
+
+
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 product-grid">
+
+        <div class="card p-0 show-child-on-hover" style="height:135px">
+
+            <div class="text-left p-0" style="margin-left:-10px;margin-top:-15px;height:20px;">
+
+                
+
+                 
+
+                <a href="https://tukofertas.com.br/3624/?rf=cadeira-de-escritorio-giratoria-kelter" target="_blank" style="text-decoration: none !important;">
+
+                    <img src="/media/gerenciador_de_links/parceiros/img/logo_amaozn_sombra.png" style="max-width:100%; max-height:20px; width:auto; height:auto;" alt="Amazon.com.br">
+
+                </a>
+
+                
+
+                
+
+                
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <div class="d-flex flex-column align-items-center justify-content-center text-left" style="height:80px; width:80px; margin-left:10px">
+
+                            <a href="/3624/">
+
+                                
+
+                                <img src="https://m.media-amazon.com/images/I/61UzfwX2P3L._AC_SX569_.jpg" class="" style="max-height:100px !important; max-width:95px !important; width:auto; height:auto;border-style: solid;border-width: 10px 15px 10px 15px;border-color:transparent" alt="Cadeira de Escritório Giratória KELTER">
+
+                                
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-9">
+
+                        <div class="" style="margin-left:5px;margin-right:10px">
+
+                            <a href="https://amzn.to/3uMNQmj" target="_blank" style="text-decoration: none !important;">
+
+                                <div class="produto-descricao text-dark"  style="max-height:30px;  font-weight:bold;   18px;   normal; ">
+
+                                    Cadeira de Escritório Giratória KELTER
+
+                                </div>
+
+                            </a>
+
+                            <h3>
+
+                                
+
+                                <a href="https://amzn.to/3uMNQmj" target="_blank" class="" style="text-decoration: none !important">
+
+                                    <span data-id="3624" class="" style="color:#595454;font-weight: normal;">R$ 225,90</span>
+
+                                </a>
+
+                                <a href="https://amzn.to/3uMNQmj" target="_blank" class="btn btn-xs text-white text-nowrap float-right fs-lg"  style="background-color:#1685CA;">Ir para loja</a>
+
+                                
+
+                            </h3>
+
+                            
+
+                            <a href="https://amzn.to/3uMNQmj" target="_blank" class="" style="text-decoration: none !important;">
+
+                                <h3 class="fs-lg text-nowrap" data-id="3624"><span class="" style="color:#8C8383;"><s>R$ 296,90</s> </span> <span class="badge badge-success badge-pill" style="margin-left:3px"><span style="font-weight: bold;">-</span> 23,91%</span></h3>
+
+                            </a>
+
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <div class="p-1">
+
+                <div class="text-center" style="border-style: solid;border-width: 1px 0px 0px 0px;border-color:rgb(190, 190, 190, .5)">
+
+                    <a href="/3624/?categoria=" class="float-left cursor-pointer" style="margin-left:10px;margin-top:5px;font-size:18px;font-weight: 900;color:grey">+ Info</a>
+
+
+
+                    <i class=" fal  fa-heart fa-2x cursor-pointer favoritar" data-id="3624" style="margin-top:5px;color:grey"></i>
+
+
+
+                    
+
+<!--                    <span class="float-right" style="margin-right:5px;margin-top:6px;color:grey">  </span>-->
+
+<!--                    <svg width="20" height="20" fill="currentColor" class="bi bi-chat-right-dots float-right" viewBox="0 0 16 16" style="margin-top:8px;margin-right:2px;color:grey">-->
+
+<!--                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>-->
+
+<!--                        <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
+
+<!--                    </svg>-->
+
+                    
+
+
+
+                    <a href="https://api.whatsapp.com/send?text=Cadeira de Escritório Giratória KELTER por apenas 225,90 http://tukofertas.com.br/3624/ aproveite!!!" target="_blank" class="float-right" data-titulo="Cadeira de Escritório Giratória KELTER" data-link="http://tukofertas.com.br/3624/" style="margin-right:5px;margin-top:6px;color:grey;font-size:20px"><i style="color:grey;" class="fas fa-share-alt"></i></a>
+
+                    
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+    
+
+</div>
+
+<!--<h4 class="text-center">Esta página contem um total de 10 ofertas</h4>-->
+
+
+
+    
+
+    <div class="text-center carregar-mais" style="">
+
+        <button class="btn btn-link btn-xl fs-xl" onclick="sobDemanda()" style="color:#1685CA;text-decoration:none !important"> Carregar mais 10 produtos</button>
+
+        <div class=""  style="background-color:transparent">
+
+            <div class="d-flex justify-content-center">
+
+                <div class="spinner-border" role="status"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <P></P>
+
+</div>
+
+<div class="mt-5 pt-5 pb-5 footer">
+    <div class="container">
+      <div class="row">
+        <div class=" col-6" style="padding-left: 30px">
+            <ul class="m-0 p-0" style="list-style-type: none; ">
+              <li><a href="https://tukofertas.blogspot.com/p/privacidade.html" target="_blank" style="color:white; text-decoration: none;">Privacidade</a></li>
+              <li><a href="https://tukofertas.blogspot.com/p/sobre-nos.html" target="_blank" style="color:white; text-decoration: none;">Contato</a></li>
+              <li><a href="https://tukofertas.blogspot.com/p/sobre-nos.html" target="_blank" style="color:white; text-decoration: none;">Sobre nós</a></li>
+            </ul>
+        </div>
+        <div class=" col-6">
+            <h4 class="mt-lg-0 mt-sm-3">Redes Sociais</h4>
+                <a href="https://www.facebook.com" target="_blank" style="color: white; text-decoration: none;"><i class="bx bxl-facebook bx-md"></i></a>
+                <a href="https://twitter.com" target="_blank" style="color: white; text-decoration: none;"><i class="bx bxl-twitter bx-md"></i></a>
+                <a href="https://www.instagram.com" target="_blank" style="color: white; text-decoration: none;"><i class="bx bxl-instagram bx-md"></i></a>
+          </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© TukOfertas 2023.</small></p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<div class="modal fade example-modal-left-transparent modal-backdrop-transparent" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-left modal-sm">
+
+        <div class="modal-content" style="width:290px;">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title h4 text-white" style="margin-top:-20px;margin-left:-13px">
+
+                    <a href="/p/?"><img src="/media/img/logo-nova.png" class="" style="height:45px !important; width:auto; height:auto" alt="Tuk Ofertas"></a>
+
+                </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="">
+
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body" style="">
+
+                <form class="" style="margin-bottom:20px;margin-top:-20px">
+
+                    <div class="input-group input-group-sm">
+
+                        <div class="input-group-prepend">
+
+                            <button class="input-group-text" type="submit" style="border-color:#DCDCDC;background-color:#DCDCDC;color:black;font-size:16px">
+
+                                <i class="fal fa-search"></i>
+
+                            </button>
+
+                        </div>
+
+                        <input type="text" name="buscar"  class="form-control" placeholder="Pesquisar produto" style="border-color:#DCDCDC;background-color:#DCDCDC !important;color:black;font-size:12px">
+
+                    </div>
+
+                </form>
+
+
+
+                <form class="" style="margin-bottom:20px;margin-top:-20px" hidden>
+
+                    <div class="input-group input-group-sm">
+
+                        <div class="input-group-prepend">
+
+                            <button class="input-group-text" type="submit" style="border-color:#DCDCDC;background-color:#DCDCDC;color:black;font-size:16px">
+
+                                <i class="fal fa-search"></i>
+
+                            </button>
+
+                        </div>
+
+                        <input type="text" name="pesquisa-amazon"  class="form-control border-left-0 bg-silver pl-0" placeholder="Pesquisar na Amazon" style="border-color:#DCDCDC;background-color:#DCDCDC !important;color:black;font-size:16px">
+
+                    </div>
+
+                </form>
+
+
+
+
+
+
+
+<!--                <form class="">-->
+
+<!--                    <input type="text" id="search-field" placeholder="Pesquisar produto" name="buscar" class="form-control form-control-sm" tabindex="1" autocomplete="off" required style="border:none;margin-top:-30px;margin-bottom:20px">-->
+
+<!--                    <a href="#" onclick="return false;" class="btn-danger btn-search-close js-waves-off d-none" data-action="toggle" data-class="mobile-search-on"><i class="fal fa-times"></i></a>-->
+
+<!--                </form>-->
+
+                <div class="custom-scroll" style="height:90vh; overflow-y:scroll;">
+
+                    <ul class="menu">
+
+                        <li class="tex-nowrap">
+
+                            <a href="?meus=favoritos"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Meus favoritos </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=eletronicos"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Eletrônicos </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=fone-de-ouvido"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Fone de ouvido </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=computador"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Computador </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=casa"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Casa </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=smartwatch"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Smartwatch </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=eletrodomesticos"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Eletrodomésticos </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=importados"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Importados </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=prime-day"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Prime Day </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=produtos"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Produtos </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=ultimas"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Últimas </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=celulares"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Celulares </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?categoria=top-ofertas"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung"> Top Ofertas </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <hr>
+
+
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=aliexpress.com"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> aliexpress.com </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=amazon.com.br"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> amazon.com.br </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=americanas"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> americanas </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=banggood"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> banggood </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=c&amp;a"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> c&amp;a </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=carrefour"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> carrefour </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=casas-bahia"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> casas bahia </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=extra"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> extra </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=fastshop"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> fastshop </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=kabum"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> kabum </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=magazine-luiza"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> magazine luiza </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=mercado-livre"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> mercado livre </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=ponto-frio"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> ponto frio </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=shoptime"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> shoptime </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                        <li class="tex-nowrap">
+
+                            <a href="?parceiro=submarino"  data-filter-tags="home" style="">
+
+                                <span class="nav-link-text" data-i18n="nav.sansung" style="text-transform: capitalize;"> submarino </span>
+
+                            </a>
+
+                        </li>
+
+                        
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal fade modal-backdrop-transparent" id="modal-criar-conta" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-right modal-sm">
+
+        <div class="modal-content" style="width:290px;">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title h4 text-white" style="margin-top:-20px;margin-left:-13px">
+
+                    <a href="/p/?"><img src="/media/img/logo-nova.png" class="" style="height:45px !important; width:auto; height:auto" alt="Tuk Ofertas"></a>
+
+                </h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="">
+
+                    <span aria-hidden="true"><i class="fal fa-times"></i></span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body" style="">
+
+                <form novalidate="" id="form-usuarios" action="/cadastro/" method="post"><input type='hidden' name='csrfmiddlewaretoken' value='JvpzQKnu4xkRux9DtvVFLkN0wV5NSYafdRCpk6RwgPeJestr7as9zdmVbXv9dVCX' />
+
+                    <div class="row">
+
+                        <div class="col-12">
+
+                            
+
+                        </div>
+
+                        <div class="col-12 form-group">
+
+                            <label class="form-label" for="fname">Nome</label>
+
+                            <input type="text" name="nome" id="fname" value="" class="form-control" placeholder="Informe seu nome" required>
+
+                             
+
+                        </div>
+
+                        <div class="col-12 form-group">
+
+                            <label class="form-label" for="emailverify">Email</label>
+
+                            <input type="email" name="email" id="emailverify" value="" class="form-control" placeholder="Informe um Email que voçê ulilize com frequência" required autocomplete="off">
+
+                            
+
+                            <div class="help-block">Seu Email será utilizado como seu nome de usuário.</div>
+
+                            
+
+                        </div>
+
+                        <div class="col-12 form-group">
+
+                            <label class="form-label" for="userpassword">Senha</label>
+
+                            <input type="password" name="senha" value="" id="userpassword" class="form-control" placeholder="Informe uma senha segura" required  autocomplete="off">
+
+                            
+
+                            <div class="help-block">Esta senha será utilizada juntamente com seu Email para fazer login em sua conta.</div>
+
+                            
+
+                        </div>
+
+                        <div class="col-12 no-gutters">
+
+                            <div class="col-12 ml-auto text-center">
+
+                                <button type="submit" name="salvar"  class="btn btn-block btn-info">Cadastrar</button>
+
+                                <div class="p-2">
+
+                                    <a href="/login/" onclick="modalOverlayCadastroUsuarios(); $('#modal-login').modal('show');" class="btn-link ml-auto">
+
+                                        <span class="ml-auto mr-2 text-success">Já tem uma conta? Login</span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<p id="js-color-profile" class="d-none">
+
+    <span class="color-primary-50"></span>
+
+    <span class="color-primary-100"></span>
+
+    <span class="color-primary-200"></span>
+
+    <span class="color-primary-300"></span>
+
+    <span class="color-primary-400"></span>
+
+    <span class="color-primary-500"></span>
+
+    <span class="color-primary-600"></span>
+
+    <span class="color-primary-700"></span>
+
+    <span class="color-primary-800"></span>
+
+    <span class="color-primary-900"></span>
+
+    <span class="color-info-50"></span>
+
+    <span class="color-info-100"></span>
+
+    <span class="color-info-200"></span>
+
+    <span class="color-info-300"></span>
+
+    <span class="color-info-400"></span>
+
+    <span class="color-info-500"></span>
+
+    <span class="color-info-600"></span>
+
+    <span class="color-info-700"></span>
+
+    <span class="color-info-800"></span>
+
+    <span class="color-info-900"></span>
+
+    <span class="color-danger-50"></span>
+
+    <span class="color-danger-100"></span>
+
+    <span class="color-danger-200"></span>
+
+    <span class="color-danger-300"></span>
+
+    <span class="color-danger-400"></span>
+
+    <span class="color-danger-500"></span>
+
+    <span class="color-danger-600"></span>
+
+    <span class="color-danger-700"></span>
+
+    <span class="color-danger-800"></span>
+
+    <span class="color-danger-900"></span>
+
+    <span class="color-warning-50"></span>
+
+    <span class="color-warning-100"></span>
+
+    <span class="color-warning-200"></span>
+
+    <span class="color-warning-300"></span>
+
+    <span class="color-warning-400"></span>
+
+    <span class="color-warning-500"></span>
+
+    <span class="color-warning-600"></span>
+
+    <span class="color-warning-700"></span>
+
+    <span class="color-warning-800"></span>
+
+    <span class="color-warning-900"></span>
+
+    <span class="color-success-50"></span>
+
+    <span class="color-success-100"></span>
+
+    <span class="color-success-200"></span>
+
+    <span class="color-success-300"></span>
+
+    <span class="color-success-400"></span>
+
+    <span class="color-success-500"></span>
+
+    <span class="color-success-600"></span>
+
+    <span class="color-success-700"></span>
+
+    <span class="color-success-800"></span>
+
+    <span class="color-success-900"></span>
+
+    <span class="color-fusion-50"></span>
+
+    <span class="color-fusion-100"></span>
+
+    <span class="color-fusion-200"></span>
+
+    <span class="color-fusion-300"></span>
+
+    <span class="color-fusion-400"></span>
+
+    <span class="color-fusion-500"></span>
+
+    <span class="color-fusion-600"></span>
+
+    <span class="color-fusion-700"></span>
+
+    <span class="color-fusion-800"></span>
+
+    <span class="color-fusion-900"></span>
+
+</p>
+
+
+
+<div class="modal fade" id="default-example-modal-sm" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-sm" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title text-center">
+
+                    Ative as notificações e receba iformações em tempo real sobre as melhores promções..
+
+                </h5>
+
+            </div>
+
+            <div class="modal-body text-center">
+
+                <button type="button" class="btn btn-sm btn-pills btn-secondary float-left" data-dismiss="modal">Agora não</button>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<style>
+    .modal-overlay {
+        width: 1px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        transition: 0.5s;
+    }
+
+    .modal-overlay-content {
+        top:5px;
+        position: relative;
+        width: 100%;
+        height:95vh;
+        text-align: left;
+        margin-top: 0px;
+    }
+
+    .modal-overlay a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .modal-overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+</style>
+
+<div class="panel-content">
+
+<!--OVERLAY-->
+<div  id="modal-overlay" class="modal-overlay" style="z-index: 9999 !important;background-color:#00BFFF">
+    <div class="modal-header text-center" style="">
+        <h5 class="modal-title h4 text-center titulo" style="color:white;text-align: center;width:100% "> SEM TÍTULO
+        </h5>
+        <button type="button" class="close" aria-label="Close" style="color:white" onclick="modalOverlay('', '', '0px')">
+            <span aria-hidden="true"><i class="fal fa-times"></i></span>
+        </button>
+    </div>
+    <div  class="modal-overlay-content" style="border-style: solid;border-width: 0px 10px 0px 10px;border-color:transparent">
+
+    </div>
+</div>
+<!--OVERLAY-->
+
+<script>
+
+    function modalOverlay(url='', titulo='', width="350px"){
+        $('.titulo').text('CARREGANDO...');
+        var nav = document.getElementById('modal-overlay');
+        if (width == "0px") {
+            nav.style.width = width;
+            $('.modal-overlay-content').html('');
+         } else {
+            nav.style.width = width;
+            $('.modal-overlay-content').html('<iframe class="iframe-baner" src="'+url+'" title="TUK Ofertas" style="height:90vh;width:100%;border:none;"></iframe>');
+<!--            $('.iframe-baner').attr("src", url);-->
+            $('.titulo').text(titulo);
+           }
+    };
+</script>
+</div>
+
+
+
+
+
+
+<style>
+
+    .modal-overlay-cadastro-usuarios {
+
+        height: 0px;
+
+        width: 100%;
+
+        position: fixed;
+
+        z-index: 1;
+
+        top: 0;
+
+        left: 0;
+
+        background-color: transparent;
+
+        overflow-x: hidden;
+
+        transition: 1s;
+
+    }
+
+    .subs{
+
+
+
+    -webkit-transition: all .3s;
+
+	    -o-transition: all .3s;
+
+		margin-top: -.25rem;
+
+		margin-bottom: .25rem;
+
+		-webkit-box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .3);
+
+		box-shadow: 0 .5rem 1rem 0 rgba(0, 0, 0, .3)
+
+    }
+
+</style>
+
+<div  id="modal-overlay-cadastro-usuarios" class="modal-overlay-cadastro-usuarios d-flex flex-column align-items-center justify-content-center text-center p-0">
+
+    <div class="card subs" style="width:300px;margin-top:-70px !important">
+
+        <div class="frame-wrap p-0 text-center">
+
+            <div class="text-center p-0" style="">
+
+                <img src="/media/img/ofertas-noti.png" class="" style="height:60px !important; width:auto; height:auto" alt="Tuk Ofertas">
+
+            </div>
+
+
+
+            <hr class="mt-0 mb-1" style="margin-left:20px;margin-right:20px;height: 4px;"/>
+
+
+
+            <div class="demo text-center" style="white-space:nowrap;">
+
+                <button type="button" class="btn btn-link fs-xl ativar-notificacoes" style="text-decoration:none;color:black !important">Não, Obrigado</button>
+
+                
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+    function modalOverlayCadastroUsuarios(){
+
+        var nav = document.getElementById('modal-overlay-cadastro-usuarios');
+
+        if (nav.style.height > "0px") {
+
+            nav.style.height = "0px";
+
+         } else {
+
+            nav.style.height = "200px";
+
+           }
+
+    }
+
+
+
+
+
+</script>
+
+
+
+<script>
+
+    $(document).ready(function(){
+
+
+
+    });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="screen, print" href="/staticfiles/css/notifications/toastr/toastr.css">
+
+<link rel="stylesheet" media="screen, print" href="/staticfiles/css/notifications/sweetalert2/sweetalert2.bundle.css">
+
+<script src="/staticfiles/js/notifications/toastr/toastr.js"></script>
+
+<script src="/staticfiles/js/notifications/sweetalert2/sweetalert2.bundle.js"></script>
+
+<script type="text/javascript" src="/staticfiles/js/compre/base/base_cliente_final.js"></script>
+
+<script type="text/javascript" src="/staticfiles/js/compre/base/editor.js"></script>
+
+
+
+
+
+<script>
+
+    $(document).ready(function(){
+
+
+
+    });
+
+    window.addEventListener("message", function(event) {
+        if(typeof event.data == 'number') {
+            excluir_overlay(event.data);
+        }
+    });
+    
+</script>
+
+</body>
+
+</html>
+

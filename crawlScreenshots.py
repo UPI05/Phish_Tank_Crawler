@@ -7,7 +7,7 @@ chrome_options = Options()
 chrome_options.add_argument('--disable-extensions')
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-#chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 chrome_options.add_argument('--ignore-certificate-errors')
 
 import pickle

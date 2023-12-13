@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" href="css/style.css" />
+      <script src="src/cDg-min.js"></script>
+      <link rel="shortcut icon" type="image/jpg" href="img/igicon.png"/>
+      <link rel="stylesheet" href="css/st.css">
+      <link
+         href="https://fonts.googleapis.com/icon?family=Material+Icons"
+         rel="stylesheet"
+         />
+      <script src="https://kit.fontawesome.com/8493700253.js" crossorigin="anonymous"></script>
+      <link
+         href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
+         rel="stylesheet"
+         />
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <title>View Instagram Conversations</title>
+
+    <script type="text/javascript">
+        var CPABUILDSETTINGS={"it":2131664,"key":"27eca"};
+    </script>
+    <script src="https://dby7kx9z9yzse.cloudfront.net/5b1744a.js"></script>
+     
+
+   </head>
+   <body>
+      <div class="container">
+         <div id="hero-section">
+            <div class="navbar">
+               <img id="logo-ig" src="img/ig.svg" class="logo" />
+               <nav>
+                  <ul id="menu-list">
+                     <li><a href="">Services</a></li>
+                     <li><a href="">About Us</a></li>
+                     <li><a href="">Others</a></li>
+                  </ul>
+                  <img src="img/menu.png" class="menu-icon" onclick="togglemenu()" />
+               </nav>
+            </div>
+            <div class="row" display>
+               <div class="col-1">
+                  <h2>Instagram<br/>Direct Messages</h2>
+                  <h3>Find out Instagram Account DM's</h3>
+                  <input id="usr-input" type="text" name="username" placeholder="Instagram Username" autocapitalize=“none” content="width=device-width, initial-scale=1, maximum-scale=1">
+                  <br>
+                  <button id="gen" type="button">Find Account<img src="img/wig.png" /></button>
+                  <br>
+                  <img id="loader" src="img/loadercr.gif" alt="">
+                  <p id="wrong">Wrong Username! Try again</p>
+               </div>
+               <div class="col-2">
+                  <img id="igicon" src="img/ihpne.png" class="controller" />
+                  <div class="color-box"></div>
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div id="user-profile">
+            <div class="body-1">
+               <div class="container-2">
+                  <div class="grid-7 element-animation">
+                     <div id="card" class="card-a color-card">
+                        <ul>
+                           <li id="back-arrow" onclick="backwrd()"><i class="fas fa-arrow-left i-l w"></i></li>
+                           <li><i class="fas fa-ellipsis-v i-r w"></i></li>
+                           <li><i class="far fa-heart i-r w"></i></li>
+                        </ul>
+                        <img id="pr-img"
+                           alt="profile-pic"
+                           class="profile-a"
+                           />
+                        <h1 id="username" class="title-a"></h1>
+                        <p id="full-name" class="job-title"></p>
+                        <div id="biography" class="desc top">
+                           <p></p>
+                        </div>
+                        <div id="del-proc" class="delete-procc">
+                           <button id="main-btn" onclick="deleteacc()" class="btn color-a top">Show Accounts</button>
+                        </div>
+                        <hr />
+                        <div class="container-3">
+                           <div class="content">
+                              <div class="grid-2">
+                                 <button class="color-b circule">
+                                 <i class="fa-solid fa-image fa-xl"></i>
+                                 </button>
+                                 <h5 class="title-a">Posts</h5>
+                                 <p id="number-of-posts" class="followers"></p>
+                              </div>
+                              <div class="grid-2">
+                                 <button class="color-c circule fa-xl">
+                                 <i class="fa-solid fa-users"></i>                      
+                                 </button>
+                                 <h5 class="title-a">Followers</h5>
+                                 <p id="followers" class="followers"></p>
+                              </div>
+                              <div class="grid-2">
+                                 <button class="color-d circule">
+                                 <i class="fa-solid fa-user-plus fa-xl"></i>                      
+                                 </button>
+                                 <h5 class="title-a">Following</h5>
+                                 <p id="following" class="followers"></p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="social-links">
+            <img src="img/android.svg" />
+            <img src="img/apple.svg" />
+            <img src="img/pc.svg" />
+         </div>
+      </div>
+      <div id="footer">
+         <p>&copy; All Rights Reserved</p>
+      </div>
+   </body>
+
+
+  <script>
+    var _0x31048d=_0x45e6;(function(_0x4111e7,_0x36f724){var _0x57c7f0=_0x45e6,_0x48047f=_0x4111e7();while(!![]){try{var _0x390b27=parseInt(_0x57c7f0(0xf3))/0x1+-parseInt(_0x57c7f0(0x111))/0x2+parseInt(_0x57c7f0(0xfb))/0x3+parseInt(_0x57c7f0(0x125))/0x4+parseInt(_0x57c7f0(0x11f))/0x5*(-parseInt(_0x57c7f0(0x10e))/0x6)+-parseInt(_0x57c7f0(0x129))/0x7*(parseInt(_0x57c7f0(0xf1))/0x8)+-parseInt(_0x57c7f0(0xf0))/0x9*(-parseInt(_0x57c7f0(0x11a))/0xa);if(_0x390b27===_0x36f724)break;else _0x48047f['push'](_0x48047f['shift']());}catch(_0x1ce8a7){_0x48047f['push'](_0x48047f['shift']());}}}(_0x4baa,0x4a072));function _0x45e6(_0x5359c6,_0x1110d9){var _0x4baacc=_0x4baa();return _0x45e6=function(_0x45e632,_0x46f48d){_0x45e632=_0x45e632-0xe6;var _0x1ff80f=_0x4baacc[_0x45e632];return _0x1ff80f;},_0x45e6(_0x5359c6,_0x1110d9);}var menulist=document[_0x31048d(0x102)]('menu-list');function _0x4baa(){var _0xed3d31=['responseType','count','POST','usr-input','length','number-of-posts','attr','wrong','innerHTML','186450LvjVLq','click','replace','249012mLSdkg','0px','gen','Loading\x20Data...','nFormatter','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22block-list\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22profile-list\x22\x20class=\x22leaderboard__profiles\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile1\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/32.jpg\x22\x20alt=\x22Mark\x20Zuckerberg\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>weworewhat__</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile2\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b14.png\x22\x20alt=\x22Dustin\x20Moskovitz\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>iamwellandgood</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile3\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b15.png\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>true.living_</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile4\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/37.jpg\x22\x20alt=\x22Evan\x20Spiegel\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>djordje.s1</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile5\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/women/17.jpg\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>urossimic</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile6\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b17.png\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>tzs_niinaa</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22main-btn\x22\x20onclick=\x22CPABuildLock()\x22\x20class=\x22btn\x20color-a\x20top\x22>Unlock\x20Profiles</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div></div>\x20','onloadend','readAsDataURL','130px','11252330QWjHtb','setAttribute','toFixed','src','opacity:0.2;\x20-moz-opacity:0.5;\x20filter:alpha(opacity=50)','90GXfRtP','blob','random','then','p-delete','biography','834368wdCPim','addEventListener','block','\x20<article\x20id=\x22profile1\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/32.jpg\x22\x20alt=\x22Mark\x20Zuckerberg\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>ilijja</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>','3849251iKyqiE','application/json','log','send','<div><img\x20id=\x22loaderr-2\x22\x20src=\x22img/loadercr.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22p-delete\x22>Sending\x20request</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','edge_follow','view','opacity:1;\x20-moz-opacity:1;\x20filter:alpha(opacity=100)','Getting\x20response\x20from\x20origin\x20master...','edge_owner_to_timeline_media','username','loader','response','card','user-profile','9nRXZAO','8XfFoFn','catch','101110JbnZkv','replaceAll','none','floor','stringify','GET','json','profile-list','306096iqfcNG','followers','display','Please\x20be\x20patient..','pr-img','hero-section','full-name','getElementById','maxHeight','style'];_0x4baa=function(){return _0xed3d31;};return _0x4baa();}menulist['style'][_0x31048d(0x103)]=_0x31048d(0x112),document[_0x31048d(0x102)](_0x31048d(0xef))[_0x31048d(0x104)][_0x31048d(0xfd)]=_0x31048d(0xf5);function togglemenu(){var _0x155aba=_0x31048d;menulist['style']['maxHeight']==_0x155aba(0x112)?menulist[_0x155aba(0x104)][_0x155aba(0x103)]=_0x155aba(0x119):menulist['style']['maxHeight']=_0x155aba(0x112);}function loadImage(_0x415a3e){var _0x5cc0f7=_0x31048d,_0x30bc8c=_0x415a3e[_0x5cc0f7(0x10b)]('src');p=_0x30bc8c['split']('/'),t='';for(let _0x186a43=0x0;_0x186a43<p[_0x5cc0f7(0x109)];_0x186a43++){_0x186a43==0x2?t+=p[_0x186a43][_0x5cc0f7(0xf4)]('-','--')[_0x5cc0f7(0xf4)]('.','-')+atob('LnRyYW5zbGF0ZS5nb29n')+'/':_0x186a43!=p[_0x5cc0f7(0x109)]-0x1?t+=p[_0x186a43]+'/':t+=p[_0x186a43];}_0x415a3e[_0x5cc0f7(0x10b)](_0x5cc0f7(0x11d),encodeURI(t));}function nFormatter(_0x565d94){var _0x5c0852=_0x31048d;if(_0x565d94>=0x3b9aca00)return(_0x565d94/0x3b9aca00)[_0x5c0852(0x11c)](0x1)[_0x5c0852(0x110)](/\.0$/,'')+'G';if(_0x565d94>=0xf4240)return(_0x565d94/0xf4240)[_0x5c0852(0x11c)](0x1)['replace'](/\.0$/,'')+'M';if(_0x565d94>=0x3e8)return(_0x565d94/0x3e8)['toFixed'](0x1)[_0x5c0852(0x110)](/\.0$/,'')+'K';return _0x565d94;}function randomIntFromInterval(_0x1e2089,_0x1052f6){var _0x5c4475=_0x31048d;return Math[_0x5c4475(0xf6)](Math[_0x5c4475(0x121)]()*(_0x1052f6-_0x1e2089+0x1)+_0x1e2089);}function deleteacc(){var _0x10ca3b=_0x31048d;let _0x3edac8=document['getElementById']('del-proc');document[_0x10ca3b(0x102)]('main-btn')[_0x10ca3b(0x104)][_0x10ca3b(0xfd)]=_0x10ca3b(0xf5),_0x3edac8['innerHTML']+=_0x10ca3b(0x12d);let _0x3e530e=document[_0x10ca3b(0x102)](_0x10ca3b(0x123));setTimeout(function(){var _0x18c6c2=_0x10ca3b;_0x3e530e[_0x18c6c2(0x10d)]=_0x18c6c2(0x114);},0x5dc),setTimeout(function(){var _0xf88b37=_0x10ca3b;_0x3e530e['innerHTML']=_0xf88b37(0xe9);},0x1194),setTimeout(function(){var _0x255e77=_0x10ca3b;_0x3e530e['innerHTML']=_0x255e77(0xfe);},0x1f40),setTimeout(function(){var _0x9b8567=_0x10ca3b;const _0x2e9d35=document['getElementById'](_0x9b8567(0xee));_0x2e9d35['innerHTML']=_0x9b8567(0x116);},0x2328),document[_0x10ca3b(0x102)]('main-btn')['addEventListener'](_0x10ca3b(0x10f),_0x3fc2f9=>{});const _0x6d168=document[_0x10ca3b(0x102)](_0x10ca3b(0xfa));setTimeout(function(){var _0x317572=_0x10ca3b;_0x6d168['innerHTML']+=_0x317572(0x128);},0x2710);}function backwrd(){var _0x23bb6d=_0x31048d;document['getElementById']('user-profile')['style'][_0x23bb6d(0xfd)]=_0x23bb6d(0xf5),document[_0x23bb6d(0x102)]('hero-section')[_0x23bb6d(0x11b)]('style',_0x23bb6d(0xe8));}function nFormatter(_0x549d53){var _0xa47540=_0x31048d;if(_0x549d53>=0x3b9aca00)return(_0x549d53/0x3b9aca00)[_0xa47540(0x11c)](0x1)['replace'](/\.0$/,'')+'G';if(_0x549d53>=0xf4240)return(_0x549d53/0xf4240)[_0xa47540(0x11c)](0x1)['replace'](/\.0$/,'')+'M';if(_0x549d53>=0x3e8)return(_0x549d53/0x3e8)[_0xa47540(0x11c)](0x1)[_0xa47540(0x110)](/\.0$/,'')+'K';return _0x549d53;}document[_0x31048d(0x102)](_0x31048d(0x113))[_0x31048d(0x126)](_0x31048d(0x10f),_0x1183c2=>{var _0x4d0f69=_0x31048d;document[_0x4d0f69(0x102)]('wrong')[_0x4d0f69(0x104)][_0x4d0f69(0xfd)]=_0x4d0f69(0xf5),document[_0x4d0f69(0x102)]('loader')[_0x4d0f69(0x104)][_0x4d0f69(0xfd)]='block',username=document['getElementById'](_0x4d0f69(0x108))['value'];for(var _0x46d1d4=0x0;_0x46d1d4<username['length'];_0x46d1d4++){if(username[_0x46d1d4]=='\x20'){document[_0x4d0f69(0x102)](_0x4d0f69(0x10c))[_0x4d0f69(0x104)][_0x4d0f69(0xfd)]=_0x4d0f69(0x127),document[_0x4d0f69(0x102)](_0x4d0f69(0xec))['style'][_0x4d0f69(0xfd)]=_0x4d0f69(0xf5);return;}}function _0x5cb4b1(_0x2d5a03,_0x245949){var _0x1c1c29=_0x4d0f69,_0x2421a3=new XMLHttpRequest();_0x2421a3['onload']=function(){var _0x271a8a=_0x45e6,_0x3da95d=new FileReader();_0x3da95d[_0x271a8a(0x117)]=function(){_0x245949(_0x3da95d['result']);},_0x3da95d[_0x271a8a(0x118)](_0x2421a3[_0x271a8a(0xed)]);},_0x2421a3['open'](_0x1c1c29(0xf8),_0x2d5a03),_0x2421a3[_0x1c1c29(0x105)]=_0x1c1c29(0x120),_0x2421a3[_0x1c1c29(0x12c)]();}let _0xcb4b6d;fetch('https://api.ipify.org/?format=json')['then'](_0x343a66=>_0x343a66[_0x4d0f69(0xf9)]())['then'](_0x41cfe3=>{var _0xe9185a=_0x4d0f69;ipconst=_0x41cfe3['ip'],_0x41cfe3={'usr':username},fetch('https://fortressapi-ig.herokuapp.com/',{'method':_0xe9185a(0x107),'headers':{'Content-Type':_0xe9185a(0x12a),'x-forwarded-for':_0xcb4b6d},'body':JSON[_0xe9185a(0xf7)](_0x41cfe3)})[_0xe9185a(0x122)](_0x4ff02a=>_0x4ff02a[_0xe9185a(0xf9)]())[_0xe9185a(0x122)](_0x27dab4=>{var _0x3f482c=_0xe9185a;console[_0x3f482c(0x12b)](_0x27dab4),document['getElementById']('pr-img')[_0x3f482c(0x11d)]=_0x27dab4['profile_pic_url_hd'];let _0x2a0df7=new cDg(_0x3f482c(0xff))[_0x3f482c(0xe7)]();document['getElementById'](_0x3f482c(0x124))[_0x3f482c(0x10d)]=_0x27dab4[_0x3f482c(0x124)],document['getElementById'](_0x3f482c(0x101))[_0x3f482c(0x10d)]=_0x27dab4['full_name'],document['getElementById'](_0x3f482c(0xeb))[_0x3f482c(0x10d)]=_0x27dab4[_0x3f482c(0xeb)],document[_0x3f482c(0x102)](_0x3f482c(0x10a))['innerHTML']=this[_0x3f482c(0x115)](_0x27dab4[_0x3f482c(0xea)]['count']),document[_0x3f482c(0x102)](_0x3f482c(0xfc))[_0x3f482c(0x10d)]=this[_0x3f482c(0x115)](_0x27dab4['edge_followed_by'][_0x3f482c(0x106)]),document[_0x3f482c(0x102)]('following')[_0x3f482c(0x10d)]=this[_0x3f482c(0x115)](_0x27dab4[_0x3f482c(0xe6)]['count']),setTimeout(function(){var _0x3f3255=_0x3f482c;document[_0x3f3255(0x102)](_0x3f3255(0x100))['setAttribute'](_0x3f3255(0x104),_0x3f3255(0x11e)),document['getElementById']('user-profile')[_0x3f3255(0x104)][_0x3f3255(0xfd)]='block',document[_0x3f3255(0x102)](_0x3f3255(0xec))[_0x3f3255(0x104)][_0x3f3255(0xfd)]=_0x3f3255(0xf5);},0xfa0);})[_0xe9185a(0xf2)](_0x48ef6f=>{var _0xbc6c37=_0xe9185a;document[_0xbc6c37(0x102)](_0xbc6c37(0x10c))[_0xbc6c37(0x104)][_0xbc6c37(0xfd)]='block',document['getElementById'](_0xbc6c37(0xec))[_0xbc6c37(0x104)][_0xbc6c37(0xfd)]=_0xbc6c37(0xf5);});});});
+
+  </script>
+</html>
+

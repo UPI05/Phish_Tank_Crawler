@@ -1,0 +1,383 @@
+<html><!-- InstanceBegin template="/Templates/template.dwt.php" codeOutsideHTMLIsLocked="false" -->
+<head>
+<title>Bienvenidos a Papeler&iacute;a del Norte</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<SCRIPT language=JavaScript>
+  var txt="Este Web Site se ve mejor en resoluci�n de 800x600 y 24 bits  -  "
+          +  "webmaster@papeleriadelnorte.com.ar  -  ";
+  function scroll()
+    {
+      window.status = txt ;
+      txt = txt.substring(1, txt.length) + txt.charAt (0) ;
+      window.setTimeout("scroll()",100);
+    }
+</SCRIPT>
+<SCRIPT src=>
+	var fadeColor = "#FFFF00";
+	var stepIn = 16; 
+	var stepOut = 500;
+	autoFade = true;  
+	sloppyClass = false;
+	macCompat = false;
+
+	hexa = new makearray(16);
+	for(var i = 0; i < 10; i++)
+		hexa[i] = i;
+	hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+	hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+	
+	document.onmouseover = domouseover;
+	document.onmouseout = domouseout;
+	
+	fadeColor = dehexize(fadeColor.toLowerCase());
+	
+	var fadeId = new Array();
+	
+	function dehexize(Color){
+		var colorArr = new makearray(3);
+		for (i=1; i<7; i++){
+			for (j=0; j<16; j++){
+				if (Color.charAt(i) == hexa[j]){
+					if (i%2 !=0)
+						colorArr[Math.floor((i-1)/2)]=eval(j)*16;
+					else
+						colorArr[Math.floor((i-1)/2)]+=eval(j);
+				}
+			}
+		}
+		return colorArr;
+	}
+	
+	function domouseover() {
+		if(document.all){
+			var srcElement = event.srcElement;
+			if ((srcElement.tagName == "A" && autoFade && srcElement.className != "nofade") || srcElement.className == "fade" || (sloppyClass && srcElement.className.indexOf("fade") != -1)) {
+					if (!srcElement.startColor) {
+						srcElement.startColor = (srcElement.style.color)? srcElement.style.color: srcElement.currentStyle.color;
+						srcElement.startColor = dehexize(srcElement.startColor.toLowerCase());
+					}
+					var link = (macCompat? srcElement.name: srcElement.uniqueID);
+					if (link) fade(srcElement.startColor,fadeColor,link,stepIn);				
+					else if (macCompat) alert("Error: Mac Compatility mode enabled, but link has no name.");
+			}
+		}
+	}
+	
+	function domouseout() {
+		if (document.all){
+			var srcElement = event.srcElement;
+			if ((srcElement.tagName == "A" && autoFade && srcElement.className != "nofade") || srcElement.className == "fade" || (sloppyClass && srcElement.className.indexOf("fade") != -1)) {
+				var link = (macCompat? srcElement.name: srcElement.uniqueID);
+				if (link) fade(fadeColor,srcElement.startColor,link,stepIn);
+			}
+		}
+	}
+	
+	function makearray(n) {
+		this.length = n;
+		for(var i = 1; i <= n; i++)
+			this[i] = 0;
+		return this;
+	}
+	
+	function hex(i) {
+		if (i < 0)
+			return "00";
+		else if (i > 255)
+			return "ff";
+		else
+		   return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+	}
+	
+	function setColor(r, g, b, element) {
+		  var hr = hex(r); var hg = hex(g); var hb = hex(b);
+		  element.style.color = "#"+hr+hg+hb;
+	}
+	
+	function fade(s,e,element,step) {
+		var sr = s[0]; var sg = s[1]; var sb = s[2];
+		var er = e[0]; var eg = e[1]; var eb = e[2];
+		
+		if (fadeId[0] != null && fade[0] != element && eval(fadeId[0])) {
+			var orig = eval(fadeId[0]);
+			setColor(orig.startColor[0],orig.startColor[1],orig.startColor[2],orig);
+			var i = 1;
+			while(i < fadeId.length) {
+				clearTimeout(fadeId[i]);
+				i++;
+			}
+		}
+			
+		for(var i = 0; i <= step; i++) {
+			fadeId[i+1] = setTimeout("setColor(Math.floor(" +sr+ " *(( " +step+ " - " +i+ " )/ " +step+ " ) + " +er+ " * (" +i+ "/" +
+				step+ ")),Math.floor(" +sg+ " * (( " +step+ " - " +i+ " )/ " +step+ " ) + " +eg+ " * (" +i+ "/" +step+
+				")),Math.floor(" +sb+ " * ((" +step+ "-" +i+ ")/" +step+ ") + " +eb+ " * (" +i+ "/" +step+ ")),"+element+");",i*step);
+		}
+		fadeId[0] = element;
+	}
+</SCRIPT>
+<STYLE>
+a:link {font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: underline}
+a:hover {font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFFFF; text-decoration: underline;}
+a:visited { font-family: Verdana, Arial, Helvetica, sans-serif; color: #FFFF00; text-decoration: underline}
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #CCCCCC;
+
+	SCROLLBAR-HIGHLIGHT-COLOR: #3333ff;
+	SCROLLBAR-SHADOW-COLOR: #000000;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #000099;
+	SCROLLBAR-DARKSHADOW-COLOR:  #003333;
+	SCROLLBAR-FACE-COLOR: #0059BB;
+}
+</STYLE>
+<SCRIPT language=JavaScript1.2>
+<!--
+var message="         Papeler�a Del Norte"    
+var message=message+" - Ventas por mayor y menor          " 
+i="0"			         
+var temptitle=""
+var speed="100"
+
+function titler(){
+if (!document.all&&!document.getElementById)
+return
+document.title=temptitle+message.charAt(i)
+temptitle=temptitle+message.charAt(i)
+i++	
+if(i==message.length)
+{
+i="0"
+temptitle=""
+}
+setTimeout("titler()",speed)
+}
+
+window.onload=titler
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</SCRIPT>
+</head>
+<body bgcolor="#000099" leftmargin="0" topmargin="0" onLoad="MM_preloadImages('nav_bar_2007/empresa_f2.gif','nav_bar_2007/agendas_f2.gif','nav_bar_2007/boligrafos_f2.gif','nav_bar_2007/llaveros_f2.gif','nav_bar_2007/marroquineria_f2.gif','nav_bar_2007/mousepad_f2.gif','nav_bar_2007/imanes_f2.gif','nav_bar_2007/contacto_f2.gif','nav_bar_2007/reglas_f2.gif','nav_bar_2007/lapices_f2.gif','nav_bar_2007/almanaques_f2.gif','nav_bar_2007/varios_f2.gif','nav_bar_2007/pendrive_f2.gif')">
+<table width="762" height="722" border="0" align="center">
+  <!--DWLayoutTable-->
+  <tr> 
+    <td height="88" colspan="2" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="755">
+        <tr> 
+          <td><img src="indicetanger/img/spacer.gif" width="106" height="1" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="449" height="1" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="31" height="1" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="1" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="168" height="1" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="1" border="0" alt=""></td>
+        </tr>
+        <tr> 
+          <td colspan="3"><img name="r1_c1" src="indicetanger/img/r1_c1.jpg" width="586" height="1" border="0" alt=""></td>
+          <td rowspan="2" colspan="2"><img name="simbolos" src="img/simbolos.jpg" width="169" height="53" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="1" border="0" alt=""></td>
+        </tr>
+        <tr> 
+          <td rowspan="3"><img name="r2_c1" src="img/r2_c1.jpg" width="106" height="84" border="0" alt=""></td>
+          <td colspan="2"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="480" height="52">
+              <param name="movie" value="swf/banner_up_2.swf">
+              <param name="quality" value="high">
+              <param name="wmode" value="transparent">
+              <embed src="swf/banner_up_2.swf" width="480" height="52" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="52" border="0" alt=""></td>
+        </tr>
+        <tr> 
+          <td rowspan="2"><img name="r3_c2" src="img/r3_c2.jpg" width="449" height="32" border="0" alt=""></td>
+          <td colspan="3"><!-- InstanceBeginEditable name="cartelito" --><img name="empresa" src="img/empresa.jpg" width="200" height="24" border="0" alt=""><!-- InstanceEndEditable --></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="24" border="0" alt=""></td>
+        </tr>
+        <tr> 
+          <td colspan="3"><img name="r4_c3" src="img/r4_c3.jpg" width="200" height="8" border="0" alt=""></td>
+          <td><img src="indicetanger/img/spacer.gif" width="1" height="8" border="0" alt=""></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr align="center"> 
+    <td height="2" colspan="2" valign="top"></td>
+  </tr>
+  <tr> 
+    <td width="104" rowspan="2" valign="top"> <div align="left"> 
+        <table width="100%" height="534" border="0">
+          <!--DWLayoutTable-->
+          <tr> 
+            <td width="98" height="251" valign="top"><table width="100%" height="300" border="0" cellpadding="0" cellspacing="0">
+                <!--DWLayoutTable-->
+                <tr> 
+                  <td width="98" height="5"></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="empresa.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('empresa_','','nav_bar_2007/empresa_f2.gif',1)"><img src="nav_bar_2007/empresa.gif" name="empresa_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="precios_agendas/precios_agendas.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('agendas_','','nav_bar_2007/agendas_f2.gif',1)"><img src="nav_bar_2007/agendas.gif" name="agendas_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="precios_boligrafos/precios_boligrafos.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boligrafos_','','nav_bar_2007/boligrafos_f2.gif',1)"><img src="nav_bar_2007/boligrafos.gif" name="boligrafos_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="lapices/lapices.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('lapices','','nav_bar_2007/lapices_f2.gif',1)"><img src="nav_bar_2007/lapices.gif" name="lapices" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="almanaques/almanaques.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('almanaques','','nav_bar_2007/almanaques_f2.gif',1)"><img src="nav_bar_2007/almanaques.gif" name="almanaques" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="llaveros/llaveros.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('llaveros_','','nav_bar_2007/llaveros_f2.gif',1)"><img src="nav_bar_2007/llaveros.gif" name="llaveros_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="marroquineria/marroquineria.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('marroquineria_','','nav_bar_2007/marroquineria_f2.gif',1)"><img src="nav_bar_2007/marroquineria.gif" name="marroquineria_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="reglas/reglas.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('reglas','','nav_bar_2007/reglas_f2.gif',1)"><img src="nav_bar_2007/reglas.gif" name="reglas" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="mousepad/mousepad.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('mousepad','','nav_bar_2007/mousepad_f2.gif',1)"><img src="nav_bar_2007/mousepad.gif" name="mousepad" width="95" height="18" border="0"></a></td>
+                </tr>
+                 <tr> 
+                  <td height="22" valign="top"><a href="pendrive/pendrive.php" onMouseOver="MM_swapImage('Image1','','nav_bar_2007/pendrive_f2.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="nav_bar_2007/pendrive.gif" name="Image1" width="95" height="18" border="0" id="Image1"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="varios/varios.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('varios','','nav_bar_2007/varios_f2.gif',1)"><img src="nav_bar_2007/varios.gif" name="varios" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr> 
+                  <td height="22" valign="top"><a href="contacto.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contacto_','','nav_bar_2007/contacto_f2.gif',1)"><img src="nav_bar_2007/contacto.gif" name="contacto_" width="95" height="18" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td height="15"></td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr> 
+            <td height="2"></td>
+          </tr>
+          <tr> 
+            <td height="270" valign="top"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="95" height="250">
+                <param name="movie" value="swf/left2009.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="transparent">
+                <embed src="swf/left2009.swf" width="95" height="250" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed></object> 
+            </td>
+          </tr>
+        </table>
+      </div></td>
+    <td width="648" height="531" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <!--DWLayoutTable-->
+        <tr> <!-- InstanceBeginEditable name="informacion" -->
+    <td width="733" align="center" valign="top"> <div align="center">
+	  <marquee bgcolor="#0099FF" width="610" scrolldelay="90">
+              <strong><font color="#FFFFFF" size="2">PONGA SU LOGO EN LOS PRODUCTOS 
+              - PONGA SU LOGO EN LOS PRODUCTOS - PONGA SU LOGO EN LOS PRODUCTOS 
+              - PONGA SU LOGO EN LOS PRODUCTOS</font></strong> 
+              </marquee><br>
+              <strong><a href="boligrafos_bic/boligrafos_bic.php"><br>
+              </a></strong></div>
+      <a href="ofertas.php"><img src="img/PDN_ofertas2023_header.jpg" width="577" height="146" alt=""/></a><br>
+            
+            <table width="90%" border="0" align="center">
+              <!--DWLayoutTable-->
+              <tr valign="top"> <br>
+                <td width="22" height="130">&nbsp;</td>
+                <td width="263" valign="top"><div align="center"><img src="img/maquina1.jpg" width="170" height="128"></div></td>
+                <td colspan="3" valign="top"> <div align="center"> 
+                    <p> <img src="img/maquina2.jpg" width="170" height="128"></p>
+                  </div></td>
+                <td width="8">&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td height="34">&nbsp;</td>
+                <td colspan="3" valign="top"><div align="center"> 
+                    <p><font size="2"><strong>Contamos con la m&aacute;s alta 
+                      tecnolog&iacute;a para la fabricaci&oacute;n e impresi&oacute;n 
+                      de logos en bol&iacute;grafos y agendas (Tampograf&iacute;a 
+                      - Hot Stamping).</strong></font></p>
+                  </div></td>
+                <td width="16">&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr valign="top"> 
+                <td height="35">&nbsp;</td>
+                <td valign="top"><div align="center"><strong><font color="#FFFF00" size="2"><br>
+                    <a href="precios_agendas/precios_agendas.php"><font size="3">Lista 
+                    de precios de<br>
+                    Agendas</font></a></font></strong></div></td>
+                <td width="20"><div align="center"></div></td>
+                <td width="246" valign="top"><div align="center"><strong><font color="#FFFF00" size="2"><br>
+                    <a href="precios_boligrafos/precios_boligrafos.php"><font size="3">Lista 
+                    de precios de <br>
+                    Bol&iacute;grafos</font></a></font></strong></div></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td height="212" colspan="6"><div align="justify"> 
+                    <p><font size="2">PAPELERIA DEL NORTE es una empresa que desde 
+                      1971 est&aacute; en el rubro de la fabricaci&oacute;n e 
+                      importacion de art&iacute;culos publicitarios, a todos estos les 
+                      podemos poner su logo, p&aacute;gina web, etc. Los &quot;regalos 
+                      de empresa&quot; promocionales, afianzan a su empresa en 
+                      modernidad. En PAPELERIA DEL NORTE as&iacute; lo creemos, 
+                      y para ello le facilitamos los mejores regalos, los cuales 
+                      personalizamos con su logo. Le ofrecemos una gran variedad 
+                      en art&iacute;culos promocionales y regalos publicitarios, 
+                      donde podr&aacute; elegir los productos m&aacute;s id&oacute;neos 
+                      dirigidos a un p&uacute;blico segmentado, fidelizando as&iacute; 
+                      a sus clientes y consiguiendo un incremento de ventas. <br>
+                      Regalos personalizados con el logotipo o marca de su compa&ntilde;&iacute;a, 
+                      potencian la imagen corporativa de su empresa.</font><br>
+                    </p>
+                    </div></td>
+              </tr>
+            </table>
+<p></td>
+    <!-- InstanceEndEditable --></tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="3"></td>
+  </tr>
+  <tr> 
+    <td height="38" align="center" valign="top"> <div align="center"></div></td>
+    <td align="center" valign="top"><p><font color="#FFFFFF" size="1" face="sans-serif"><font size="2">RIVADAVIA 
+        2449 (1034) CAP. FEDERAL<br>
+        4952-0775 - 4951-7840 - <a href="mailto:info@papeleriadelnorte.com.ar">info@papeleriadelnorte.com.ar</a></font></font>
+<p><font color="#FFFFFF" size="1" face="sans-serif"><br>
+        </font><font size="1" face="Arial, Helvetica, sans-serif">[<a href="http://www.papeleriadelnorte.com.ar/index.php">Home</a>] 
+        [<a href="http://www.papeleriadelnorte.com.ar/empresa.php">Empresa</a>]</font><font color="#FFFFFF" size="1" face="Arial, Helvetica, sans-serif"> 
+        [<a href="http://www.papeleriadelnorte.com.ar/contacto.php">Cont&aacute;ctenos</a>]</font><font color="#FFFFFF" size="1" face="sans-serif"><br>
+        <br>
+        </font></td>
+  </tr>
+  <tr> 
+    <td height="20">&nbsp;</td>
+    <td></td>
+  </tr>
+</table>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>send2Sign</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="JBHrkwsuyScZQco2X1azzWZpiQru1K2CwdYaGF9Z">
+        
+        <meta http-equiv="Cache-Control" content="no-cache" />
+        <meta http-equiv="Pragma" content="no-cache" />
+
+                    <link rel="icon" href="https://caixacapitalrisc.send2sign.net/img/send2signLogo-16.png">
+        
+
+        <link href="https://caixacapitalrisc.send2sign.net/css/app.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" 
+            integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <script src="https://caixacapitalrisc.send2sign.net/js/app.js"></script>
+
+        <script>
+
+            function InvalidMsg(textbox) {
+                if (textbox.value == '') {
+                    textbox.setCustomValidity("Por favor rellene este campo.");
+                } else if (textbox.validity.typeMismatch) {
+                    textbox.setCustomValidity("Incluya una '@' en la dirección de correo electrónico.");
+                }
+                else
+                {
+                    textbox.setCustomValidity('');
+                }
+                return true;
+            }
+
+            function check() {
+                "use strict";
+                if (typeof Symbol == "undefined") return false;
+                try {
+                    eval("class Foo {}");
+                    eval("var bar = (x) => x+1");
+                } catch (e) { return false; }
+                return true;
+            }
+
+            if (!check()) {
+                window.location.href= "https://caixacapitalrisc.send2sign.net/no-compatible";
+                // The engine doesn't support those ES6 features
+            }else{
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    timeout: 120000
+                });
+            }
+            $( document ).ready(function() {
+                $('.is-invalid').change(function(){
+                    $(this).removeClass('is-invalid');
+                    $(this).children('.help-block').empty();
+                });
+                document.cookie = "menuVisibility="+"; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+
+                window.logoS2s = '/img/'+window.location.host.split('.')[0]+'.png';
+                $.get(logoS2s)
+                    .done(function() {
+                        $('img.s2-login').attr('src',logoS2s);
+                    }).fail(function() {
+                        $('img.s2-login').attr('src','https://caixacapitalrisc.send2sign.net/storage/img/logo/logo-general.png');
+                });
+            });
+
+            async function fn_loginWithVIDChain() {
+                var client = window.OpenIDClient;
+                await client.callback();
+                await client.getToken({
+                    scopes: {
+                        request: ["openid", "EmailCredential"],
+                        require: ["openid", "EmailCredential"],
+                    }, 
+                });
+            }
+        </script>
+
+
+
+                    <style>
+                body {
+                    background-color: #73EEDC;
+                }
+                .btnExt {
+                    background: #78CAD2;
+                }
+                .btnExt:hover {
+                    background-color: #73EEDC;
+                }
+                .login-link {
+                    color: #78CAD2;
+                }
+            </style>
+            <link href="https://caixacapitalrisc.send2sign.net/css/loginTemplate1.css" rel="stylesheet">
+
+            </head>
+    <body>
+            
+
+        <!-- wrapper -->
+        <div id="wrapper" class="d-flex flex-column col-12" style="min-height: 100vh;">
+            <!-- content -->
+            <div id="content" class="container row align-self-center" style="margin-top:4em;">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-4 offset-md-2 offset-lg-3 offset-xl-4">
+                    <div class="panel panel-default q-shadow-b">
+                        <div class="panel-heading" style="border-bottom: 0px; background-color: #FFFFFF"></div>
+                        <div class="panel-body p-4 px-md-0 rounded" style="background-color: #FFFFFF">
+                            <div class="row" style="padding-bottom: 20px">
+                                <img src="" alt="logo Send2sign"
+                                     class="w-75 h-75 mx-auto s2-login" style="max-width: 215px">
+                            </div>
+                                    <form class="form-horizontal" method="POST" action="https://caixacapitalrisc.send2sign.net/login">
+            <input type="hidden" name="_token" value="JBHrkwsuyScZQco2X1azzWZpiQru1K2CwdYaGF9Z">
+            <fieldset>
+                <div class="row">
+                    <div class="col-sm-12 col-md-10 offset-md-1">
+                                                <div class="s2-margin-input form-group">
+                            <div class="input-group">
+                                <input id="email" type="email" name="email"
+                                    class="s2-campos-inputs form-control"
+                                    placeholder="Email" value=""
+                                    required autocomplete="off" autofocus maxlength="255" oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);">
+                            </div>
+                        </div>
+                        <div class="s2-margin-input form-group">
+                            <div class="input-group">
+                                <input id="password" type="password" name="password"
+                                    class="s2-campos-inputs form-control"
+                                    placeholder="Contraseña"
+                                    required autocomplete="off">
+                            </div>
+                                                    </div>
+                        <div class="s2-margin-input form-group">
+                            <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<div id="_g-recaptcha"></div>
+<div class="g-recaptcha" data-sitekey="6LdC1qYUAAAAAFiGDW6zQnmIyr394ELtNjxzIPUb" data-size="invisible" data-callback="_submitForm" data-badge="‘bottomleft’"></div><script src="https://www.google.com/recaptcha/api.js?hl=es" async defer></script>
+<script>var _submitForm,_captchaForm,_captchaSubmit,_execute=true,_captchaBadge;</script><script>window.addEventListener('load', _loadCaptcha);
+function _loadCaptcha(){_captchaForm=document.querySelector("#_g-recaptcha").closest("form");_captchaSubmit=_captchaForm.querySelector('[type=submit]');_submitForm=function(){if(typeof _submitEvent==="function"){_submitEvent();grecaptcha.reset();}else{_captchaForm.submit();}};_captchaForm.addEventListener('submit',function(e){e.preventDefault();if(typeof _beforeSubmit==='function'){_execute=_beforeSubmit(e);}if(_execute){grecaptcha.execute();}});console.log("Checking element binding of _submitForm...");console.log(_submitForm!==undefined);console.log("Checking element binding of _captchaForm...");console.log(_captchaForm!==undefined);console.log("Checking element binding of _captchaSubmit...");console.log(_captchaSubmit!==undefined);}</script>
+                            <input type="submit" class="btnExt q-shadow-b" value="Iniciar sesión">
+                        </div>
+                        <div class="text-center">
+                            <a class="login-link" href="https://caixacapitalrisc.send2sign.net/password/reset">Restablecer contraseña</a>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+                                    
+                             
+                                <hr class="m-4">
+                                <div class="col-sm-12 col-md-10 offset-md-1 p-0">
+                                    <div class="row text-center">
+                                        <span>
+                                            Inicia sesión con VIDwallet, con tu credencial de email, sin contraseñas y de forma más segura. 
+                                            <strong>
+                                                <a class="login-link" 
+                                                    href="https://es.validatedid.com/vidchain/tutorialcentralized" 
+                                                    target="_blank"
+                                                >
+                                                    Descubre cómo                                                </a>
+                                            </strong>
+                                        </span>
+                                    </div>
+                                    <div class="mt-4 s2-margin-input form-group">
+                                        <input id="s2sLoginVIDchainButton"
+                                            class="btnExt q-shadow-b mt-2"
+                                            onclick="fn_loginWithVIDChain()"
+                                            value="Accede con VIDwallet"
+                                        >
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END content -->
+            <!-- footer -->
+            <footer id="footer" class="mt-auto d-flex align-items-center">
+                <p class="text-left">
+                                            <a href="https://send2sign.net/"
+                           alt="Qualita Solutions & Consulting Send2sign info page">Send2sign</a>
+                         es un producto de                         <a href="https://qualita.es/"
+                           alt="Qualita Solutions & Consulting website">Qualita Solutions and Consulting</a>
+                                    </p>
+
+            </footer>
+            <!-- footer -->
+        </div>
+        <!-- END wrapper -->
+
+    
+    </body>
+</html>

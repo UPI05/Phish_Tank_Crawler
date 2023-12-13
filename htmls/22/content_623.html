@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logmedo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Content-Security-Policy" content="default-src &#39;self&#39; data: gap: https://ssl.gstatic.com file://* * blob:;
+        img-src &#39;self&#39; * data: blob:; 
+        style-src &#39;self&#39; https://www.google.com &#39;unsafe-inline&#39;; 
+        script-src &#39;self&#39; blob: https://ajax.googleapis.com  
+        https://alcdn.msauth.net https://appleid.apple.com 
+        https://appleid.cdn-apple.com https://js.live.net https://www.dropbox.com 
+        https://www.google-analytics.com http://www.google-analytics.com https://www.google.com 
+        https://www.gstatic.com https://apis.google.com data: &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;">
+        <meta name="viewport" content="width=device-width,height=device-height,viewport-fit=cover,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+
+
+        <meta name="theme-color" content="#259b24">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">      
+		<link rel="icon" sizes="192x192" href="/logmedo/images/icon192x192.png">
+		
+		<link id="manifest-id" rel="manifest">
+		<link id="apple-touch-icon" rel="apple-touch-icon" href="/logmedo/images/icon192x192w.png">
+		
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2048-2732.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2732-2048.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1668-2388.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2388-1668.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1536-2048.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2048-1536.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1668-2224.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2224-1668.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1620-2160.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2160-1620.png" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1242-2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2688-1242.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1125-2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-2436-1125.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-828-1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1792-828.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1080-1920.png" media="(device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1920-1080.png" media="(device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1334-750.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+		<link rel="apple-touch-startup-image" href="/logmedo/splashscreens/apple-splash-1136-640.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
+
+
+        <link rel="stylesheet" href="/logmedo/lib/bootstrap/css/bootstrap.min.css">   
+		<link rel="stylesheet" href="/logmedo/lib/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/logmedo/lib/android-material-icon-font/styles.css">
+
+		<link rel="stylesheet" href="/logmedo/css/lib-1.0.494.min.css">
+	
+                
+        <link rel="stylesheet" href="/logmedo/css/logmedo-1.0.494.css">
+        <link rel="stylesheet" href="/logmedo/css/embed-1.0.494.css">
+        <script src="/logmedo/utils/mobile.min-1.0.494.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+		    if (window.location.hash && window.location.hash == '#_=_') {
+		        window.location.hash = '';
+		    }
+	    	prepareCSS();
+		</script>
+		<link id="themeStylesheet" rel="stylesheet">
+		
+
+    
+    </head>
+    <body>
+    <div id="install-app" style="display:none">
+	    <button id="install-app-btn" class="btn btn-sm btn-default install-app-btn" title="Install as PWA">
+			<i class="fa fa-fw fa-download"></i> Install
+		</button>
+	</div>
+    <div id="wrapper">
+        <div id="body-overlay"></div>
+        <div id="header">
+        </div>
+        <div id="notifications" class="notifications"></div>
+        
+        <div id="loading"></div>
+        <div id="loading-spinner"></div>
+        	
+	    <div id="container">
+            <div id="content">
+				<div id="app"></div>
+			</div>
+	    </div>
+	    
+        <div id="footer"></div>
+    </div>
+    
+    <div id="chart-image-container">
+    	<div id="chart-image-holder" class="charts chart-body chart-item"></div>
+    </div>
+    
+
+    <script type="text/javascript" src="/logmedo/lib/ace/ace.js"></script>
+
+    
+    
+	<script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+    
+    <script src="https://accounts.google.com/gsi/client" type="text/javascript" async defer="defer"></script>
+	
+	<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+		
+	<script src="https://js.live.net/v7.2/OneDrive.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="gexp6ja85pr1iga"></script>
+
+
+<script src="/logmedo/lib/lib.min-1.0.494.js" type="text/javascript"></script>
+
+	<script src="/logmedo/lib/lib-web.min-1.0.494.js" type="text/javascript"></script>
+    
+
+	
+	<script src="/logmedo/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+    
+    
+    
+    
+
+    <script type="text/javascript" src="/logmedo/app/logmedo.min-1.0.494.js"></script>
+
+</body>
+</html>

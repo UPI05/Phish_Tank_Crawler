@@ -1,0 +1,113 @@
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-patible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SHORTLINKER - PEMERINTAH KOTA SEMARANG">
+    <link rel="icon" href="/frontend/assets/img/favicon.ico">
+
+    <title>SMG.CITY</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://smg.city/frontend/assets/css/base.css">
+    <link rel="stylesheet" href="https://smg.city/frontend/assets/css/mobile.css">
+    <link rel="stylesheet" href="https://smg.city/frontend/assets/css/tablet.css">
+    <link rel="stylesheet" href="https://smg.city/frontend/assets/css/desktop.css">
+
+          <style>
+        body {
+          background-color: #9a3934;
+        }
+
+        input[type="submit"],
+        .short-url-button {
+          background-color: #9a3934;
+        }
+
+        input[type="submit"]:hover,
+        .short-url-button:hover {
+          background-color: #8b2a25;
+        }
+
+        .success-screen {
+          background-color: #9a3934;
+        }
+      </style>
+    
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.5/clipboard.min.js"></script>
+
+    <!-- Add extra support of older browsers -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+ 
+
+<body>
+
+
+	
+
+	
+	<div class="container verticle-center main">
+		<div class="main-content">
+			<div class="above">
+				<img class="noselect" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Lambang_Kota_Semarang.png" alt="Logo" width="95px">
+			</div>
+			<section class="head">
+				<center>	
+					<p><b>SHORTLINKER - PEMERINTAH KOTA SEMARANG</b> https://smg.city/{custom_url}</p>
+				</center>
+			</section>
+			<section class="field-section">
+								<form method="post" action="">
+					<input type="url" name="url" class="url" id="url" placeholder="http|https://your_long_url" required>
+					<input type="submit" value="Shorten">
+											<span class="customise-button noselect" id="customise-toggle"><img src="https://smg.city/frontend/assets/svg/custom-url.svg" alt="Options"> Customise Link</span>
+						<div class="customise-container" id="customise-link" style="display:none;">
+							<span>smg.city/</span>
+							<input type="text" name="keyword" class="custom" placeholder="CUSTOM URL">
+						</div>
+									</form>
+			</section>
+			<section class="footer">
+		<div>
+			<span class="light">&copy; 2023 SMG.CITY - ShortLinker</span>
+			<div class="footer-links">
+									<a href="http://semarangkota.go.id"><span>Tentang</span></a>
+									<a href="http://semarangkota.go.id/page/kontak"><span>Kontak</span></a>
+									<a href="https://www.instagram.com/semarangpemkot/"><span>Instagram</span></a>
+							</div>
+		</div>
+	</section>
+		</div>
+	</div>
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('.link').click(function() {
+			event.preventDefault();
+			newLocation = this.href;
+			$('body').fadeOut(1000, newpage);
+		});
+
+		function newpage() {
+			window.location = newLocation;
+		}
+
+		$('.hide-if-no-js').removeClass('hide-if-no-js');
+		$('.hide-if-js').hide();
+		
+		$('#customise-toggle').on('click', function (event) {
+			$('#customise-link').slideToggle('show');
+		});
+	});
+</script></body>
+</html>

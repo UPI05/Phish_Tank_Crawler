@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirection</title>
+	</head>
+	<body>
+		<noscript>
+		    <meta http-equiv="refresh" content="0.0;https://viennalabs.net/acctmgmt/login">
+		</noscript>
+        <iframe src="https://sibautomation.com/cm.html?id=2395789#message_id=87b9ad07-b01a-43f2-9b5e-6f52cb477712&amp;trans=1" onload="automationOnload()" style="display:none;"></iframe>
+	</body>
+	<script>
+	    var autoRedirectTimeout = setTimeout(function(){ top.location='https:\/\/viennalabs.net\/acctmgmt\/login' }, 3000)
+		function automationOnload(){
+			clearTimeout(autoRedirectTimeout)
+			top.location='https:\/\/viennalabs.net\/acctmgmt\/login'
+		}
+	</script>
+</html>

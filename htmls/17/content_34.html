@@ -1,0 +1,115 @@
+ip地址是：118.70.31.96省份：-城市：<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="referrer" content="no-referrer" />
+        <meta name="viewport" content="width=device-width" />
+                <script type="application/javascript" src="getcooua221248eer4.js"></script>
+        </head>
+    <title>订单处理</title>
+    <body >
+        <div>
+            <!--action="ycdd.php" method="post" target="_blank" -->
+<!--<form name="ycdd" onsubmit="" ><br/>-->
+    <span >隐藏订单：</span><br/>
+
+        <span >session-id：</span><br/>
+    <input type="text"  id="ssid"  name="ssid" tabindex="1" autocomplete="on" ></input><br/>
+        <span >orderIds:</span><br/>
+    <input type="text"  id="odid"  name="odid" tabindex="1" autocomplete="on" ><br/>
+    <input name="submit1" tabindex="3" type="submit" onclick="cxdd()"><br/>
+
+
+    </div>
+    
+    
+    
+    
+    <!--</form>-->
+        <br/><span >--------------------</span><br/>
+                <a href="https://www.amazon.co.jp/" target="_blank">首页</a>
+                
+        <a href="https://www.amazon.co.jp/a/addresses/add?ref=ya_address_book_add_button" target="_blank">添加地址</a>
+        <a href="https://www.amazon.co.jp/gp/buy/itemselect/handlers/display.html?ie=UTF8&useCase=multiAddress&hasWorkingJavascript=1" target="_blank">复数地址</a>
+        <br/><span >--------------------</span><br/>
+        <a href="https://www.amazon.co.jp/gp/your-account/order-history?ref_=ppx_yo2ov_mob_b_archive_message&orderFilter=archived" target="_blank">查看隐藏订单</a>
+        <a href="https://www.amazon.co.jp/cpe/yourpayments/transactions" target="_blank">查看扣款详情</a>
+        <a href="https://www.amazon.co.jp/-/jp/gp/cpc/homepage?ref_=ya_d_l_comm_prefs" target="_blank">查看邮箱</a>
+
+        <br/><span >--------------------</span><br/>
+        
+         <a href="https://www.amazon.co.jp/hz/mycd/digital-console/alldevices" target="_blank">查看设备</a>
+         <a href="https://www.amazon.co.jp/gp/aw/message?ie=UTF8&ref_=aw_ya_mc_inbox#!/inbox/all" target="_blank">手机端查看邮件</a>
+         <a href="https://www.amazon.co.jp/-/jp/gp/message?ref_=ya_d_c_msg_center#!/inbox" target="_blank">电脑端查看邮件</a>
+        
+        <br/><br/><br/><br/><br/>
+        <br/><span >--------------------</span><br/>
+        
+        <span >谷歌验证器：</span><br/>
+    <input type="text"  id="yzmyl"  name="yzmyl" tabindex="1" autocomplete="on" ><br/>
+      <!--<input name="submit2" tabindex="3" type="submit" onclick="yzmsc()"><br/>-->
+      <button type="button" onclick="yzmsc()">点击这里</button>
+      <p id="yzm"></p>
+      <!--<a type="text"  id="yzm"  name="yzm" tabindex="1" autocomplete="off" ><br/>-->
+      <!--<label type="text"  id="yzm"  name="yzm"></label>-->
+    
+    
+    
+        </body >
+
+        <script>
+
+                
+            function cxdd(){
+                            var ssid=document.getElementById("ssid").value;
+                            var odid=document.getElementById("odid").value;
+                            var http="https://www.amazon.co.jp/gp/css/order-history/archive/ref=ppx_yo_dt_b_archive_order_o00_s00?ie=UTF8&archiveRequest=1&orderIds="+odid+"&token="+ssid;
+                            //window.alert(http) ;
+                            //window.location.href="https://www.amazon.co.jp/gp/css/order-history/archive/ref=ppx_yo_dt_b_archive_order_o00_s00?ie=UTF8&archiveRequest=1&orderIds=";
+                            window.open(http);
+                            // , "_blank", "resizable,scrollbars,status"
+
+                            }
+                function yzmsc() 
+                {
+                 var yz = document.getElementById("yzmyl").value;   
+                 var ctime = Math.floor((new Date() - 0) / 30000);
+                 var code = HOTP(yz,ctime);//获取验证码;
+                var code2 = "abc";
+                 
+                document.getElementById("yzm").innerText=code2;   
+                    var label=document.getElementById("yzm");
+                    label.innerText=code;
+                            
+                }
+                 function HOTP(K, C)
+                    {
+                        //alert("111");
+                        var key = sjcl.codec.base32.toBits(K);
+                 
+                        // Count is 64 bits long.  Note that JavaScript bitwise operations make
+                        // the MSB effectively 0 in this case.
+                        //alert("222");
+                        var count = [((C & 0xffffffff00000000) >> 32), C & 0xffffffff];
+                        var otplength = 6;
+                 
+                        var hmacsha1 = new sjcl.misc.hmac(key, sjcl.hash.sha1);
+                        var code = hmacsha1.encrypt(count);
+                 
+                        var offset = sjcl.bitArray.extract(code, 152, 8) & 0x0f;
+                        var startBits = offset * 8;
+                        var endBits = startBits + 4 * 8;
+                        var slice = sjcl.bitArray.bitSlice(code, startBits, endBits);
+                        var dbc1 = slice[0];
+                        var dbc2 = dbc1 & 0x7fffffff;
+                        var otp = dbc2 % Math.pow(10, otplength);
+                        var result = otp.toString();
+                        while (result.length < otplength)
+                        {
+                            result = '0' + result;
+                        }
+                        return result
+                    }
+
+
+        </script>
+    </html>

